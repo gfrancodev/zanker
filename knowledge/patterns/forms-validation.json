@@ -1,0 +1,185 @@
+{
+  "schemaVersion": "1.0",
+  "id": "forms-validation",
+  "title": "Forms and error management",
+  "category": "patterns",
+  "summary": "Forms and error management operational rules curated for Zanker. Independent synthesis; consult primary sources for exact normative requirements.",
+  "updatedAt": "2026-10-12",
+  "sources": [
+    {
+      "name": "W3C",
+      "url": "https://www.w3.org/WAI/WCAG22/quickref/",
+      "verifiedAt": null
+    }
+  ],
+  "rules": [
+    {
+      "id": "forms-validation.visible-labels",
+      "title": "Visible input labels",
+      "intent": "Provide persistent meaningful labels; placeholder is supplemental",
+      "tags": [
+        "forms",
+        "validation.visible",
+        "labels"
+      ],
+      "principles": [
+        "Provide persistent meaningful labels; placeholder is supplemental"
+      ],
+      "antiPatterns": [
+        "Placeholder-only inputs"
+      ],
+      "acceptance": [
+        "Labels programmatically associated"
+      ],
+      "sources": [
+        {
+          "name": "W3C",
+          "url": "https://www.w3.org/WAI/WCAG22/quickref/",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "forms-validation.error-recovery",
+      "title": "Actionable errors",
+      "intent": "Identify field, problem and recovery guidance",
+      "tags": [
+        "forms",
+        "validation.error",
+        "recovery"
+      ],
+      "principles": [
+        "Identify field, problem and recovery guidance"
+      ],
+      "antiPatterns": [
+        "Generic error toast detached from control"
+      ],
+      "acceptance": [
+        "Field association and error text checked"
+      ],
+      "sources": [
+        {
+          "name": "W3C",
+          "url": "https://www.w3.org/WAI/WCAG22/quickref/",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "forms-validation.required-data",
+      "title": "Data minimization",
+      "intent": "Ask only necessary information and explain why",
+      "tags": [
+        "forms",
+        "validation.required",
+        "data"
+      ],
+      "principles": [
+        "Ask only necessary information and explain why"
+      ],
+      "antiPatterns": [
+        "Unnecessary fields that increase abandonment"
+      ],
+      "acceptance": [
+        "Each required field has justification"
+      ],
+      "sources": [
+        {
+          "name": "W3C",
+          "url": "https://www.w3.org/WAI/WCAG22/quickref/",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "forms-validation.validation-timing",
+      "title": "Timing of feedback",
+      "intent": "Validate in ways that help without punishing mid-entry input",
+      "tags": [
+        "forms",
+        "validation.validation",
+        "timing"
+      ],
+      "principles": [
+        "Validate in ways that help without punishing mid-entry input"
+      ],
+      "antiPatterns": [
+        "Errors flashed at each keystroke before completion"
+      ],
+      "acceptance": [
+        "Error timings exercised by interaction tests"
+      ],
+      "sources": [
+        {
+          "name": "W3C",
+          "url": "https://www.w3.org/WAI/WCAG22/quickref/",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "forms-validation.multi-step",
+      "title": "Multi-step progress",
+      "intent": "Show progress and preserve data across stages",
+      "tags": [
+        "forms",
+        "validation.multi",
+        "step"
+      ],
+      "principles": [
+        "Show progress and preserve data across stages"
+      ],
+      "antiPatterns": [
+        "Wizard resets on browser back"
+      ],
+      "acceptance": [
+        "Resume/back behavior verified"
+      ],
+      "sources": [
+        {
+          "name": "W3C",
+          "url": "https://www.w3.org/WAI/WCAG22/quickref/",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "forms-validation.security-input",
+      "title": "Sensitive input treatment",
+      "intent": "Avoid exposing sensitive data in screenshots or fixtures",
+      "tags": [
+        "forms",
+        "validation.security",
+        "input"
+      ],
+      "principles": [
+        "Avoid exposing sensitive data in screenshots or fixtures"
+      ],
+      "antiPatterns": [
+        "Real identity data in preview sessions"
+      ],
+      "acceptance": [
+        "Fixtures contain synthetic identifiers"
+      ],
+      "sources": [
+        {
+          "name": "W3C",
+          "url": "https://www.w3.org/WAI/WCAG22/quickref/",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    }
+  ]
+}

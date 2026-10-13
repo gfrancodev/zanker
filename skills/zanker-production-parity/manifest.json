@@ -1,0 +1,46 @@
+{
+  "name": "zanker-production-parity",
+  "description": "Verify isolated preview matches actual integrated application.",
+  "triggers": [
+    "sandbox mismatch",
+    "SSR",
+    "production readiness"
+  ],
+  "knowledge": [
+    "frontend-architecture",
+    "quality-gates"
+  ],
+  "workflow": [
+    {
+      "step": 1,
+      "instruction": "List sandbox shims, mocked providers, styles and runtime limitations."
+    },
+    {
+      "step": 2,
+      "instruction": "Reproduce in the target framework native server/route when feasible."
+    },
+    {
+      "step": 3,
+      "instruction": "Compare shared state, fonts, global CSS, SSR output, hydration and user permissions."
+    },
+    {
+      "step": 4,
+      "instruction": "Flag unverified cases and prevent signoff as production-equivalent."
+    }
+  ],
+  "outputs": [
+    "Parity checklist",
+    "Integrated screenshots"
+  ],
+  "acceptance": [
+    "Mocked dependencies recorded",
+    "No claim of parity without evidence"
+  ],
+  "fallback": "Mark integrated validation pending.",
+  "tools": [
+    "optional local scripts (.sh/.ps1)",
+    "project file reader",
+    "browser if available"
+  ],
+  "version": "1.0.0"
+}

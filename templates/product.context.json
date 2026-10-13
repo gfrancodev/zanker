@@ -1,0 +1,29 @@
+{
+  "product": {
+    "name": "Example product",
+    "industry": null,
+    "stage": "existing"
+  },
+  "audiences": [
+    {
+      "id": "primary",
+      "job": "Describe the core user task",
+      "confidence": "hypothesis",
+      "evidence": []
+    }
+  ],
+  "primaryJob": "User can complete the main task accurately and confidently",
+  "evidence": [],
+  "assumptions": [
+    "Needs user research validation"
+  ],
+  "outcomes": {
+    "user": [
+      "Task success"
+    ],
+    "business": [
+      "Reduced rework"
+    ]
+  },
+  "risks": []
+}

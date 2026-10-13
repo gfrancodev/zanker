@@ -1,0 +1,46 @@
+{
+  "name": "zanker-visual-brainstorm",
+  "description": "Serve multiple design explorations and collect user selections locally.",
+  "triggers": [
+    "compare UI ideas",
+    "visual companion",
+    "visual brainstorming"
+  ],
+  "knowledge": [
+    "visual-hierarchy",
+    "product-discovery"
+  ],
+  "workflow": [
+    {
+      "step": 1,
+      "instruction": "Create a concepts.json with 2-3 visual directions; HTML/CSS concepts allowed."
+    },
+    {
+      "step": 2,
+      "instruction": "Run `bash ${CLAUDE_PLUGIN_ROOT}/scripts/studio.sh --project . --concepts concepts.json`."
+    },
+    {
+      "step": 3,
+      "instruction": "User opens URL and selects or comments; inspect .zanker/studio/events-*.jsonl."
+    },
+    {
+      "step": 4,
+      "instruction": "Translate approved direction into implementation plan; concepts are not production code."
+    }
+  ],
+  "outputs": [
+    "concepts.json",
+    "Choice and feedback events"
+  ],
+  "acceptance": [
+    "Concepts differ substantively",
+    "Approval captured before major redesign"
+  ],
+  "fallback": "Render static alternatives or image references if interactive preview unavailable.",
+  "tools": [
+    "optional local scripts (.sh/.ps1)",
+    "project file reader",
+    "browser if available"
+  ],
+  "version": "1.0.0"
+}

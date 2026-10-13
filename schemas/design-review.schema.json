@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Zanker design review",
+  "type": "object",
+  "required": [
+    "taskId",
+    "status",
+    "findings",
+    "evidence"
+  ],
+  "properties": {
+    "taskId": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "pass",
+        "needs-review",
+        "fail",
+        "not-tested"
+      ]
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "category",
+          "severity",
+          "description"
+        ],
+        "properties": {
+          "category": {
+            "type": "string"
+          },
+          "severity": {
+            "enum": [
+              "critical",
+              "major",
+              "minor",
+              "advisory"
+            ]
+          },
+          "description": {
+            "type": "string"
+          },
+          "reproduction": {
+            "type": "string"
+          },
+          "recommendation": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "productionParity": {
+      "enum": [
+        "verified",
+        "partial",
+        "not-verified"
+      ]
+    }
+  }
+}

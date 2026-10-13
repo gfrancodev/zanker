@@ -1,0 +1,181 @@
+{
+  "schemaVersion": "1.0",
+  "id": "information-architecture",
+  "title": "Information architecture",
+  "category": "product",
+  "summary": "Information architecture operational rules curated for Zanker. Independent synthesis; consult primary sources for exact normative requirements.",
+  "updatedAt": "2026-10-12",
+  "sources": [
+    {
+      "name": "NNG",
+      "url": "https://www.nngroup.com/articles/ten-usability-heuristics/",
+      "verifiedAt": null
+    }
+  ],
+  "rules": [
+    {
+      "id": "information-architecture.navigation-priority",
+      "title": "Navigation by user task",
+      "intent": "Organize navigation according to user goals and expectations",
+      "tags": [
+        "information",
+        "architecture.navigation",
+        "priority"
+      ],
+      "principles": [
+        "Organize navigation according to user goals and expectations"
+      ],
+      "antiPatterns": [
+        "Organizing menus by internal team structure"
+      ],
+      "acceptance": [
+        "Key task is reachable through predictable path"
+      ],
+      "sources": [
+        {
+          "name": "NNG",
+          "url": "https://www.nngroup.com/articles/ten-usability-heuristics/",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "information-architecture.labels",
+      "title": "Explicit category labels",
+      "intent": "Use language users understand for navigation labels",
+      "tags": [
+        "information",
+        "architecture.labels"
+      ],
+      "principles": [
+        "Use language users understand for navigation labels"
+      ],
+      "antiPatterns": [
+        "Inventing creative labels that hide meaning"
+      ],
+      "acceptance": [
+        "Labels remain unambiguous in tests"
+      ],
+      "sources": [
+        {
+          "name": "NNG",
+          "url": "https://www.nngroup.com/articles/ten-usability-heuristics/",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "information-architecture.hierarchy",
+      "title": "Information hierarchy",
+      "intent": "Place decisions and primary tasks ahead of tertiary detail",
+      "tags": [
+        "information",
+        "architecture.hierarchy"
+      ],
+      "principles": [
+        "Place decisions and primary tasks ahead of tertiary detail"
+      ],
+      "antiPatterns": [
+        "All information shares equal emphasis"
+      ],
+      "acceptance": [
+        "First-glance priority matches task"
+      ],
+      "sources": [
+        {
+          "name": "NNG",
+          "url": "https://www.nngroup.com/articles/ten-usability-heuristics/",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "information-architecture.findability",
+      "title": "Findability",
+      "intent": "Support predictable search/filter paths in large datasets",
+      "tags": [
+        "information",
+        "architecture.findability"
+      ],
+      "principles": [
+        "Support predictable search/filter paths in large datasets"
+      ],
+      "antiPatterns": [
+        "Forcing browsing through long unstructured lists"
+      ],
+      "acceptance": [
+        "Information can be found with defined task steps"
+      ],
+      "sources": [
+        {
+          "name": "NNG",
+          "url": "https://www.nngroup.com/articles/ten-usability-heuristics/",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "information-architecture.progressive-disclosure",
+      "title": "Progressive disclosure",
+      "intent": "Reveal advanced detail as needed while keeping essentials visible",
+      "tags": [
+        "information",
+        "architecture.progressive",
+        "disclosure"
+      ],
+      "principles": [
+        "Reveal advanced detail as needed while keeping essentials visible"
+      ],
+      "antiPatterns": [
+        "Hiding required terms in accordions"
+      ],
+      "acceptance": [
+        "Critical information remains discoverable"
+      ],
+      "sources": [
+        {
+          "name": "NNG",
+          "url": "https://www.nngroup.com/articles/ten-usability-heuristics/",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "information-architecture.orientation",
+      "title": "Navigation state",
+      "intent": "Show current location, prior context and return path",
+      "tags": [
+        "information",
+        "architecture.orientation"
+      ],
+      "principles": [
+        "Show current location, prior context and return path"
+      ],
+      "antiPatterns": [
+        "Losing context after navigation"
+      ],
+      "acceptance": [
+        "Breadcrumb/tab/active states verified"
+      ],
+      "sources": [
+        {
+          "name": "NNG",
+          "url": "https://www.nngroup.com/articles/ten-usability-heuristics/",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    }
+  ]
+}

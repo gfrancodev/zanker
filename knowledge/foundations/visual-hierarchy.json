@@ -1,0 +1,185 @@
+{
+  "schemaVersion": "1.0",
+  "id": "visual-hierarchy",
+  "title": "Visual hierarchy and composition",
+  "category": "foundations",
+  "summary": "Visual hierarchy and composition operational rules curated for Zanker. Independent synthesis; consult primary sources for exact normative requirements.",
+  "updatedAt": "2026-10-12",
+  "sources": [
+    {
+      "name": "NNG",
+      "url": "https://www.nngroup.com/articles/ten-usability-heuristics/",
+      "verifiedAt": null
+    }
+  ],
+  "rules": [
+    {
+      "id": "visual-hierarchy.primary-focal",
+      "title": "One dominant focal point",
+      "intent": "Create a clear priority for the primary task and important data",
+      "tags": [
+        "visual",
+        "hierarchy.primary",
+        "focal"
+      ],
+      "principles": [
+        "Create a clear priority for the primary task and important data"
+      ],
+      "antiPatterns": [
+        "Five equally vivid call-to-action controls"
+      ],
+      "acceptance": [
+        "Primary action is identified in five-second review"
+      ],
+      "sources": [
+        {
+          "name": "NNG",
+          "url": "https://www.nngroup.com/articles/ten-usability-heuristics/",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "visual-hierarchy.visual-rhythm",
+      "title": "Consistent visual rhythm",
+      "intent": "Use consistent layout rhythm and deliberate whitespace",
+      "tags": [
+        "visual",
+        "hierarchy.visual",
+        "rhythm"
+      ],
+      "principles": [
+        "Use consistent layout rhythm and deliberate whitespace"
+      ],
+      "antiPatterns": [
+        "Random margins across sections"
+      ],
+      "acceptance": [
+        "Spacing ties to tokens or explicit pattern"
+      ],
+      "sources": [
+        {
+          "name": "NNG",
+          "url": "https://www.nngroup.com/articles/ten-usability-heuristics/",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "visual-hierarchy.optical-alignment",
+      "title": "Optical and geometric alignment",
+      "intent": "Inspect perceptual alignment in addition to box coordinates",
+      "tags": [
+        "visual",
+        "hierarchy.optical",
+        "alignment"
+      ],
+      "principles": [
+        "Inspect perceptual alignment in addition to box coordinates"
+      ],
+      "antiPatterns": [
+        "Mathematically centered but visually imbalanced glyphs"
+      ],
+      "acceptance": [
+        "Screenshot passes visual inspection at multiple sizes"
+      ],
+      "sources": [
+        {
+          "name": "NNG",
+          "url": "https://www.nngroup.com/articles/ten-usability-heuristics/",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "visual-hierarchy.density-intent",
+      "title": "Intentional information density",
+      "intent": "Adapt density to frequency of use, expertise and screen size",
+      "tags": [
+        "visual",
+        "hierarchy.density",
+        "intent"
+      ],
+      "principles": [
+        "Adapt density to frequency of use, expertise and screen size"
+      ],
+      "antiPatterns": [
+        "Universal oversized cards for expert workflows"
+      ],
+      "acceptance": [
+        "Common tasks visible without excessive scrolling"
+      ],
+      "sources": [
+        {
+          "name": "NNG",
+          "url": "https://www.nngroup.com/articles/ten-usability-heuristics/",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "visual-hierarchy.composition-balance",
+      "title": "Balanced composition",
+      "intent": "Balance large and small shapes and contrasting regions",
+      "tags": [
+        "visual",
+        "hierarchy.composition",
+        "balance"
+      ],
+      "principles": [
+        "Balance large and small shapes and contrasting regions"
+      ],
+      "antiPatterns": [
+        "Uniform tile repetition with no hierarchy"
+      ],
+      "acceptance": [
+        "Visual scanning follows intended flow"
+      ],
+      "sources": [
+        {
+          "name": "NNG",
+          "url": "https://www.nngroup.com/articles/ten-usability-heuristics/",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "visual-hierarchy.negative-space",
+      "title": "Purposeful negative space",
+      "intent": "Use whitespace to establish grouping and legibility",
+      "tags": [
+        "visual",
+        "hierarchy.negative",
+        "space"
+      ],
+      "principles": [
+        "Use whitespace to establish grouping and legibility"
+      ],
+      "antiPatterns": [
+        "Maximizing decoration per pixel"
+      ],
+      "acceptance": [
+        "Groups visually discernible"
+      ],
+      "sources": [
+        {
+          "name": "NNG",
+          "url": "https://www.nngroup.com/articles/ten-usability-heuristics/",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    }
+  ]
+}

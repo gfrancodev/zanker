@@ -1,0 +1,46 @@
+{
+  "name": "zanker-design-decisions",
+  "description": "Record visual alternatives, rationale, approvals, failures and evidence for future sessions.",
+  "triggers": [
+    "user approval",
+    "decision memory",
+    "follow-up revision"
+  ],
+  "knowledge": [
+    "governance",
+    "quality-gates"
+  ],
+  "workflow": [
+    {
+      "step": 1,
+      "instruction": "Read existing studio event log and product context."
+    },
+    {
+      "step": 2,
+      "instruction": "Create an append-only decision record with scope, context, alternatives, evidence and selection."
+    },
+    {
+      "step": 3,
+      "instruction": "Store relative source and screenshot references, without private user data."
+    },
+    {
+      "step": 4,
+      "instruction": "Do not replace new user requirements with old preference; detect contradictory decisions."
+    }
+  ],
+  "outputs": [
+    "Decisions JSONL",
+    "Decision rationale"
+  ],
+  "acceptance": [
+    "Provenance and date present",
+    "No fabricated user approval"
+  ],
+  "fallback": "Store pending recommendation without labeling it approved.",
+  "tools": [
+    "optional local scripts (.sh/.ps1)",
+    "project file reader",
+    "browser if available"
+  ],
+  "version": "1.0.0"
+}

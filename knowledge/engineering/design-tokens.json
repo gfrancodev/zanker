@@ -1,0 +1,186 @@
+{
+  "schemaVersion": "1.0",
+  "id": "design-tokens",
+  "title": "Design tokens and theming",
+  "category": "engineering",
+  "summary": "Design tokens and theming operational rules curated for Zanker. Independent synthesis; consult primary sources for exact normative requirements.",
+  "updatedAt": "2026-10-12",
+  "sources": [
+    {
+      "name": "TOKENS",
+      "url": "https://www.designtokens.org/tr/drafts/format/",
+      "verifiedAt": null
+    }
+  ],
+  "rules": [
+    {
+      "id": "design-tokens.semantic-tokens",
+      "title": "Semantic tokens",
+      "intent": "Use role-based tokens separate from raw scales",
+      "tags": [
+        "design",
+        "tokens.semantic",
+        "tokens"
+      ],
+      "principles": [
+        "Use role-based tokens separate from raw scales"
+      ],
+      "antiPatterns": [
+        "Components embed literal colors throughout"
+      ],
+      "acceptance": [
+        "Semantic aliases documented"
+      ],
+      "sources": [
+        {
+          "name": "TOKENS",
+          "url": "https://www.designtokens.org/tr/drafts/format/",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "design-tokens.multi-brand",
+      "title": "Brand and theme support",
+      "intent": "Separate semantic roles from brand palette",
+      "tags": [
+        "design",
+        "tokens.multi",
+        "brand"
+      ],
+      "principles": [
+        "Separate semantic roles from brand palette"
+      ],
+      "antiPatterns": [
+        "Hard-coded brand colors inside components"
+      ],
+      "acceptance": [
+        "Theme overrides verified"
+      ],
+      "sources": [
+        {
+          "name": "TOKENS",
+          "url": "https://www.designtokens.org/tr/drafts/format/",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "design-tokens.token-governance",
+      "title": "Token changes as API",
+      "intent": "Treat tokens as shared contracts and assess blast radius",
+      "tags": [
+        "design",
+        "tokens.token",
+        "governance"
+      ],
+      "principles": [
+        "Treat tokens as shared contracts and assess blast radius"
+      ],
+      "antiPatterns": [
+        "Changing global radius to fix one dialog"
+      ],
+      "acceptance": [
+        "Consumers enumerated before global edits"
+      ],
+      "sources": [
+        {
+          "name": "TOKENS",
+          "url": "https://www.designtokens.org/tr/drafts/format/",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "design-tokens.token-export",
+      "title": "Interoperable JSON conventions",
+      "intent": "Use modern design token formatting where feasible",
+      "tags": [
+        "design",
+        "tokens.token",
+        "export"
+      ],
+      "principles": [
+        "Use modern design token formatting where feasible"
+      ],
+      "antiPatterns": [
+        "Custom unversioned nested color objects"
+      ],
+      "acceptance": [
+        "Token schema and version specified"
+      ],
+      "sources": [
+        {
+          "name": "TOKENS",
+          "url": "https://www.designtokens.org/tr/drafts/format/",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "design-tokens.spacing-system",
+      "title": "Spacing rhythm",
+      "intent": "Use a coherent spacing scale with exceptions justified",
+      "tags": [
+        "design",
+        "tokens.spacing",
+        "system"
+      ],
+      "principles": [
+        "Use a coherent spacing scale with exceptions justified"
+      ],
+      "antiPatterns": [
+        "Magic margin numbers without reason"
+      ],
+      "acceptance": [
+        "Exceptions documented"
+      ],
+      "sources": [
+        {
+          "name": "TOKENS",
+          "url": "https://www.designtokens.org/tr/drafts/format/",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "design-tokens.css-var-bridge",
+      "title": "CSS variable integration",
+      "intent": "Prefer CSS custom properties as runtime theme bridge",
+      "tags": [
+        "design",
+        "tokens.css",
+        "var",
+        "bridge"
+      ],
+      "principles": [
+        "Prefer CSS custom properties as runtime theme bridge"
+      ],
+      "antiPatterns": [
+        "Duplicated theme values in multiple languages"
+      ],
+      "acceptance": [
+        "Theme switch works without rebuild"
+      ],
+      "sources": [
+        {
+          "name": "TOKENS",
+          "url": "https://www.designtokens.org/tr/drafts/format/",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    }
+  ]
+}

@@ -1,0 +1,218 @@
+{
+  "schemaVersion": "1.0",
+  "id": "material-fluent-carbon",
+  "title": "Cross-system UI guidance",
+  "category": "platforms",
+  "summary": "Operational rules for Material on Android, Fluent on Microsoft platforms, Carbon for enterprise density, and keeping the product design system in charge. Each rule links the page for that system.",
+  "updatedAt": "2026-10-12",
+  "sources": [
+    {
+      "name": "Material Design 3",
+      "url": "https://m3.material.io/",
+      "verifiedAt": "2026-10-12"
+    },
+    {
+      "name": "Fluent 2",
+      "url": "https://fluent2.microsoft.design/design-principles",
+      "verifiedAt": "2026-10-12"
+    },
+    {
+      "name": "Carbon Design System",
+      "url": "https://www.carbondesignsystem.com/building-blocks/foundations/spacing/overview",
+      "verifiedAt": "2026-10-12"
+    }
+  ],
+  "rules": [
+    {
+      "id": "material-fluent-carbon.material-guidelines",
+      "title": "Material patterns",
+      "intent": "Use Material 3 when the experience should align with Android, and theme it instead of pasting the default Google look onto another brand",
+      "tags": [
+        "material",
+        "android",
+        "breakpoints"
+      ],
+      "principles": [
+        "On Android, follow Material layout breakpoints (the former window size classes) and change panes, navigation, and actions as the window grows",
+        "Implement Android UI with Jetpack Compose, the toolkit Material currently recommends. Views remain available for maintenance, not for new Material features",
+        "Express brand through Material tokens. Reference, system, and component tokens are the customization path, not a one-off restyle of each component"
+      ],
+      "antiPatterns": [
+        "Using Material rules blindly in any brand",
+        "A compact phone layout stretched unchanged onto an expanded window"
+      ],
+      "acceptance": [
+        "The decision to use Material is written down, with the target platform",
+        "Layout changes are mapped to compact, medium, expanded, large, and extra-large breakpoints"
+      ],
+      "limitations": [
+        "Breakpoints apply to Android and the web Material guidance. They do not replace a product design system that is not Material",
+        "Component specs stay on the component pages. This rule does not copy sizes"
+      ],
+      "sources": [
+        {
+          "name": "Material 3 Get started",
+          "url": "https://m3.material.io/get-started",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        },
+        {
+          "name": "Material 3 Breakpoints",
+          "url": "https://m3.material.io/foundations/layout/breakpoints",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        },
+        {
+          "name": "Material 3 Jetpack Compose",
+          "url": "https://m3.material.io/develop/android/jetpack-compose",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        },
+        {
+          "name": "Material 3 Develop",
+          "url": "https://m3.material.io/develop",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "material-fluent-carbon.fluent-guidelines",
+      "title": "Fluent patterns",
+      "intent": "Use Fluent 2 for Microsoft-oriented products, and let the layout follow the platform instead of a phone metaphor",
+      "tags": [
+        "fluent",
+        "microsoft",
+        "desktop"
+      ],
+      "principles": [
+        "Make the layout feel natural on the platform: adapt to the screen, and reuse native platform components for ordinary UI",
+        "Use Fluent layout: a grid, spacing that groups related items, and a hierarchy that keeps the next decision comfortable",
+        "For a native Windows app, check the Windows app design docs alongside Fluent 2. Fluent's web pages are not the Windows control spec"
+      ],
+      "antiPatterns": [
+        "Forcing phone metaphors into desktop tools",
+        "Hardcoded pixels and hex values where a Fluent token already names the role"
+      ],
+      "acceptance": [
+        "Desktop controls follow Fluent or Windows conventions for the target shell",
+        "The layout still works when the window is resized, not only at one laptop width"
+      ],
+      "limitations": [
+        "Fluent 2 design principles and layout were checked. Windows control metrics stay on learn.microsoft.com and are not copied here"
+      ],
+      "sources": [
+        {
+          "name": "Fluent 2 Design principles",
+          "url": "https://fluent2.microsoft.design/design-principles",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        },
+        {
+          "name": "Fluent 2 Layout",
+          "url": "https://fluent2.microsoft.design/layout",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        },
+        {
+          "name": "Windows app design",
+          "url": "https://learn.microsoft.com/en-us/windows/apps/design/",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "material-fluent-carbon.carbon-guidelines",
+      "title": "Carbon enterprise patterns",
+      "intent": "Use Carbon as the reference for dense enterprise data, with spacing and table sizes chosen on purpose",
+      "tags": [
+        "carbon",
+        "enterprise",
+        "density",
+        "data-table"
+      ],
+      "principles": [
+        "Use the Carbon spacing scale inside and between components. Density is allowed in a section. The whole page still needs space for the eye to rest",
+        "Put a data table in the main content, wide enough to avoid truncation, and pick one row size (extra small through extra large) for both header and body",
+        "Do not nest a table inside a table or a container so small that the data must be clipped"
+      ],
+      "antiPatterns": [
+        "Inventing ad hoc patterns for tables",
+        "Mixing row heights between the header and the body"
+      ],
+      "acceptance": [
+        "Enterprise tasks are reviewed against Carbon table and spacing guidance",
+        "The chosen density is named (xs, sm, md, lg, or xl) and used consistently"
+      ],
+      "limitations": [
+        "Row heights and spacing tokens change with Carbon versions. Read the linked pages for the current numbers. This rule does not freeze them"
+      ],
+      "sources": [
+        {
+          "name": "Carbon Spacing",
+          "url": "https://www.carbondesignsystem.com/building-blocks/foundations/spacing/overview",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        },
+        {
+          "name": "Carbon Data table",
+          "url": "https://www.carbondesignsystem.com/building-blocks/core/components/data-table/guidelines",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "material-fluent-carbon.design-system-conflicts",
+      "title": "Project DS authority",
+      "intent": "When the product already has tokens and components, those win over the default look of Material, Fluent, or Carbon",
+      "tags": [
+        "design-system",
+        "tokens",
+        "theming"
+      ],
+      "principles": [
+        "Theme a chosen system through its own tokens: Material system tokens, Fluent alias tokens, or Carbon theme tokens",
+        "Change shared token values, not one-off overrides on individual components",
+        "Keep one visual system in the product. Do not combine Material, Fluent, and Carbon component looks in the same app"
+      ],
+      "antiPatterns": [
+        "Mixing 3 design systems in one app",
+        "Restyling a Carbon or Material component locally while the product tokens say something else"
+      ],
+      "acceptance": [
+        "Project conventions and token names are preserved",
+        "Any borrowed component is mapped onto the product's tokens, or the exception is written down"
+      ],
+      "limitations": [
+        "None of the three systems forbids using another system. The single-system rule is operational guidance for a product that already has an identity",
+        "Token pages describe each system's theming. They do not authorize replacing the repository's design system"
+      ],
+      "sources": [
+        {
+          "name": "Material 3 Design tokens",
+          "url": "https://m3.material.io/foundations/design-tokens",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        },
+        {
+          "name": "Fluent 2 Design tokens",
+          "url": "https://fluent2.microsoft.design/design-tokens",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        },
+        {
+          "name": "Carbon Themes",
+          "url": "https://www.carbondesignsystem.com/building-blocks/foundations/themes/overview",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    }
+  ]
+}

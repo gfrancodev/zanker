@@ -1,0 +1,49 @@
+{
+  "name": "zanker-accessibility-audit",
+  "description": "Audit semantic controls, keyboard interaction, contrast and WCAG-related requirements.",
+  "triggers": [
+    "WCAG",
+    "a11y",
+    "accessible forms",
+    "keyboard"
+  ],
+  "knowledge": [
+    "components-states",
+    "forms-validation",
+    "quality-gates",
+    "web-design"
+  ],
+  "workflow": [
+    {
+      "step": 1,
+      "instruction": "Run available automated accessibility tools such as @axe-core/playwright if project has them."
+    },
+    {
+      "step": 2,
+      "instruction": "Inspect labels, focus, keyboard flow, reduced motion, error feedback and status announcements."
+    },
+    {
+      "step": 3,
+      "instruction": "Map findings to exact WCAG 2.2 success criteria where appropriate."
+    },
+    {
+      "step": 4,
+      "instruction": "State what automated checks cannot verify and require manual/assistive-tech testing."
+    }
+  ],
+  "outputs": [
+    "Accessibility report",
+    "Reproduction steps"
+  ],
+  "acceptance": [
+    "No claims of total WCAG compliance from automation",
+    "Issue severity explained"
+  ],
+  "fallback": "Provide manual test checklist and mark untested cases.",
+  "tools": [
+    "optional local scripts (.sh/.ps1)",
+    "project file reader",
+    "browser if available"
+  ],
+  "version": "1.0.0"
+}

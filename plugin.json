@@ -1,0 +1,23 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "zanker",
+  "version": "1.0.0",
+  "description": "Product-aware UX/UI design, frontend forensics, media, motion, isolated previews, and visual quality; Visual Spec documentation only.",
+  "author": {
+    "name": "Gustavo Franco",
+    "url": "https://github.com/gfrancodev"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/gfrancodev/zanker",
+  "homepage": "https://github.com/gfrancodev/zanker",
+  "keywords": [
+    "ux",
+    "ui",
+    "design-system",
+    "frontend",
+    "accessibility",
+    "visual-qa",
+    "design-tokens"
+  ],
+  "icon": "./assets/logo-rounded.png"
+}

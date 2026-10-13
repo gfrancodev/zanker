@@ -1,0 +1,47 @@
+{
+  "name": "zanker-design-critique",
+  "description": "Critique rendered interface for coherence, hierarchy, suitability and visual polish.",
+  "triggers": [
+    "is this UI premium",
+    "screenshot critique",
+    "design review"
+  ],
+  "knowledge": [
+    "visual-hierarchy",
+    "quality-gates",
+    "product-discovery"
+  ],
+  "workflow": [
+    {
+      "step": 1,
+      "instruction": "Review screenshot at realistic viewport with product audience and task in mind."
+    },
+    {
+      "step": 2,
+      "instruction": "Score hierarchy, typographic quality, spacing, affordances, identity, states and readability with evidence."
+    },
+    {
+      "step": 3,
+      "instruction": "Differentiate normative violations from taste or aesthetic preference."
+    },
+    {
+      "step": 4,
+      "instruction": "Recommend concrete improvements with screenshot positions and expected effect."
+    }
+  ],
+  "outputs": [
+    "Critique with screenshot references",
+    "Prioritized improvements"
+  ],
+  "acceptance": [
+    "No unexplained numeric score",
+    "Product relevance explicit"
+  ],
+  "fallback": "Give bounded heuristic critique when target cannot render.",
+  "tools": [
+    "optional local scripts (.sh/.ps1)",
+    "project file reader",
+    "browser if available"
+  ],
+  "version": "1.0.0"
+}

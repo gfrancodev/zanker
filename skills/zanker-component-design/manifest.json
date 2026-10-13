@@ -1,0 +1,50 @@
+{
+  "name": "zanker-component-design",
+  "description": "Build reusable accessible UI components in the existing frontend stack.",
+  "triggers": [
+    "new button",
+    "modal",
+    "table",
+    "component library"
+  ],
+  "knowledge": [
+    "components-states",
+    "design-tokens",
+    "frontend-architecture",
+    "navigation-data"
+  ],
+  "workflow": [
+    {
+      "step": 1,
+      "instruction": "Locate current equivalents; choose extend, compose or create, with rationale."
+    },
+    {
+      "step": 2,
+      "instruction": "Define semantic props, states, keyboard behavior, loading/error and disabled logic."
+    },
+    {
+      "step": 3,
+      "instruction": "Render in Zanker sandbox with realistic scenarios."
+    },
+    {
+      "step": 4,
+      "instruction": "Run visual/accessibility checks and produce patch, examples and acceptance criteria."
+    }
+  ],
+  "outputs": [
+    "Component implementation",
+    "Scenario fixtures",
+    "Test evidence"
+  ],
+  "acceptance": [
+    "Uses existing tokens",
+    "Accessibility semantics correct"
+  ],
+  "fallback": "If component cannot be isolated, use framework-native preview and disclose parity gap.",
+  "tools": [
+    "optional local scripts (.sh/.ps1)",
+    "project file reader",
+    "browser if available"
+  ],
+  "version": "1.0.0"
+}

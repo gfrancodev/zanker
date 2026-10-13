@@ -1,0 +1,186 @@
+{
+  "schemaVersion": "1.0",
+  "id": "product-discovery",
+  "title": "Product discovery and audience",
+  "category": "product",
+  "summary": "Product discovery and audience operational rules curated for Zanker. Independent synthesis; consult primary sources for exact normative requirements.",
+  "updatedAt": "2026-10-12",
+  "sources": [
+    {
+      "name": "GOV",
+      "url": "https://www.gov.uk/service-manual/user-research",
+      "verifiedAt": null
+    }
+  ],
+  "rules": [
+    {
+      "id": "product-discovery.audience-evidence",
+      "title": "Audience backed by evidence",
+      "intent": "Distinguish observed user needs from assumptions and label uncertainty",
+      "tags": [
+        "product",
+        "discovery.audience",
+        "evidence"
+      ],
+      "principles": [
+        "Distinguish observed user needs from assumptions and label uncertainty"
+      ],
+      "antiPatterns": [
+        "Inventing personas as research facts"
+      ],
+      "acceptance": [
+        "Every persona statement is linked to evidence or marked hypothesis"
+      ],
+      "sources": [
+        {
+          "name": "GOV",
+          "url": "https://www.gov.uk/service-manual/user-research",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "product-discovery.primary-job",
+      "title": "Primary job to be done",
+      "intent": "Write the main user task as outcome, not a requested UI feature",
+      "tags": [
+        "product",
+        "discovery.primary",
+        "job"
+      ],
+      "principles": [
+        "Write the main user task as outcome, not a requested UI feature"
+      ],
+      "antiPatterns": [
+        "Optimizing for requested screens without confirming user goal"
+      ],
+      "acceptance": [
+        "Success is measurable by task completion"
+      ],
+      "sources": [
+        {
+          "name": "GOV",
+          "url": "https://www.gov.uk/service-manual/user-research",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "product-discovery.product-maturity",
+      "title": "Stage-aware design",
+      "intent": "Adapt UX tradeoffs to product stage and existing users",
+      "tags": [
+        "product",
+        "discovery.product",
+        "maturity"
+      ],
+      "principles": [
+        "Adapt UX tradeoffs to product stage and existing users"
+      ],
+      "antiPatterns": [
+        "Redesigning established workflows without migration plan"
+      ],
+      "acceptance": [
+        "Migration and existing behavior constraints are recorded"
+      ],
+      "sources": [
+        {
+          "name": "GOV",
+          "url": "https://www.gov.uk/service-manual/user-research",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "product-discovery.critical-context",
+      "title": "Context of use",
+      "intent": "Identify device, connectivity, urgency and repeat frequency before density decisions",
+      "tags": [
+        "product",
+        "discovery.critical",
+        "context"
+      ],
+      "principles": [
+        "Identify device, connectivity, urgency and repeat frequency before density decisions"
+      ],
+      "antiPatterns": [
+        "One layout philosophy for all audiences"
+      ],
+      "acceptance": [
+        "Context assumptions documented and validated"
+      ],
+      "sources": [
+        {
+          "name": "GOV",
+          "url": "https://www.gov.uk/service-manual/user-research",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "product-discovery.risk-sensitive",
+      "title": "High-consequence decisions",
+      "intent": "Provide confirmation, auditability and recoverability for irreversible actions",
+      "tags": [
+        "product",
+        "discovery.risk",
+        "sensitive"
+      ],
+      "principles": [
+        "Provide confirmation, auditability and recoverability for irreversible actions"
+      ],
+      "antiPatterns": [
+        "One-click destructive controls without explanation"
+      ],
+      "acceptance": [
+        "High-impact actions have explicit feedback and recovery"
+      ],
+      "sources": [
+        {
+          "name": "GOV",
+          "url": "https://www.gov.uk/service-manual/user-research",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "product-discovery.user-experience-goals",
+      "title": "Product success alignment",
+      "intent": "Connect interface outcomes to user benefit and business metric",
+      "tags": [
+        "product",
+        "discovery.user",
+        "experience",
+        "goals"
+      ],
+      "principles": [
+        "Connect interface outcomes to user benefit and business metric"
+      ],
+      "antiPatterns": [
+        "Equating aesthetics with success"
+      ],
+      "acceptance": [
+        "Proposed design has user and business success criteria"
+      ],
+      "sources": [
+        {
+          "name": "GOV",
+          "url": "https://www.gov.uk/service-manual/user-research",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    }
+  ]
+}

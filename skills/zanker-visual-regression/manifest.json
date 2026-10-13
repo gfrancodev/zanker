@@ -1,0 +1,46 @@
+{
+  "name": "zanker-visual-regression",
+  "description": "Capture deterministic browser screenshots and review meaningful changes.",
+  "triggers": [
+    "pixel regression",
+    "compare before-after",
+    "responsive screenshots"
+  ],
+  "knowledge": [
+    "quality-gates",
+    "layout-responsive"
+  ],
+  "workflow": [
+    {
+      "step": 1,
+      "instruction": "Use stable font, browser version, device scale and fixtures."
+    },
+    {
+      "step": 2,
+      "instruction": "Run `bash ${CLAUDE_PLUGIN_ROOT}/scripts/audit.sh --url LOCAL_URL --project .` and capture screenshots."
+    },
+    {
+      "step": 3,
+      "instruction": "Compare artifacts to approved references; classify intentional vs unintentional changes."
+    },
+    {
+      "step": 4,
+      "instruction": "Never auto-approve a baseline solely to make tests green."
+    }
+  ],
+  "outputs": [
+    "Screenshots",
+    "Review notes"
+  ],
+  "acceptance": [
+    "Browser environment recorded",
+    "Affected state coverage"
+  ],
+  "fallback": "Save screenshots for manual compare when pixel tooling absent.",
+  "tools": [
+    "optional local scripts (.sh/.ps1)",
+    "project file reader",
+    "browser if available"
+  ],
+  "version": "1.0.0"
+}

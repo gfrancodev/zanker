@@ -1,0 +1,185 @@
+{
+  "schemaVersion": "1.0",
+  "id": "layout-responsive",
+  "title": "Responsive and container-aware layouts",
+  "category": "foundations",
+  "summary": "Responsive and container-aware layouts operational rules curated for Zanker. Independent synthesis; consult primary sources for exact normative requirements.",
+  "updatedAt": "2026-10-12",
+  "sources": [
+    {
+      "name": "CONTAINER",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_containment/Container_queries",
+      "verifiedAt": null
+    }
+  ],
+  "rules": [
+    {
+      "id": "layout-responsive.container-queries",
+      "title": "Component-sized responsiveness",
+      "intent": "Prefer container queries for reusable components sized by parent space",
+      "tags": [
+        "layout",
+        "responsive.container",
+        "queries"
+      ],
+      "principles": [
+        "Prefer container queries for reusable components sized by parent space"
+      ],
+      "antiPatterns": [
+        "Using viewport width to assume component available width"
+      ],
+      "acceptance": [
+        "Component previews at 320,480,768 container widths"
+      ],
+      "sources": [
+        {
+          "name": "CONTAINER",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_containment/Container_queries",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "layout-responsive.grid-structure",
+      "title": "Robust grid layout",
+      "intent": "Use intrinsic CSS Grid/Flex patterns and sensible minmax behavior",
+      "tags": [
+        "layout",
+        "responsive.grid",
+        "structure"
+      ],
+      "principles": [
+        "Use intrinsic CSS Grid/Flex patterns and sensible minmax behavior"
+      ],
+      "antiPatterns": [
+        "Fixed pixels that overflow on narrow viewports"
+      ],
+      "acceptance": [
+        "No horizontal overflow at target sizes"
+      ],
+      "sources": [
+        {
+          "name": "CONTAINER",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_containment/Container_queries",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "layout-responsive.text-growth",
+      "title": "Text growth",
+      "intent": "Allow layout to reflow under 200% text sizing",
+      "tags": [
+        "layout",
+        "responsive.text",
+        "growth"
+      ],
+      "principles": [
+        "Allow layout to reflow under 200% text sizing"
+      ],
+      "antiPatterns": [
+        "Fixed height clipping important text"
+      ],
+      "acceptance": [
+        "No truncation of essential content when zoomed"
+      ],
+      "sources": [
+        {
+          "name": "CONTAINER",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_containment/Container_queries",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "layout-responsive.touch-targets",
+      "title": "Pointer targets",
+      "intent": "Ensure interactive targets have sufficient usable hit areas",
+      "tags": [
+        "layout",
+        "responsive.touch",
+        "targets"
+      ],
+      "principles": [
+        "Ensure interactive targets have sufficient usable hit areas"
+      ],
+      "antiPatterns": [
+        "Tiny touch icons on phones"
+      ],
+      "acceptance": [
+        "Target size checked against applicable WCAG rules"
+      ],
+      "sources": [
+        {
+          "name": "CONTAINER",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_containment/Container_queries",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "layout-responsive.safe-areas",
+      "title": "Safe areas and sticky layers",
+      "intent": "Account for on-screen keyboard and device safe areas",
+      "tags": [
+        "layout",
+        "responsive.safe",
+        "areas"
+      ],
+      "principles": [
+        "Account for on-screen keyboard and device safe areas"
+      ],
+      "antiPatterns": [
+        "Primary CTA blocked by keyboard"
+      ],
+      "acceptance": [
+        "Form usable with virtual keyboard"
+      ],
+      "sources": [
+        {
+          "name": "CONTAINER",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_containment/Container_queries",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "layout-responsive.responsive-fidelity",
+      "title": "Responsive evidence",
+      "intent": "Capture actual screenshots across breakpoints",
+      "tags": [
+        "layout",
+        "responsive.responsive",
+        "fidelity"
+      ],
+      "principles": [
+        "Capture actual screenshots across breakpoints"
+      ],
+      "antiPatterns": [
+        "Declaring responsive because classes exist"
+      ],
+      "acceptance": [
+        "Mobile and desktop screenshots reviewed"
+      ],
+      "sources": [
+        {
+          "name": "CONTAINER",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_containment/Container_queries",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "name": "zanker",
+  "owner": {
+    "name": "Gustavo Franco",
+    "url": "https://github.com/gfrancodev"
+  },
+  "plugins": [
+    {
+      "name": "zanker",
+      "source": ".",
+      "description": "Product-aware UX/UI design, frontend forensics, media, motion, isolated previews, and visual quality; Visual Spec documentation only.",
+      "version": "1.0.0",
+      "category": "Developer Tools",
+      "tags": [
+        "Design",
+        "Frontend",
+        "UX"
+      ],
+      "repository": "https://github.com/gfrancodev/zanker"
+    }
+  ],
+  "description": "Product-aware UX/UI design, frontend forensics and visual quality for existing codebases.",
+  "version": "1.0.0"
+}

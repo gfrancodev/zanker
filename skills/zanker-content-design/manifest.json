@@ -1,0 +1,49 @@
+{
+  "name": "zanker-content-design",
+  "description": "Design UI microcopy, errors, empty states and translations consistent with user tasks.",
+  "triggers": [
+    "form copy",
+    "onboarding copy",
+    "error messages",
+    "localized product"
+  ],
+  "knowledge": [
+    "localization",
+    "forms-validation",
+    "ai-product-ux",
+    "product-discovery"
+  ],
+  "workflow": [
+    {
+      "step": 1,
+      "instruction": "Identify user vocabulary, decision impact and content goal."
+    },
+    {
+      "step": 2,
+      "instruction": "Write labels and actionable error/recovery texts; avoid placeholder-only inputs."
+    },
+    {
+      "step": 3,
+      "instruction": "Test long translations, accents, currency and date formats."
+    },
+    {
+      "step": 4,
+      "instruction": "Review content with product stakeholders or users when stakes are meaningful."
+    }
+  ],
+  "outputs": [
+    "Copy deck",
+    "Localization constraints"
+  ],
+  "acceptance": [
+    "Plain language",
+    "Important content not truncated"
+  ],
+  "fallback": "Mark sensitive language for human review.",
+  "tools": [
+    "optional local scripts (.sh/.ps1)",
+    "project file reader",
+    "browser if available"
+  ],
+  "version": "1.0.0"
+}

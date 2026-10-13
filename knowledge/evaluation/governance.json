@@ -1,0 +1,150 @@
+{
+  "schemaVersion": "1.0",
+  "id": "governance",
+  "title": "References, licenses and provenance",
+  "category": "evaluation",
+  "summary": "References, licenses and provenance operational rules curated for Zanker. Independent synthesis; consult primary sources for exact normative requirements.",
+  "updatedAt": "2026-10-12",
+  "sources": [
+    {
+      "name": "LICENSES",
+      "url": "https://choosealicense.com/",
+      "verifiedAt": null
+    }
+  ],
+  "rules": [
+    {
+      "id": "governance.licenses",
+      "title": "Respect upstream licenses",
+      "intent": "Check each incorporated dependency and media license",
+      "tags": [
+        "governance.licenses"
+      ],
+      "principles": [
+        "Check each incorporated dependency and media license"
+      ],
+      "antiPatterns": [
+        "Assuming public GitHub source is unrestricted"
+      ],
+      "acceptance": [
+        "License inventory created"
+      ],
+      "sources": [
+        {
+          "name": "LICENSES",
+          "url": "https://choosealicense.com/",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "governance.attribution",
+      "title": "Source attribution",
+      "intent": "Preserve required notices and mark original paraphrases",
+      "tags": [
+        "governance.attribution"
+      ],
+      "principles": [
+        "Preserve required notices and mark original paraphrases"
+      ],
+      "antiPatterns": [
+        "Copying paid courses verbatim into JSON"
+      ],
+      "acceptance": [
+        "Reference attribution exists"
+      ],
+      "sources": [
+        {
+          "name": "LICENSES",
+          "url": "https://choosealicense.com/",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "governance.secret-safety",
+      "title": "No secrets in sandbox",
+      "intent": "Block accidental .env and credential capture in preview flows",
+      "tags": [
+        "governance.secret",
+        "safety"
+      ],
+      "principles": [
+        "Block accidental .env and credential capture in preview flows"
+      ],
+      "antiPatterns": [
+        "Sandbox fetching live privileged endpoints"
+      ],
+      "acceptance": [
+        "Secrets never in reports"
+      ],
+      "sources": [
+        {
+          "name": "LICENSES",
+          "url": "https://choosealicense.com/",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "governance.document-only",
+      "title": "Visual Spec documentation only",
+      "intent": "Never treat Visual Spec as implementation source or codegen input",
+      "tags": [
+        "governance.document",
+        "only"
+      ],
+      "principles": [
+        "Never treat Visual Spec as implementation source or codegen input"
+      ],
+      "antiPatterns": [
+        "Rebuilding JSX from Visual Spec artifact"
+      ],
+      "acceptance": [
+        "Only reference and document creation allowed"
+      ],
+      "sources": [
+        {
+          "name": "LICENSES",
+          "url": "https://choosealicense.com/",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "governance.human-oversight",
+      "title": "Review before integration",
+      "intent": "Produce reviewable patch and avoid destructive modifications",
+      "tags": [
+        "governance.human",
+        "oversight"
+      ],
+      "principles": [
+        "Produce reviewable patch and avoid destructive modifications"
+      ],
+      "antiPatterns": [
+        "Unreviewed invasive global changes"
+      ],
+      "acceptance": [
+        "Changed files and risks reported"
+      ],
+      "sources": [
+        {
+          "name": "LICENSES",
+          "url": "https://choosealicense.com/",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    }
+  ]
+}

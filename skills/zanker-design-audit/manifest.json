@@ -1,0 +1,47 @@
+{
+  "name": "zanker-design-audit",
+  "description": "Audit an existing product UI across hierarchy, affordances, consistency and accessibility.",
+  "triggers": [
+    "review design",
+    "audit page",
+    "page structure"
+  ],
+  "knowledge": [
+    "visual-hierarchy",
+    "quality-gates",
+    "information-architecture"
+  ],
+  "workflow": [
+    {
+      "step": 1,
+      "instruction": "Inventory key screens and user journeys; prioritize costly issues."
+    },
+    {
+      "step": 2,
+      "instruction": "Inspect rendered screenshots and interaction patterns, not only JSX/CSS."
+    },
+    {
+      "step": 3,
+      "instruction": "Link each issue to usability impact, evidence, severity and source location."
+    },
+    {
+      "step": 4,
+      "instruction": "Separate aesthetic preferences from normatively required accessibility fixes."
+    }
+  ],
+  "outputs": [
+    "Prioritized issues list",
+    "Annotated evidence"
+  ],
+  "acceptance": [
+    "Every critical issue is reproducible",
+    "Avoid subjective scores without rationale"
+  ],
+  "fallback": "Provide a heuristic review with explicitly limited confidence.",
+  "tools": [
+    "optional local scripts (.sh/.ps1)",
+    "project file reader",
+    "browser if available"
+  ],
+  "version": "1.0.0"
+}

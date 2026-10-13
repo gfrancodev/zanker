@@ -1,0 +1,176 @@
+{
+  "schemaVersion": "1.0",
+  "id": "performance",
+  "title": "Visual performance and resource usage",
+  "category": "engineering",
+  "summary": "Visual performance and resource usage operational rules curated for Zanker. Independent synthesis; consult primary sources for exact normative requirements.",
+  "updatedAt": "2026-10-12",
+  "sources": [
+    {
+      "name": "WEBVITALS",
+      "url": "https://web.dev/articles/defining-core-web-vitals-thresholds",
+      "verifiedAt": null
+    }
+  ],
+  "rules": [
+    {
+      "id": "performance.lcp",
+      "title": "Largest Contentful Paint",
+      "intent": "Optimize main content visibility and image loading",
+      "tags": [
+        "performance.lcp"
+      ],
+      "principles": [
+        "Optimize main content visibility and image loading"
+      ],
+      "antiPatterns": [
+        "Huge hero resources blocking rendering"
+      ],
+      "acceptance": [
+        "Field LCP monitored where feasible"
+      ],
+      "sources": [
+        {
+          "name": "WEBVITALS",
+          "url": "https://web.dev/articles/defining-core-web-vitals-thresholds",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "performance.inp",
+      "title": "Interaction to Next Paint",
+      "intent": "Avoid heavy JS on critical interaction paths",
+      "tags": [
+        "performance.inp"
+      ],
+      "principles": [
+        "Avoid heavy JS on critical interaction paths"
+      ],
+      "antiPatterns": [
+        "Motion calculations block UI interactions"
+      ],
+      "acceptance": [
+        "Field INP monitored where feasible"
+      ],
+      "sources": [
+        {
+          "name": "WEBVITALS",
+          "url": "https://web.dev/articles/defining-core-web-vitals-thresholds",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "performance.cls",
+      "title": "Cumulative Layout Shift",
+      "intent": "Reserve media space and prevent late font layout shifts",
+      "tags": [
+        "performance.cls"
+      ],
+      "principles": [
+        "Reserve media space and prevent late font layout shifts"
+      ],
+      "antiPatterns": [
+        "Images without dimensions pushing content"
+      ],
+      "acceptance": [
+        "Field CLS monitored where feasible"
+      ],
+      "sources": [
+        {
+          "name": "WEBVITALS",
+          "url": "https://web.dev/articles/defining-core-web-vitals-thresholds",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "performance.animations-cost",
+      "title": "Animation performance",
+      "intent": "Use efficient properties and reduced-motion support",
+      "tags": [
+        "performance.animations",
+        "cost"
+      ],
+      "principles": [
+        "Use efficient properties and reduced-motion support"
+      ],
+      "antiPatterns": [
+        "Animators triggering full-page layout every frame"
+      ],
+      "acceptance": [
+        "Performance trace reviewed for complex motion"
+      ],
+      "sources": [
+        {
+          "name": "WEBVITALS",
+          "url": "https://web.dev/articles/defining-core-web-vitals-thresholds",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "performance.font-budget",
+      "title": "Font footprint",
+      "intent": "Limit typeface families/weights; prefer subset optimizations where possible",
+      "tags": [
+        "performance.font",
+        "budget"
+      ],
+      "principles": [
+        "Limit typeface families/weights; prefer subset optimizations where possible"
+      ],
+      "antiPatterns": [
+        "Many fonts blocking first render"
+      ],
+      "acceptance": [
+        "Font assets and waterfalls inspected"
+      ],
+      "sources": [
+        {
+          "name": "WEBVITALS",
+          "url": "https://web.dev/articles/defining-core-web-vitals-thresholds",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "performance.asset-budget",
+      "title": "Asset budget",
+      "intent": "Compress and right-size visual media",
+      "tags": [
+        "performance.asset",
+        "budget"
+      ],
+      "principles": [
+        "Compress and right-size visual media"
+      ],
+      "antiPatterns": [
+        "Oversized videos autoplay on slow networks"
+      ],
+      "acceptance": [
+        "Transfer and decoded sizes checked"
+      ],
+      "sources": [
+        {
+          "name": "WEBVITALS",
+          "url": "https://web.dev/articles/defining-core-web-vitals-thresholds",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    }
+  ]
+}

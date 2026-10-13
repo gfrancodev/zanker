@@ -1,0 +1,46 @@
+{
+  "name": "zanker-reference-curation",
+  "description": "Maintain trustworthy, attributable JSON knowledge without scraping proprietary courses.",
+  "triggers": [
+    "update references",
+    "new UI guideline",
+    "knowledge authoring"
+  ],
+  "knowledge": [
+    "governance",
+    "ux-research"
+  ],
+  "workflow": [
+    {
+      "step": 1,
+      "instruction": "Locate the official primary reference and read applicable scope."
+    },
+    {
+      "step": 2,
+      "instruction": "Write concise original operational rule with source URL, limitations, antipattern and acceptance."
+    },
+    {
+      "step": 3,
+      "instruction": "Add record to relevant JSON pack, update index and run `bash ${CLAUDE_PLUGIN_ROOT}/scripts/validate.sh`."
+    },
+    {
+      "step": 4,
+      "instruction": "Do not copy paid courses or protected third-party source into redistributed package."
+    }
+  ],
+  "outputs": [
+    "Curated JSON rule",
+    "Source provenance"
+  ],
+  "acceptance": [
+    "Source is attributable",
+    "No unsupported normative claims"
+  ],
+  "fallback": "Mark source as unverified and omit hard requirements until checked.",
+  "tools": [
+    "optional local scripts (.sh/.ps1)",
+    "project file reader",
+    "browser if available"
+  ],
+  "version": "1.0.0"
+}

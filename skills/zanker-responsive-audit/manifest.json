@@ -1,0 +1,46 @@
+{
+  "name": "zanker-responsive-audit",
+  "description": "Review viewport, container, zoom, long content and touch usability.",
+  "triggers": [
+    "mobile issue",
+    "tablet",
+    "layout overflow"
+  ],
+  "knowledge": [
+    "layout-responsive",
+    "quality-gates"
+  ],
+  "workflow": [
+    {
+      "step": 1,
+      "instruction": "Audit widths 375,768,1440 and add relevant breakpoint edges."
+    },
+    {
+      "step": 2,
+      "instruction": "Inspect horizontal overflow, clipped controls, keyboard overlays and long text."
+    },
+    {
+      "step": 3,
+      "instruction": "Check reusable components at different container widths."
+    },
+    {
+      "step": 4,
+      "instruction": "Retest after changes and provide screenshots."
+    }
+  ],
+  "outputs": [
+    "Viewport screenshots",
+    "Responsive defects"
+  ],
+  "acceptance": [
+    "Main task remains usable",
+    "No horizontal overflow"
+  ],
+  "fallback": "Use browser responsive devtools when Playwright missing.",
+  "tools": [
+    "optional local scripts (.sh/.ps1)",
+    "project file reader",
+    "browser if available"
+  ],
+  "version": "1.0.0"
+}

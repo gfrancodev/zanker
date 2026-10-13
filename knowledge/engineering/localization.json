@@ -1,0 +1,152 @@
+{
+  "schemaVersion": "1.0",
+  "id": "localization",
+  "title": "Content design and internationalization",
+  "category": "engineering",
+  "summary": "Content design and internationalization operational rules curated for Zanker. Independent synthesis; consult primary sources for exact normative requirements.",
+  "updatedAt": "2026-10-12",
+  "sources": [
+    {
+      "name": "I18N",
+      "url": "https://www.w3.org/International/questions/qa-i18n",
+      "verifiedAt": null
+    }
+  ],
+  "rules": [
+    {
+      "id": "localization.clear-copy",
+      "title": "Plain language",
+      "intent": "Use the audience language and explain specialized terms",
+      "tags": [
+        "localization.clear",
+        "copy"
+      ],
+      "principles": [
+        "Use the audience language and explain specialized terms"
+      ],
+      "antiPatterns": [
+        "Technical jargon in consumer UI"
+      ],
+      "acceptance": [
+        "Microcopy tested for comprehension"
+      ],
+      "sources": [
+        {
+          "name": "I18N",
+          "url": "https://www.w3.org/International/questions/qa-i18n",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "localization.localization-overflow",
+      "title": "Expansion-resilient layout",
+      "intent": "Support longer labels and translated values",
+      "tags": [
+        "localization.localization",
+        "overflow"
+      ],
+      "principles": [
+        "Support longer labels and translated values"
+      ],
+      "antiPatterns": [
+        "Fixed width CTA clipping other languages"
+      ],
+      "acceptance": [
+        "Layout tested with expanded text"
+      ],
+      "sources": [
+        {
+          "name": "I18N",
+          "url": "https://www.w3.org/International/questions/qa-i18n",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "localization.regional-format",
+      "title": "Regional data formats",
+      "intent": "Use locale-appropriate currency, date and number format",
+      "tags": [
+        "localization.regional",
+        "format"
+      ],
+      "principles": [
+        "Use locale-appropriate currency, date and number format"
+      ],
+      "antiPatterns": [
+        "Hard-coded US separators for Brazilian users"
+      ],
+      "acceptance": [
+        "Fixtures test target locales"
+      ],
+      "sources": [
+        {
+          "name": "I18N",
+          "url": "https://www.w3.org/International/questions/qa-i18n",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "localization.rtl-resilience",
+      "title": "Bidirectional layouts",
+      "intent": "Use logical CSS properties when RTL is required",
+      "tags": [
+        "localization.rtl",
+        "resilience"
+      ],
+      "principles": [
+        "Use logical CSS properties when RTL is required"
+      ],
+      "antiPatterns": [
+        "Assuming left means start for all languages"
+      ],
+      "acceptance": [
+        "RTL layout reviewed if supported"
+      ],
+      "sources": [
+        {
+          "name": "I18N",
+          "url": "https://www.w3.org/International/questions/qa-i18n",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "localization.inclusive-language",
+      "title": "Respectful terminology",
+      "intent": "Avoid assumptions about user identity and abilities",
+      "tags": [
+        "localization.inclusive",
+        "language"
+      ],
+      "principles": [
+        "Avoid assumptions about user identity and abilities"
+      ],
+      "antiPatterns": [
+        "Copy excluding relevant audience"
+      ],
+      "acceptance": [
+        "Content review for inclusivity"
+      ],
+      "sources": [
+        {
+          "name": "I18N",
+          "url": "https://www.w3.org/International/questions/qa-i18n",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    }
+  ]
+}

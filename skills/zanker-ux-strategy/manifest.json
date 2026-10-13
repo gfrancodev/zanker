@@ -1,0 +1,49 @@
+{
+  "name": "zanker-ux-strategy",
+  "description": "Translate audience and goals into task flows, hierarchy and design decisions.",
+  "triggers": [
+    "product problem",
+    "user flow",
+    "onboarding",
+    "end-to-end flow"
+  ],
+  "knowledge": [
+    "product-discovery",
+    "information-architecture",
+    "ai-product-ux",
+    "ux-research"
+  ],
+  "workflow": [
+    {
+      "step": 1,
+      "instruction": "Define actor, entry point, primary success path, exception states and high-impact actions."
+    },
+    {
+      "step": 2,
+      "instruction": "Map steps and remove needless decisions; preserve discoverable critical information."
+    },
+    {
+      "step": 3,
+      "instruction": "Express design principles aligned with product stage and audience."
+    },
+    {
+      "step": 4,
+      "instruction": "Agree acceptance measures before prototyping."
+    }
+  ],
+  "outputs": [
+    "Flow outline",
+    "UX intent contract"
+  ],
+  "acceptance": [
+    "Path exists for recovery from errors",
+    "Metrics are associated with user outcomes"
+  ],
+  "fallback": "Document a minimal decision flow rather than inventing user evidence.",
+  "tools": [
+    "optional local scripts (.sh/.ps1)",
+    "project file reader",
+    "browser if available"
+  ],
+  "version": "1.0.0"
+}

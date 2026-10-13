@@ -1,0 +1,46 @@
+{
+  "name": "zanker-project-dna",
+  "description": "Inspect an existing frontend repository for framework, styling, design system, routes and shared components.",
+  "triggers": [
+    "unknown repository",
+    "learn the stack",
+    "first contact"
+  ],
+  "knowledge": [
+    "frontend-architecture",
+    "design-tokens"
+  ],
+  "workflow": [
+    {
+      "step": 1,
+      "instruction": "Run `bash ${CLAUDE_PLUGIN_ROOT}/scripts/inspect.sh --project .` (read only except generated .zanker manifest)."
+    },
+    {
+      "step": 2,
+      "instruction": "Review package.json, scripts, global CSS, font assets, token definitions and shared components."
+    },
+    {
+      "step": 3,
+      "instruction": "Identify runtime dependencies that an isolated preview must reproduce."
+    },
+    {
+      "step": 4,
+      "instruction": "Do not execute package scripts or install dependencies during discovery."
+    }
+  ],
+  "outputs": [
+    ".zanker/project.manifest.json",
+    "Dependencies and fidelity risks"
+  ],
+  "acceptance": [
+    "Reuse project components first",
+    "Flag uncertain detections"
+  ],
+  "fallback": "Inspect manually and document unsupported workspace layouts.",
+  "tools": [
+    "optional local scripts (.sh/.ps1)",
+    "project file reader",
+    "browser if available"
+  ],
+  "version": "1.0.0"
+}

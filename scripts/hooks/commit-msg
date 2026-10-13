@@ -1,0 +1,45 @@
+#!/bin/sh
+# commit-msg: the subject must open with a gitmoji. See https://gitmoji.dev
+#
+# Why: a log is read far more often than it is written, and a leading glyph says
+# what kind of change a commit is before the eye reaches the words.
+#
+# Install once, from the repository root:
+#   git config core.hooksPath scripts/hooks
+#
+# The allowlist below is the official set, 75 entries, vendored because a hook
+# has no network. Refresh it with: sh scripts/hooks/refresh-gitmoji.sh
+
+set -e
+subject=$(sed -n '1p' "$1")
+
+# git owns these subjects, so leave them alone
+case "$subject" in
+  ''|'#'*|'Merge '*|'Revert '*|'fixup!'*|'squash!'*) exit 0 ;;
+esac
+
+first=${subject%% *}
+
+if [ "$first" = "$subject" ]; then
+  echo "commit-msg: the subject is one token. Write: <gitmoji> <what changed>" >&2
+  exit 1
+fi
+
+for g in 🎨 ⚡️ 🔥 🐛 🚑️ ✨ 📝 🚀 💄 🎉 ✅ 🔒️ 🔐 🔖 🚨 🚧 💚 ⬇️ ⬆️ 📌 👷 📈 ♻️ ➕ ➖ 🔧 🔨 🌐 ✏️ 💩 ⏪️ 🔀 📦️ 👽️ 🚚 📄 💥 🍱 ♿️ 💡 🍻 💬 🗃️ 🔊 🔇 👥 🚸 🏗️ 📱 🤡 🥚 🙈 📸 ⚗️ 🔍️ 🏷️ 🌱 🚩 🥅 💫 🗑️ 🛂 🩹 🧐 ⚰️ 🧪 👔 🩺 🧱 🧑‍💻 💸 🧵 🦺 ✈️ 🦖; do
+  [ "$first" = "$g" ] && exit 0
+done
+
+{
+  echo "commit-msg: the subject does not open with a gitmoji."
+  echo
+  echo "  got:      $subject"
+  echo "  expected: <gitmoji> $subject"
+  echo
+  echo "The ones this repository uses most:"
+  echo "  🎉 begin a project    ✨ new feature    🐛 fix a bug"
+  echo "  ♻️  refactor           🎨 structure        📝 documentation"
+  echo "  ✅ tests              🔧 configuration  🔖 release tag"
+  echo
+  echo "Full list: https://gitmoji.dev"
+} >&2
+exit 1

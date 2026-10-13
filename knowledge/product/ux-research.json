@@ -1,0 +1,184 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ux-research",
+  "title": "UX research methods and evidence",
+  "category": "product",
+  "summary": "UX research methods and evidence operational rules curated for Zanker. Independent synthesis; consult primary sources for exact normative requirements.",
+  "updatedAt": "2026-10-12",
+  "sources": [
+    {
+      "name": "RESEARCH",
+      "url": "https://www.nngroup.com/articles/which-ux-research-methods/",
+      "verifiedAt": null
+    }
+  ],
+  "rules": [
+    {
+      "id": "ux-research.research-question",
+      "title": "Specific research questions",
+      "intent": "Pick research method based on concrete uncertainty",
+      "tags": [
+        "ux",
+        "research.research",
+        "question"
+      ],
+      "principles": [
+        "Pick research method based on concrete uncertainty"
+      ],
+      "antiPatterns": [
+        "Running generic surveys without hypotheses"
+      ],
+      "acceptance": [
+        "Question, method and sample limitations are documented"
+      ],
+      "sources": [
+        {
+          "name": "RESEARCH",
+          "url": "https://www.nngroup.com/articles/which-ux-research-methods/",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "ux-research.mixed-methods",
+      "title": "Qualitative and quantitative balance",
+      "intent": "Combine observed behavior with quantitative signals where possible",
+      "tags": [
+        "ux",
+        "research.mixed",
+        "methods"
+      ],
+      "principles": [
+        "Combine observed behavior with quantitative signals where possible"
+      ],
+      "antiPatterns": [
+        "Treating clicks as motives"
+      ],
+      "acceptance": [
+        "Findings distinguish what happened from why"
+      ],
+      "sources": [
+        {
+          "name": "RESEARCH",
+          "url": "https://www.nngroup.com/articles/which-ux-research-methods/",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "ux-research.usability-test",
+      "title": "Task-focused usability testing",
+      "intent": "Evaluate realistic task success and friction",
+      "tags": [
+        "ux",
+        "research.usability",
+        "test"
+      ],
+      "principles": [
+        "Evaluate realistic task success and friction"
+      ],
+      "antiPatterns": [
+        "Asking only whether users like a design"
+      ],
+      "acceptance": [
+        "Task, failure criteria and observations exist"
+      ],
+      "sources": [
+        {
+          "name": "RESEARCH",
+          "url": "https://www.nngroup.com/articles/which-ux-research-methods/",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "ux-research.sampling",
+      "title": "Sampling bias awareness",
+      "intent": "State who participated and who did not",
+      "tags": [
+        "ux",
+        "research.sampling"
+      ],
+      "principles": [
+        "State who participated and who did not"
+      ],
+      "antiPatterns": [
+        "Presenting tiny convenience samples as representative"
+      ],
+      "acceptance": [
+        "Confidence limitations included"
+      ],
+      "sources": [
+        {
+          "name": "RESEARCH",
+          "url": "https://www.nngroup.com/articles/which-ux-research-methods/",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "ux-research.accessibility-research",
+      "title": "Inclusive research",
+      "intent": "Include users with relevant accessibility needs and devices",
+      "tags": [
+        "ux",
+        "research.accessibility",
+        "research"
+      ],
+      "principles": [
+        "Include users with relevant accessibility needs and devices"
+      ],
+      "antiPatterns": [
+        "Testing only with developers on fast desktops"
+      ],
+      "acceptance": [
+        "Accessibility participant assumptions explicit"
+      ],
+      "sources": [
+        {
+          "name": "RESEARCH",
+          "url": "https://www.nngroup.com/articles/which-ux-research-methods/",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "ux-research.research-provenance",
+      "title": "Research provenance",
+      "intent": "Keep date, source, participant consent and evidence references",
+      "tags": [
+        "ux",
+        "research.research",
+        "provenance"
+      ],
+      "principles": [
+        "Keep date, source, participant consent and evidence references"
+      ],
+      "antiPatterns": [
+        "Storing unverifiable conclusions"
+      ],
+      "acceptance": [
+        "Every finding has a provenance record"
+      ],
+      "sources": [
+        {
+          "name": "RESEARCH",
+          "url": "https://www.nngroup.com/articles/which-ux-research-methods/",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    }
+  ]
+}

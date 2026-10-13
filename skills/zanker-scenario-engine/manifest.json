@@ -1,0 +1,46 @@
+{
+  "name": "zanker-scenario-engine",
+  "description": "Build deterministic mock states for loading, error, empty, overflow and user permissions.",
+  "triggers": [
+    "component states",
+    "fixture design",
+    "no backend"
+  ],
+  "knowledge": [
+    "components-states",
+    "forms-validation"
+  ],
+  "workflow": [
+    {
+      "step": 1,
+      "instruction": "List all distinct user-visible states and relevant transitions."
+    },
+    {
+      "step": 2,
+      "instruction": "Create JSON array of id/label/props fixtures using synthetic data."
+    },
+    {
+      "step": 3,
+      "instruction": "Supply wrapper/provider mocks for network, auth, locale and feature flags when needed."
+    },
+    {
+      "step": 4,
+      "instruction": "Run previews at mobile and desktop sizes and check recovery interactions."
+    }
+  ],
+  "outputs": [
+    "scenarios.json",
+    "State matrix"
+  ],
+  "acceptance": [
+    "No production PII",
+    "Relevant edge cases covered"
+  ],
+  "fallback": "Document unavailable states and recommend integrated tests.",
+  "tools": [
+    "optional local scripts (.sh/.ps1)",
+    "project file reader",
+    "browser if available"
+  ],
+  "version": "1.0.0"
+}

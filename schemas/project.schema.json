@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Zanker Project DNA manifest",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "project",
+    "frameworks",
+    "styling"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "string"
+    },
+    "project": {
+      "type": "string"
+    },
+    "packageName": {
+      "type": "string"
+    },
+    "frameworks": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dependencies": {
+      "type": "object"
+    },
+    "scripts": {
+      "type": "object"
+    },
+    "styling": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "globalStyles": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "designTokens": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

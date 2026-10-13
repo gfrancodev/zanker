@@ -1,0 +1,185 @@
+{
+  "schemaVersion": "1.0",
+  "id": "components-states",
+  "title": "UI component states and behaviors",
+  "category": "patterns",
+  "summary": "UI component states and behaviors operational rules curated for Zanker. Independent synthesis; consult primary sources for exact normative requirements.",
+  "updatedAt": "2026-10-12",
+  "sources": [
+    {
+      "name": "ARIA",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/",
+      "verifiedAt": null
+    }
+  ],
+  "rules": [
+    {
+      "id": "components-states.state-matrix",
+      "title": "State coverage",
+      "intent": "Model default, loading, empty, error, disabled and success states",
+      "tags": [
+        "components",
+        "states.state",
+        "matrix"
+      ],
+      "principles": [
+        "Model default, loading, empty, error, disabled and success states"
+      ],
+      "antiPatterns": [
+        "Only previewing ideal populated state"
+      ],
+      "acceptance": [
+        "Explicit fixtures for each relevant state"
+      ],
+      "sources": [
+        {
+          "name": "ARIA",
+          "url": "https://www.w3.org/WAI/ARIA/apg/patterns/",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "components-states.dialog-focus",
+      "title": "Modal focus management",
+      "intent": "Trap and restore focus appropriately in modal dialogs",
+      "tags": [
+        "components",
+        "states.dialog",
+        "focus"
+      ],
+      "principles": [
+        "Trap and restore focus appropriately in modal dialogs"
+      ],
+      "antiPatterns": [
+        "Modal keyboard focus escaping behind overlay"
+      ],
+      "acceptance": [
+        "Keyboard open, close and focus restoration tested"
+      ],
+      "sources": [
+        {
+          "name": "ARIA",
+          "url": "https://www.w3.org/WAI/ARIA/apg/patterns/",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "components-states.interactive-semantics",
+      "title": "Native semantics first",
+      "intent": "Prefer native semantic controls and preserve keyboard operability",
+      "tags": [
+        "components",
+        "states.interactive",
+        "semantics"
+      ],
+      "principles": [
+        "Prefer native semantic controls and preserve keyboard operability"
+      ],
+      "antiPatterns": [
+        "Clickable divs without keyboard support"
+      ],
+      "acceptance": [
+        "Tab and Enter/Space verified"
+      ],
+      "sources": [
+        {
+          "name": "ARIA",
+          "url": "https://www.w3.org/WAI/ARIA/apg/patterns/",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "components-states.feedback-timing",
+      "title": "System feedback",
+      "intent": "Communicate pending operations and completion",
+      "tags": [
+        "components",
+        "states.feedback",
+        "timing"
+      ],
+      "principles": [
+        "Communicate pending operations and completion"
+      ],
+      "antiPatterns": [
+        "Silent action leaving user uncertain"
+      ],
+      "acceptance": [
+        "Loading and completion feedback available"
+      ],
+      "sources": [
+        {
+          "name": "ARIA",
+          "url": "https://www.w3.org/WAI/ARIA/apg/patterns/",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "components-states.destructive-actions",
+      "title": "Destructive confirmation",
+      "intent": "Use appropriate confirmation and recovery for high-consequence actions",
+      "tags": [
+        "components",
+        "states.destructive",
+        "actions"
+      ],
+      "principles": [
+        "Use appropriate confirmation and recovery for high-consequence actions"
+      ],
+      "antiPatterns": [
+        "One tap deleting critical data without safeguards"
+      ],
+      "acceptance": [
+        "Recovery or explicit verification supported"
+      ],
+      "sources": [
+        {
+          "name": "ARIA",
+          "url": "https://www.w3.org/WAI/ARIA/apg/patterns/",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "components-states.component-consistency",
+      "title": "Reuse semantic components",
+      "intent": "Extend established components before duplicating them",
+      "tags": [
+        "components",
+        "states.component",
+        "consistency"
+      ],
+      "principles": [
+        "Extend established components before duplicating them"
+      ],
+      "antiPatterns": [
+        "New button implementation per screen"
+      ],
+      "acceptance": [
+        "Reuse decision documented"
+      ],
+      "sources": [
+        {
+          "name": "ARIA",
+          "url": "https://www.w3.org/WAI/ARIA/apg/patterns/",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    }
+  ]
+}

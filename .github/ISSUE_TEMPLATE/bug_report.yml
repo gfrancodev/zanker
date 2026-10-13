@@ -1,0 +1,83 @@
+name: Bug report
+description: Something in the plugin behaves differently from what it says it does.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A prompt change is hard to reproduce from a summary, so paste the actual exchange where you
+        can. If the problem is a security vulnerability, do not file it here: see SECURITY.md.
+
+  - type: dropdown
+    id: harness
+    attributes:
+      label: Harness
+      description: Where you were running Zanker.
+      options:
+        - Claude Code
+        - Cursor
+        - Kiro
+        - GitHub Copilot
+        - Codex
+        - OpenCode
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Zanker version
+      description: From .claude-plugin/plugin.json, or the commit you installed.
+      placeholder: 1.0.0
+    validations:
+      required: true
+
+  - type: textarea
+    id: asked
+    attributes:
+      label: What you asked for
+      description: The request as you typed it, and the skill or command involved if you know it.
+    validations:
+      required: true
+
+  - type: textarea
+    id: happened
+    attributes:
+      label: What happened
+      description: >
+        What the agent did or produced. Paste the exchange, the script output or the error.
+        A screenshot helps for anything visual.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected instead
+      description: If a rule in the plugin says it should behave differently, name the rule.
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Operating system, Node.js version, and whether Playwright and axe-core are installed.
+      placeholder: |
+        OS: Ubuntu 24.04
+        node --version: v22.11.0
+        Playwright: installed
+        axe-core: not installed
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before filing
+      options:
+        - label: I searched the existing issues
+          required: true
+        - label: This is not a security vulnerability
+          required: true

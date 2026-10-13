@@ -1,0 +1,288 @@
+{
+  "schemaVersion": "1.0",
+  "id": "motion-design",
+  "title": "Motion design and transitions",
+  "category": "media",
+  "summary": "Operational rules for purposeful motion, reduced motion, shared easing, compositor-friendly properties, focus during transitions, and autoplay loops. Each rule links the CSS or WCAG page for that subject.",
+  "updatedAt": "2026-10-12",
+  "sources": [
+    {
+      "name": "CSS Snapshot 2026",
+      "url": "https://www.w3.org/TR/css-2026/",
+      "verifiedAt": "2026-10-12"
+    },
+    {
+      "name": "Media Queries Level 5",
+      "url": "https://www.w3.org/TR/mediaqueries-5/#prefers-reduced-motion",
+      "verifiedAt": "2026-10-12"
+    }
+  ],
+  "rules": [
+    {
+      "id": "motion-design.motion-purpose",
+      "title": "Motion explains change",
+      "intent": "Animate to show a change of state, a spatial relationship, or feedback, and treat everything else as removable",
+      "tags": [
+        "motion",
+        "purpose",
+        "transitions"
+      ],
+      "principles": [
+        "Use a transition or animation when it shows where something went, what changed, or that an action registered",
+        "Motion that does not carry information is non-essential. WCAG 2.3.3 requires interaction-triggered motion animation to be disableable unless it is essential",
+        "Declarative transitions are easier to create, and easier for a user agent to slow or turn off. That is a reason to keep them few, not a reason to animate every update"
+      ],
+      "antiPatterns": [
+        "Animating every visible item on every rerender"
+      ],
+      "acceptance": [
+        "Each animation states what change it explains, or it is absent"
+      ],
+      "limitations": [
+        "CSS Snapshot 2026 lists Animations and Transitions as safe to release before Candidate Recommendation, and also groups them with modules of rough interoperability. Behavior in edge cases can still differ"
+      ],
+      "sources": [
+        {
+          "name": "CSS Animations",
+          "url": "https://www.w3.org/TR/css-animations-1/#intro",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        },
+        {
+          "name": "CSS Transitions, motion accessibility",
+          "url": "https://www.w3.org/TR/css-transitions-1/#accessibility-motion",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        },
+        {
+          "name": "WCAG 2.3.3 Animation from Interactions",
+          "url": "https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "motion-design.reduced-motion",
+      "title": "Respect reduced motion",
+      "intent": "When prefers-reduced-motion is reduce, non-essential motion does not run, and the task still works",
+      "tags": [
+        "motion",
+        "prefers-reduced-motion",
+        "wcag"
+      ],
+      "principles": [
+        "prefers-reduced-motion: reduce means the person asked the system to minimize non-essential motion",
+        "Ship the still presentation as the base, and add motion only inside prefers-reduced-motion: no-preference. Or turn the motion off inside reduce. Either way the reduced setting has a usable result",
+        "A change of color, blur, or opacity that does not change perceived size, shape, or position is not motion animation under WCAG 2.3.3"
+      ],
+      "antiPatterns": [
+        "Motion remains mandatory for sensitive users"
+      ],
+      "acceptance": [
+        "With the system set to reduce, interaction-triggered motion is off unless it is essential, and the action still completes"
+      ],
+      "limitations": [
+        "The media feature is in Media Queries Level 5. CSS Snapshot 2026 lists it as safe to release before Candidate Recommendation. C39 is a sufficient technique for 2.3.3, not the only one"
+      ],
+      "sources": [
+        {
+          "name": "Media Queries 5, prefers-reduced-motion",
+          "url": "https://www.w3.org/TR/mediaqueries-5/#prefers-reduced-motion",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        },
+        {
+          "name": "WCAG technique C39",
+          "url": "https://www.w3.org/WAI/WCAG22/Techniques/css/C39",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        },
+        {
+          "name": "WCAG 2.3.3 Animation from Interactions",
+          "url": "https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "motion-design.motion-tokens",
+      "title": "Reusable motion tokens",
+      "intent": "Share duration and easing with custom properties, using the easing functions CSS already defines",
+      "tags": [
+        "motion",
+        "easing",
+        "custom-properties"
+      ],
+      "principles": [
+        "Define repeated durations and easing curves once, as custom properties, and use those for the same kind of change",
+        "Use the easing functions in CSS Easing: linear, ease, ease-in, ease-out, ease-in-out, cubic-bezier, or steps",
+        "A one-off timing on a single view needs a reason"
+      ],
+      "antiPatterns": [
+        "Random timings across views"
+      ],
+      "acceptance": [
+        "Repeated transitions read their duration and easing from a shared custom property"
+      ],
+      "limitations": [
+        "CSS defines the functions and the custom-property mechanism. It does not require a named token scale. The scale is a project decision"
+      ],
+      "sources": [
+        {
+          "name": "CSS Easing Functions",
+          "url": "https://www.w3.org/TR/css-easing-1/#easing-functions",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        },
+        {
+          "name": "CSS Custom Properties",
+          "url": "https://www.w3.org/TR/css-variables-1/",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        },
+        {
+          "name": "CSS Snapshot 2026, official definition",
+          "url": "https://www.w3.org/TR/css-2026/#css-official",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "motion-design.animate-transform",
+      "title": "Performant properties",
+      "intent": "Keep routine motion on transform and opacity so it does not force layout or paint every frame",
+      "tags": [
+        "motion",
+        "transform",
+        "opacity",
+        "will-change"
+      ],
+      "principles": [
+        "Move and scale with transform. Show and hide with opacity. Those stay on the compositor for routine transitions",
+        "Before animating any other property, check whether it triggers layout or paint. Avoid that unless the effect needs it",
+        "will-change is a hint for an element that is about to change, applied for that change and removed after. It is not a default on every node"
+      ],
+      "antiPatterns": [
+        "Animating large layout properties each frame"
+      ],
+      "acceptance": [
+        "Routine transitions use transform or opacity, and a layout-property animation has a stated reason"
+      ],
+      "limitations": [
+        "Transforms Level 1 is in the official CSS definition. will-change is grouped with rough interoperability. The compositor guidance is from web.dev, which is an authoring article, not the spec"
+      ],
+      "sources": [
+        {
+          "name": "web.dev high-performance CSS animations",
+          "url": "https://web.dev/articles/animations-guide",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        },
+        {
+          "name": "CSS Transforms",
+          "url": "https://www.w3.org/TR/css-transforms-1/#intro",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        },
+        {
+          "name": "CSS Will Change",
+          "url": "https://www.w3.org/TR/css-will-change-1/#intro",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "motion-design.interaction-states",
+      "title": "Animate entry and exit coherently",
+      "intent": "Let entry and exit finish without taking keyboard focus or blocking the rest of the page",
+      "tags": [
+        "motion",
+        "focus",
+        "exit"
+      ],
+      "principles": [
+        "Entry and exit of the same component use the same easing family, so the motion reads as one system",
+        "An animation that starts from a user action can be turned off under prefers-reduced-motion unless it is essential",
+        "A moving layer must not hold focus in a way that makes the rest of the page unusable. Focus lands on the control that should have it when the transition ends"
+      ],
+      "antiPatterns": [
+        "Exit animations trap interaction"
+      ],
+      "acceptance": [
+        "Keyboard focus is correct when the transition ends, including when reduced motion is on"
+      ],
+      "limitations": [
+        "WCAG 2.2.2 says a pause control must not tie up focus. It does not require the exit to be shorter than the enter. A shorter exit is a project choice, not a spec rule"
+      ],
+      "sources": [
+        {
+          "name": "WCAG 2.3.3 Animation from Interactions",
+          "url": "https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        },
+        {
+          "name": "WCAG 2.2.2 Pause, Stop, Hide",
+          "url": "https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        },
+        {
+          "name": "CSS Easing Functions",
+          "url": "https://www.w3.org/TR/css-easing-1/#easing-functions",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "motion-design.no-busy-loop",
+      "title": "Avoid distracting loops",
+      "intent": "Give a way to pause, stop, or hide motion that starts by itself, lasts more than five seconds, and sits beside other content",
+      "tags": [
+        "motion",
+        "autoplay",
+        "pause"
+      ],
+      "principles": [
+        "Moving, blinking, or scrolling content that starts automatically, lasts more than five seconds, and is shown with other content needs a mechanism to pause, stop, or hide it",
+        "The mechanism must not trap the user. Stopping only while the animation has focus, then restarting when focus leaves, does not qualify",
+        "Hover, focus, or scrolling into view can count as an automatic start. Essential motion, where the motion is the activity, is the exception",
+        "In a task UI, do not run an ambient loop next to the primary action"
+      ],
+      "antiPatterns": [
+        "Pulsing graphics competing with primary form"
+      ],
+      "acceptance": [
+        "Any automatic loop longer than five seconds can be paused, stopped, or hidden without losing the task"
+      ],
+      "limitations": [
+        "The five-second threshold and the essential-activity exception are WCAG 2.2.2. A shorter decorative loop can still fail 2.3.3 when a user interaction starts it"
+      ],
+      "sources": [
+        {
+          "name": "WCAG 2.2.2 Pause, Stop, Hide",
+          "url": "https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        },
+        {
+          "name": "WCAG 2.3.3 Animation from Interactions",
+          "url": "https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    }
+  ]
+}

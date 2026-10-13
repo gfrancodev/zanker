@@ -1,0 +1,46 @@
+{
+  "name": "zanker-performance-audit",
+  "description": "Check UI media cost, font behavior, interactions and layout instability.",
+  "triggers": [
+    "slow landing page",
+    "heavy animation",
+    "images"
+  ],
+  "knowledge": [
+    "performance",
+    "media-production"
+  ],
+  "workflow": [
+    {
+      "step": 1,
+      "instruction": "Inventory fonts, videos and images that contribute to first paint."
+    },
+    {
+      "step": 2,
+      "instruction": "Review intrinsic image sizing, lazy loading and layout shift risk."
+    },
+    {
+      "step": 3,
+      "instruction": "Measure real Web Vitals with suitable field tooling where available; avoid inferring LCP/INP from screenshots."
+    },
+    {
+      "step": 4,
+      "instruction": "Provide prioritized fixes with estimated UX impact."
+    }
+  ],
+  "outputs": [
+    "Performance notes",
+    "Optimization plan"
+  ],
+  "acceptance": [
+    "No invented field metrics",
+    "High-impact media risks flagged"
+  ],
+  "fallback": "Use source-level resource review and document no field data.",
+  "tools": [
+    "optional local scripts (.sh/.ps1)",
+    "project file reader",
+    "browser if available"
+  ],
+  "version": "1.0.0"
+}
