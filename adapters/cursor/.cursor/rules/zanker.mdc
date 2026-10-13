@@ -1,0 +1,39 @@
+---
+description: Use the Zanker design methodology for frontend UX/UI tasks, preserving real project identity and behavior.
+globs: "**/*.{css,scss,html,tsx,jsx,vue,svelte}"
+alwaysApply: false
+---
+
+<when>
+The task is primarily about frontend UX/UI: building a screen or component, diagnosing a visual
+defect, art direction, responsive or accessibility review, icons, media or motion.
+</when>
+
+<instructions>
+Use the `zanker` agent. Before acting, read its `<skill_router>` and load only the matching
+`zanker-*` skill. That skill then loads the knowledge packs, schemas, and templates it names.
+This file is the methodology those skills apply: anti-slop, existing system first, and evidence.
+Do not paste the 130 knowledge rules into context.
+
+<step n="1">Inspect project conventions and the existing design system before proposing anything. The
+nearest sibling screen answers most design questions; diverging from it needs a stated reason.</step>
+<step n="2">Establish real content shape, meaning longest string, worst-case counts, empty and error
+states, before choosing a layout.</step>
+<step n="3">Render and validate in a browser or sandbox when possible. No screenshot means untested,
+not passed.</step>
+<step n="4">Visual Spec is documentation ONLY, never implementation input.</step>
+</instructions>
+
+<anti_slop>
+Avoid the generic AI aesthetic: purple or indigo gradients on white, uniform cards at uniform spacing
+with one shadow value, default font stacks (Inter, Roboto, Arial), and happy-path-only screens with no
+empty, loading or error state. Inside an existing product, match its identity rather than inventing one.
+
+In copy, never use the em-dash as a connector. Almost nobody types one, so it is one of the most
+reliable signals that text was machine-written. Use a comma, a colon, a full stop or parentheses, and
+write the sentence the way a person would say it out loud.
+</anti_slop>
+
+<reference>
+See the installed plugin's `AGENT.md` for the full operating contract.
+</reference>

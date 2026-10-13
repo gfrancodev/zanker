@@ -1,0 +1,45 @@
+{
+  "name": "zanker-design-system-evolution",
+  "description": "Safely extend shared components and token sets based on repeated needs.",
+  "triggers": [
+    "new shared component",
+    "design system refactor"
+  ],
+  "knowledge": [
+    "design-tokens",
+    "components-states"
+  ],
+  "workflow": [
+    {
+      "step": 1,
+      "instruction": "Identify repeat usage and semantic reason for extracting abstraction."
+    },
+    {
+      "step": 2,
+      "instruction": "Check existing API consumers and token hierarchy."
+    },
+    {
+      "step": 3,
+      "instruction": "Add variants without breaking default behavior; provide migration guidance."
+    },
+    {
+      "step": 4,
+      "instruction": "Render all shared states and guard with regression tests."
+    }
+  ],
+  "outputs": [
+    "Component/API proposal",
+    "Migration note"
+  ],
+  "acceptance": [
+    "Avoid duplicate primitives",
+    "Consumers assessed"
+  ],
+  "fallback": "Prefer local composition until reuse is proven.",
+  "tools": [
+    "optional local scripts (.sh/.ps1)",
+    "project file reader",
+    "browser if available"
+  ],
+  "version": "1.0.0"
+}

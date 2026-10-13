@@ -1,0 +1,281 @@
+{
+  "schemaVersion": "1.0",
+  "id": "web-design",
+  "title": "Web platform patterns",
+  "category": "platforms",
+  "summary": "Operational web rules for semantic HTML, familiar UI patterns, pointer and viewport diversity, native browser behavior, and content-shaped layout. Each rule links the page for that subject.",
+  "updatedAt": "2026-10-12",
+  "sources": [
+    {
+      "name": "web.dev Learn HTML",
+      "url": "https://web.dev/learn/html/semantic-html",
+      "verifiedAt": "2026-10-12"
+    },
+    {
+      "name": "web.dev Learn Responsive Design",
+      "url": "https://web.dev/learn/design",
+      "verifiedAt": "2026-10-12"
+    },
+    {
+      "name": "WAI-ARIA Authoring Practices",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/",
+      "verifiedAt": "2026-10-12"
+    }
+  ],
+  "rules": [
+    {
+      "id": "web-design.semantic-html",
+      "title": "Semantic HTML",
+      "intent": "Choose elements for their meaning and built-in behavior, then add ARIA only when no native element expresses the widget",
+      "tags": [
+        "web",
+        "semantic-html",
+        "landmarks",
+        "keyboard"
+      ],
+      "principles": [
+        "Pick the element that matches the content's function: headings, lists, tables, buttons, and links, not a styled div",
+        "Expose page regions with header, nav, main, and footer so assistive tech can jump between landmarks",
+        "Keep heading levels in document order. A section needs a heading unless a more specific element already names it",
+        "Prefer a native control. Reach for ARIA when the widget has no HTML equivalent, such as a tab set"
+      ],
+      "antiPatterns": [
+        "Clickable nested div hierarchy",
+        "A landmark on every small group, which turns the accessibility tree into noise"
+      ],
+      "acceptance": [
+        "Landmarks and headings are present and named",
+        "Interactive controls are native elements, or a documented ARIA pattern with keyboard behavior"
+      ],
+      "limitations": [
+        "These pages describe HTML semantics and accessible structure. They do not specify visual style"
+      ],
+      "sources": [
+        {
+          "name": "web.dev Semantic HTML",
+          "url": "https://web.dev/learn/html/semantic-html",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        },
+        {
+          "name": "web.dev Headings and sections",
+          "url": "https://web.dev/learn/html/headings-and-sections",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        },
+        {
+          "name": "web.dev Learn Design: Accessibility",
+          "url": "https://web.dev/learn/design/accessibility",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "web-design.web-conventions",
+      "title": "Web conventions",
+      "intent": "Reuse patterns people already know how to operate, and change presentation across sizes without changing the meaning",
+      "tags": [
+        "web",
+        "conventions",
+        "patterns"
+      ],
+      "principles": [
+        "Keep global navigation the same on every page, and mark the current page",
+        "Adapt a known pattern to the viewport: a nav list, a table, or a set of cards can reflow, but the same items stay reachable",
+        "When a custom widget is required, follow a published ARIA pattern instead of inventing the keyboard model"
+      ],
+      "antiPatterns": [
+        "Inventing navigation metaphors without evidence",
+        "A small-screen layout that hides links with no visible way to reach them"
+      ],
+      "acceptance": [
+        "A person can predict where a control goes and what it does",
+        "Any custom widget names the APG pattern it follows"
+      ],
+      "limitations": [
+        "The UI patterns lesson covers responsive presentation of common components. It does not authorize replacing a product's own navigation system",
+        "A tested alternative can still replace a convention. These pages do not define the test"
+      ],
+      "sources": [
+        {
+          "name": "web.dev Navigation",
+          "url": "https://web.dev/learn/html/navigation",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        },
+        {
+          "name": "web.dev User interface patterns",
+          "url": "https://web.dev/learn/design/ui-patterns",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        },
+        {
+          "name": "WAI-ARIA APG patterns",
+          "url": "https://www.w3.org/WAI/ARIA/apg/patterns/",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "web-design.responsive-web",
+      "title": "Viewport and input diversity",
+      "intent": "Respond to viewport and input capabilities directly, instead of guessing touch from a narrow screen",
+      "tags": [
+        "web",
+        "responsive",
+        "pointer",
+        "keyboard"
+      ],
+      "principles": [
+        "Choose breakpoints from the content, using min-width and min-height, not from a phone model list",
+        "Query pointer, any-pointer, and hover. A coarse pointer needs a larger target. Do not shrink targets just because a fine pointer exists",
+        "Do not hide an essential action behind hover. Pair hover styles with focus",
+        "Set the viewport meta to width=device-width and initial-scale=1 before relying on fluid layout"
+      ],
+      "antiPatterns": [
+        "Desktop-only mockups",
+        "Treating a narrow viewport as proof that the only input is a finger"
+      ],
+      "acceptance": [
+        "The layout is checked at narrow and wide widths, including a short wide window",
+        "Keyboard focus and a coarse pointer can both reach the primary actions"
+      ],
+      "limitations": [
+        "Media features report input capability. They do not replace a manual keyboard pass"
+      ],
+      "sources": [
+        {
+          "name": "web.dev Introduction to responsive design",
+          "url": "https://web.dev/learn/design/intro",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        },
+        {
+          "name": "web.dev Media queries",
+          "url": "https://web.dev/learn/design/media-queries",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        },
+        {
+          "name": "web.dev Interaction",
+          "url": "https://web.dev/learn/design/interaction",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "web-design.browser-behavior",
+      "title": "Native browser behavior",
+      "intent": "Leave back, text selection, autofill, and the person's choice of tab alone unless a specific control needs otherwise",
+      "tags": [
+        "web",
+        "browser",
+        "history",
+        "autofill"
+      ],
+      "principles": [
+        "Keep pages eligible for the back/forward cache: avoid unload listeners and close connections on pagehide so Back restores the previous view",
+        "Let readable text use the user agent's selection behavior. Reserve user-select: none for a control where selection would fight the interaction",
+        "Hint fields with autocomplete, name, and type so the browser can offer saved data. Turn autofill off only for a one-off value such as a one-time code",
+        "Leave ordinary links in the current tab. People can already open a new tab. Use target=_blank only when leaving the page would discard their work, and do not spawn a new tab on every click"
+      ],
+      "antiPatterns": [
+        "Overriding navigation without need",
+        "autocomplete=off on a name, address, or password field",
+        "user-select: none on body copy"
+      ],
+      "acceptance": [
+        "Back returns to the previous view without a broken reload",
+        "Body text can be selected",
+        "Contact and address fields expose autocomplete tokens",
+        "In-app links do not force a new tab"
+      ],
+      "limitations": [
+        "MDN documents user-select. It does not forbid none. The restriction on body copy is operational guidance derived from the default",
+        "The links lesson explains target=_blank. It does not ban it"
+      ],
+      "sources": [
+        {
+          "name": "web.dev Back/forward cache",
+          "url": "https://web.dev/articles/bfcache",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        },
+        {
+          "name": "MDN user-select",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/user-select",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        },
+        {
+          "name": "web.dev Autofill",
+          "url": "https://web.dev/learn/forms/autofill",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        },
+        {
+          "name": "web.dev Links, browsing context",
+          "url": "https://web.dev/learn/html/links#browsing_context",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "web-design.content-first",
+      "title": "Content-first layout",
+      "intent": "Settle the content order, the real string lengths, and the empty condition before choosing a layout",
+      "tags": [
+        "web",
+        "content",
+        "empty-state",
+        "layout"
+      ],
+      "principles": [
+        "Make the single-column content order sensible first. That order is what a narrow viewport gets",
+        "Check line length and type size against real copy, not a short placeholder",
+        "An empty panel states what is missing, whether the system is still working, and the next action. Do not show a false 'no records' message while data is still loading"
+      ],
+      "antiPatterns": [
+        "Design only with lorem ipsum",
+        "A blank container after a filter or a first visit, with no status and no way forward"
+      ],
+      "acceptance": [
+        "Fixtures use the longest realistic string and a true empty result",
+        "The narrow layout follows the document order",
+        "Empty, loading, and no-results are visibly different"
+      ],
+      "limitations": [
+        "Macro layouts and typography cover content order and reading comfort. Empty-state behavior comes from the NN/g article, which is research guidance, not a web platform specification"
+      ],
+      "sources": [
+        {
+          "name": "web.dev Macro layouts",
+          "url": "https://web.dev/learn/design/macro-layouts",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        },
+        {
+          "name": "web.dev Typography",
+          "url": "https://web.dev/learn/design/typography",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        },
+        {
+          "name": "NN/g Empty states",
+          "url": "https://www.nngroup.com/articles/empty-state-interface-design/",
+          "kind": "primary-research",
+          "verifiedAt": "2026-10-12"
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    }
+  ]
+}

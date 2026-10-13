@@ -1,0 +1,184 @@
+{
+  "schemaVersion": "1.0",
+  "id": "quality-gates",
+  "title": "Visual validation and quality",
+  "category": "evaluation",
+  "summary": "Visual validation and quality operational rules curated for Zanker. Independent synthesis; consult primary sources for exact normative requirements.",
+  "updatedAt": "2026-10-12",
+  "sources": [
+    {
+      "name": "PW",
+      "url": "https://playwright.dev/docs/test-snapshots",
+      "verifiedAt": null
+    }
+  ],
+  "rules": [
+    {
+      "id": "quality-gates.visual-baseline",
+      "title": "Stable visual baseline",
+      "intent": "Compare same browser, fonts, viewport and platform",
+      "tags": [
+        "quality",
+        "gates.visual",
+        "baseline"
+      ],
+      "principles": [
+        "Compare same browser, fonts, viewport and platform"
+      ],
+      "antiPatterns": [
+        "Diffs generated in inconsistent environments"
+      ],
+      "acceptance": [
+        "Screenshot environment pinned"
+      ],
+      "sources": [
+        {
+          "name": "PW",
+          "url": "https://playwright.dev/docs/test-snapshots",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "quality-gates.a11y-automation",
+      "title": "Automation plus manual accessibility",
+      "intent": "Use axe and keyboard checks but do not claim full WCAG conformance",
+      "tags": [
+        "quality",
+        "gates.a11y",
+        "automation"
+      ],
+      "principles": [
+        "Use axe and keyboard checks but do not claim full WCAG conformance"
+      ],
+      "antiPatterns": [
+        "All green automated checks interpreted as full compliance"
+      ],
+      "acceptance": [
+        "Manual gaps listed"
+      ],
+      "sources": [
+        {
+          "name": "PW",
+          "url": "https://playwright.dev/docs/test-snapshots",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "quality-gates.scenario-test",
+      "title": "Scenario state coverage",
+      "intent": "Verify loading, error, empty, long content and dark themes",
+      "tags": [
+        "quality",
+        "gates.scenario",
+        "test"
+      ],
+      "principles": [
+        "Verify loading, error, empty, long content and dark themes"
+      ],
+      "antiPatterns": [
+        "Only happy-path test"
+      ],
+      "acceptance": [
+        "State matrix maintained"
+      ],
+      "sources": [
+        {
+          "name": "PW",
+          "url": "https://playwright.dev/docs/test-snapshots",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "quality-gates.evidence-trail",
+      "title": "Evidence trail",
+      "intent": "Attach screenshots, logs, test outcomes and source diff",
+      "tags": [
+        "quality",
+        "gates.evidence",
+        "trail"
+      ],
+      "principles": [
+        "Attach screenshots, logs, test outcomes and source diff"
+      ],
+      "antiPatterns": [
+        "Agent self-assertion of quality"
+      ],
+      "acceptance": [
+        "Report includes artifacts"
+      ],
+      "sources": [
+        {
+          "name": "PW",
+          "url": "https://playwright.dev/docs/test-snapshots",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "quality-gates.visual-critic",
+      "title": "Independent design critique",
+      "intent": "Judge legibility, hierarchy and coherence from screenshots",
+      "tags": [
+        "quality",
+        "gates.visual",
+        "critic"
+      ],
+      "principles": [
+        "Judge legibility, hierarchy and coherence from screenshots"
+      ],
+      "antiPatterns": [
+        "Trusting source code comments as visual proof"
+      ],
+      "acceptance": [
+        "Critique is grounded to rendering"
+      ],
+      "sources": [
+        {
+          "name": "PW",
+          "url": "https://playwright.dev/docs/test-snapshots",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "quality-gates.approval",
+      "title": "Human approval on meaningful changes",
+      "intent": "Request confirmation before substantial aesthetic changes or baseline updates",
+      "tags": [
+        "quality",
+        "gates.approval"
+      ],
+      "principles": [
+        "Request confirmation before substantial aesthetic changes or baseline updates"
+      ],
+      "antiPatterns": [
+        "Automatically accepting regression updates"
+      ],
+      "acceptance": [
+        "Decision recorded"
+      ],
+      "sources": [
+        {
+          "name": "PW",
+          "url": "https://playwright.dev/docs/test-snapshots",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    }
+  ]
+}

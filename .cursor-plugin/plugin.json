@@ -1,0 +1,24 @@
+{
+  "name": "zanker",
+  "version": "1.0.0",
+  "description": "Product-aware UX/UI design, frontend forensics, media, motion, isolated previews, and visual quality; Visual Spec documentation only.",
+  "author": {
+    "name": "Gustavo Franco",
+    "url": "https://github.com/gfrancodev"
+  },
+  "license": "MIT",
+  "category": "Developer Tools",
+  "keywords": [
+    "ux",
+    "ui",
+    "design",
+    "frontend",
+    "visual",
+    "accessibility"
+  ],
+  "skills": "skills",
+  "agents": "agents",
+  "commands": "commands",
+  "rules": "rules",
+  "icon": "./assets/logo-rounded.png"
+}

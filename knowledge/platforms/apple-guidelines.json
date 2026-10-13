@@ -1,0 +1,206 @@
+{
+  "schemaVersion": "1.0",
+  "id": "apple-guidelines",
+  "title": "Apple human interface guidance",
+  "category": "platforms",
+  "summary": "Operational Apple HIG rules for platform familiarity, clarity, feedback, and system accessibility settings. Each rule links the HIG page for that subject.",
+  "updatedAt": "2026-10-12",
+  "sources": [
+    {
+      "name": "Apple Human Interface Guidelines",
+      "url": "https://developer.apple.com/design/human-interface-guidelines/",
+      "verifiedAt": "2026-10-12"
+    }
+  ],
+  "rules": [
+    {
+      "id": "apple-guidelines.platform-feel",
+      "title": "Respect platform interaction conventions",
+      "intent": "Feel at home on the Apple platform in use by reusing patterns people already know and giving that platform its own care",
+      "tags": [
+        "apple",
+        "platform",
+        "inputs",
+        "familiarity"
+      ],
+      "principles": [
+        "Build on concepts people already know from the platform and the physical world, and keep a behavior consistent once it is established",
+        "Design each platform on purpose. An iPhone layout is not a shrunk macOS window",
+        "Support the input methods that platform actually offers, including touch, keyboard, and pointer, instead of one desktop control dropped onto a touch screen"
+      ],
+      "antiPatterns": [
+        "Porting desktop-only controls directly to touch",
+        "A custom gesture that contradicts the platform gesture for the same action"
+      ],
+      "acceptance": [
+        "Navigation, gestures, and controls match the HIG page for the target platform",
+        "A second input method still reaches the primary action"
+      ],
+      "limitations": [
+        "Design principles state the familiarity and platform rules. Control specs live on the linked platform and inputs pages, which this pack does not restate"
+      ],
+      "sources": [
+        {
+          "name": "HIG Design principles, Familiarity",
+          "url": "https://developer.apple.com/design/human-interface-guidelines/design-principles#Familiarity",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        },
+        {
+          "name": "HIG Designing for iOS",
+          "url": "https://developer.apple.com/design/human-interface-guidelines/designing-for-ios",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        },
+        {
+          "name": "HIG Inputs",
+          "url": "https://developer.apple.com/design/human-interface-guidelines/inputs",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "apple-guidelines.clarity",
+      "title": "Clarity and focus",
+      "intent": "Keep the interface direct: only what the task needs, in an order people can scan",
+      "tags": [
+        "apple",
+        "clarity",
+        "typography",
+        "layout"
+      ],
+      "principles": [
+        "Include what the task needs and let the rest recede. Simplicity here means focus, not an empty screen",
+        "Make hierarchy obvious with recognizable controls and a stable structure, so people know where they are and what is next",
+        "Keep text concise, and set type and layout so the primary content stays legible"
+      ],
+      "antiPatterns": [
+        "Overdecorated functional content",
+        "Delight or decoration that blocks the task"
+      ],
+      "acceptance": [
+        "The first action is identifiable without color",
+        "Labels say the action, not a slogan"
+      ],
+      "limitations": [
+        "Typography and layout pages hold the metric guidance. This rule does not copy type sizes or grid numbers"
+      ],
+      "sources": [
+        {
+          "name": "HIG Design principles, Simplicity",
+          "url": "https://developer.apple.com/design/human-interface-guidelines/design-principles#Simplicity",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        },
+        {
+          "name": "HIG Typography",
+          "url": "https://developer.apple.com/design/human-interface-guidelines/typography",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        },
+        {
+          "name": "HIG Layout",
+          "url": "https://developer.apple.com/design/human-interface-guidelines/layout",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "apple-guidelines.touch-feedback",
+      "title": "Feedback on interaction",
+      "intent": "Tell people what happened, what is happening, and what they can do next, at a volume that matches the event",
+      "tags": [
+        "apple",
+        "feedback",
+        "haptics",
+        "status"
+      ],
+      "principles": [
+        "Match the interruption to the stakes: passive status near the item, an alert only for critical and actionable news",
+        "Deliver feedback in more than one channel, such as text plus haptics or sound, so it survives a silenced device or VoiceOver",
+        "Confirm a significant completed action, and explain why a command cannot run",
+        "On watchOS, do not hold attention with an indeterminate spinner. Tell people they will be notified when the work finishes"
+      ],
+      "antiPatterns": [
+        "No feedback during an asynchronous operation",
+        "An alert for a routine success",
+        "Color as the only signal that something changed"
+      ],
+      "acceptance": [
+        "Tap, gesture, success, failure, and in-progress states are each visible",
+        "A destructive surprise warns before data loss. An expected delete does not"
+      ],
+      "limitations": [
+        "Haptic patterns are specified on Playing haptics. This rule only requires a non-visual channel, not a particular haptic"
+      ],
+      "sources": [
+        {
+          "name": "HIG Feedback",
+          "url": "https://developer.apple.com/design/human-interface-guidelines/feedback",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        },
+        {
+          "name": "HIG Playing haptics",
+          "url": "https://developer.apple.com/design/human-interface-guidelines/playing-haptics",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "apple-guidelines.system-preferences",
+      "title": "System accessibility settings",
+      "intent": "Honor the person's text size, contrast, and motion settings instead of shipping one fixed presentation",
+      "tags": [
+        "apple",
+        "accessibility",
+        "dynamic-type",
+        "reduce-motion"
+      ],
+      "principles": [
+        "Support larger text, ideally to at least 200 percent (140 percent on watchOS), through Dynamic Type or an equivalent control",
+        "When Reduce Motion is on, reduce automatic, repetitive, zooming, scaling, and peripheral motion",
+        "Do not use motion as the only way to communicate. Pair it with haptics, audio, or text",
+        "Keep custom type at or above the platform's recommended sizes, and larger still if the weight is thin"
+      ],
+      "antiPatterns": [
+        "Ignoring system display settings",
+        "A fixed type size that clips or overlaps at the largest Dynamic Type size"
+      ],
+      "acceptance": [
+        "The screen is checked at the largest text size the platform asks for",
+        "With Reduce Motion on, essential information remains without the decorative animation"
+      ],
+      "limitations": [
+        "The accessibility page states the text-size and Reduce Motion expectations. Exact type ramps stay on the typography page"
+      ],
+      "sources": [
+        {
+          "name": "HIG Accessibility",
+          "url": "https://developer.apple.com/design/human-interface-guidelines/accessibility",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        },
+        {
+          "name": "HIG Motion",
+          "url": "https://developer.apple.com/design/human-interface-guidelines/motion",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        },
+        {
+          "name": "HIG Typography",
+          "url": "https://developer.apple.com/design/human-interface-guidelines/typography",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    }
+  ]
+}

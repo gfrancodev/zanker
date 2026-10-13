@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Zanker Product DNA",
+  "type": "object",
+  "properties": {
+    "product": {
+      "type": "object"
+    },
+    "audiences": {
+      "type": "array"
+    },
+    "primaryJob": {
+      "type": "string"
+    },
+    "evidence": {
+      "type": "array"
+    },
+    "assumptions": {
+      "type": "array"
+    },
+    "outcomes": {
+      "type": "object"
+    },
+    "risks": {
+      "type": "array"
+    }
+  }
+}

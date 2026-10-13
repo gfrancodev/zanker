@@ -1,0 +1,256 @@
+{
+  "schemaVersion": "1.0",
+  "id": "iconography",
+  "title": "Icon systems and curation",
+  "category": "media",
+  "summary": "Operational rules for icon meaning, one visual family, reusing the project set, accessible names, decorative hiding, and license metadata. Each rule links the page for that subject.",
+  "updatedAt": "2026-10-12",
+  "sources": [
+    {
+      "name": "Iconify icon sets",
+      "url": "https://iconify.design/docs/icons/icon-set-basics.html",
+      "verifiedAt": "2026-10-12"
+    },
+    {
+      "name": "WAI images tutorial",
+      "url": "https://www.w3.org/WAI/tutorials/images/",
+      "verifiedAt": "2026-10-12"
+    }
+  ],
+  "rules": [
+    {
+      "id": "iconography.icon-semantics",
+      "title": "Semantic selection",
+      "intent": "Choose an icon for the action it starts, and name that action rather than the picture",
+      "tags": [
+        "iconography",
+        "semantics",
+        "purpose"
+      ],
+      "principles": [
+        "A functional icon starts an action. Its text alternative states the action, such as Print this page, not a description of the glyph",
+        "Name the control for its purpose. A control that closes a dialog is Close, not X",
+        "Prefer a symbol people already attach to that task. Novelty is not a reason to pick a glyph"
+      ],
+      "antiPatterns": [
+        "Same generic sparkles icon for unrelated AI actions"
+      ],
+      "acceptance": [
+        "The accessible name states the action, and a sighted reviewer can connect the glyph to that action"
+      ],
+      "limitations": [
+        "WAI and the APG define the name and the function. They do not publish a mandatory icon-to-action dictionary"
+      ],
+      "sources": [
+        {
+          "name": "WAI functional images",
+          "url": "https://www.w3.org/WAI/tutorials/images/functional/",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        },
+        {
+          "name": "APG names and descriptions",
+          "url": "https://www.w3.org/WAI/ARIA/apg/practices/names-and-descriptions/",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "iconography.family-consistency",
+      "title": "Single visual grammar",
+      "intent": "Stay inside one icon set, which shares a license, a grid, padding, and either monotone or a fixed palette",
+      "tags": [
+        "iconography",
+        "family",
+        "grid"
+      ],
+      "principles": [
+        "An icon set is one design: the same grid and padding, and either monotone or a hardcoded palette, not both",
+        "Icons in a toolbar come from that one set so stroke, fill, and corner logic match",
+        "Map the chosen set onto the project's icon tokens"
+      ],
+      "antiPatterns": [
+        "Mixing outline and filled sets in same toolbar"
+      ],
+      "acceptance": [
+        "The toolbar uses one set, and that set's grid and palette type are named"
+      ],
+      "limitations": [
+        "Iconify describes how a set is structured. It does not choose the set for a product that already has one"
+      ],
+      "sources": [
+        {
+          "name": "Iconify icon set basics",
+          "url": "https://iconify.design/docs/icons/icon-set-basics.html",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "iconography.reuse-first",
+      "title": "Project icon library first",
+      "intent": "Use the approved set before adding another, because a second set brings a second grid and a second license",
+      "tags": [
+        "iconography",
+        "reuse",
+        "dependency"
+      ],
+      "principles": [
+        "Search the project's existing set before opening another collection",
+        "Add a new set only when the approved set has no glyph for the action, and record why",
+        "Do not take a dependency for one icon that repeats a glyph the project already has"
+      ],
+      "antiPatterns": [
+        "New dependency for one redundant glyph"
+      ],
+      "acceptance": [
+        "The project library was checked, and any added set is named with its grid and license"
+      ],
+      "limitations": [
+        "Iconify defines what a set contains. The requirement to prefer the project's own set is operational guidance for a product that already chose one"
+      ],
+      "sources": [
+        {
+          "name": "Iconify icon set basics",
+          "url": "https://iconify.design/docs/icons/icon-set-basics.html",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "iconography.accessible-icon",
+      "title": "Icon button accessible name",
+      "intent": "Give an icon-only button a non-empty accessible name that states the action",
+      "tags": [
+        "iconography",
+        "accessible-name",
+        "button"
+      ],
+      "principles": [
+        "A button needs a non-empty accessible name. Text inside the button is the default name",
+        "When the button shows only an icon, provide the name with aria-label or aria-labelledby. aria-label hides descendant content from assistive tech, so the name must be the full action",
+        "The name matches the visible result: Close, Search, or Print this page"
+      ],
+      "antiPatterns": [
+        "Unlabeled icon-only button"
+      ],
+      "acceptance": [
+        "The button's accessible name is non-empty and states the action"
+      ],
+      "limitations": [
+        "ACT rule 97a4e1 checks that a button's name is non-empty. It does not judge whether the wording is the right action. That check is the functional-images tutorial"
+      ],
+      "sources": [
+        {
+          "name": "APG button pattern",
+          "url": "https://www.w3.org/WAI/ARIA/apg/patterns/button/",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        },
+        {
+          "name": "ACT rule, button name",
+          "url": "https://www.w3.org/WAI/standards-guidelines/act/rules/97a4e1/",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        },
+        {
+          "name": "WAI functional images",
+          "url": "https://www.w3.org/WAI/tutorials/images/functional/",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "iconography.decorative-icon",
+      "title": "Decorative icon hidden",
+      "intent": "Hide an icon that adds no information, so assistive tech does not announce the glyph or the file name",
+      "tags": [
+        "iconography",
+        "decorative",
+        "aria-hidden"
+      ],
+      "principles": [
+        "If the icon adds nothing beyond adjacent text, give an img an empty alt with no space between the quotes. Omitting alt makes some readers announce the file name",
+        "A decorative icon inside a control that already has a name is hidden with aria-hidden, so the glyph is not part of the name",
+        "Do not hide an icon that is the only source of the action's name"
+      ],
+      "antiPatterns": [
+        "Decorative emoji read aloud as action"
+      ],
+      "acceptance": [
+        "Screen reader output skips the decorative glyph and still announces the control's action"
+      ],
+      "limitations": [
+        "Whether an icon is decorative is an author judgment, as the WAI tutorial states. An empty alt is for an img. An inline SVG or icon font uses the hiding method that matches how it is embedded"
+      ],
+      "sources": [
+        {
+          "name": "WAI decorative images",
+          "url": "https://www.w3.org/WAI/tutorials/images/decorative/",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        },
+        {
+          "name": "WAI alt decision tree",
+          "url": "https://www.w3.org/WAI/tutorials/images/decision-tree/",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        },
+        {
+          "name": "APG names and descriptions",
+          "url": "https://www.w3.org/WAI/ARIA/apg/practices/names-and-descriptions/",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "iconography.icon-asset-provenance",
+      "title": "Icon license provenance",
+      "intent": "Record the set's author and license before distributing an icon, because the license applies to the whole set",
+      "tags": [
+        "iconography",
+        "license",
+        "provenance"
+      ],
+      "principles": [
+        "License is a property of the icon set, not of a single glyph. Record the set name, author, license title, SPDX identifier, and license URL from the set info",
+        "Read the license before shipping. An open license can still require attribution or restrict commercial use",
+        "Do not embed an SVG whose set and license are unknown"
+      ],
+      "antiPatterns": [
+        "Embedding unknown SVG assets"
+      ],
+      "acceptance": [
+        "Each distributed icon traces to a set, an author, and a license"
+      ],
+      "limitations": [
+        "Iconify stores the metadata. The legal terms are the license the set names, not Iconify's own summary"
+      ],
+      "sources": [
+        {
+          "name": "Iconify icon set basics",
+          "url": "https://iconify.design/docs/icons/icon-set-basics.html",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        },
+        {
+          "name": "Iconify info, license object",
+          "url": "https://iconify.design/docs/types/iconify-info.html",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "name": "zanker-motion-design",
+  "description": "Design purposeful CSS/Motion/GSAP animation with reduced-motion equivalents.",
+  "triggers": [
+    "animation",
+    "microinteraction",
+    "transitions",
+    "interactive motion"
+  ],
+  "knowledge": [
+    "motion-design",
+    "performance"
+  ],
+  "workflow": [
+    {
+      "step": 1,
+      "instruction": "Explain state change or spatial relationship communicated by motion."
+    },
+    {
+      "step": 2,
+      "instruction": "Choose native CSS for simple transitions, framework library for interaction, advanced runtime only when justified."
+    },
+    {
+      "step": 3,
+      "instruction": "Check Zanker motion presets `read ${CLAUDE_PLUGIN_ROOT}/knowledge/media/motion-design.json`; generate tokens via `bash ${CLAUDE_PLUGIN_ROOT}/scripts/motion-css.sh --out ...` if desired."
+    },
+    {
+      "step": 4,
+      "instruction": "Test prefers-reduced-motion, focus behavior, exit timing and runtime performance."
+    }
+  ],
+  "outputs": [
+    "Motion intent and timing",
+    "Motion CSS or component animation"
+  ],
+  "acceptance": [
+    "Animation aids task",
+    "Reduced-motion works"
+  ],
+  "fallback": "Offer a static transition or simpler state feedback.",
+  "tools": [
+    "optional local scripts (.sh/.ps1)",
+    "project file reader",
+    "browser if available"
+  ],
+  "version": "1.0.0"
+}

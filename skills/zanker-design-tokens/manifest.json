@@ -1,0 +1,48 @@
+{
+  "name": "zanker-design-tokens",
+  "description": "Map, author and validate semantic design tokens while preserving existing brand contracts.",
+  "triggers": [
+    "theme changes",
+    "whitelabel",
+    "token migration"
+  ],
+  "knowledge": [
+    "design-tokens",
+    "color-systems",
+    "typography",
+    "material-fluent-carbon"
+  ],
+  "workflow": [
+    {
+      "step": 1,
+      "instruction": "Inspect raw scales and semantic aliases."
+    },
+    {
+      "step": 2,
+      "instruction": "Map proposed decisions to existing tokens before defining new ones."
+    },
+    {
+      "step": 3,
+      "instruction": "Check light/dark/high contrast/brand variants."
+    },
+    {
+      "step": 4,
+      "instruction": "Limit global token changes; enumerate affected consumers and write migration note."
+    }
+  ],
+  "outputs": [
+    "Token proposal",
+    "Consumer impact list"
+  ],
+  "acceptance": [
+    "No hardcoded magic colors without reason",
+    "Theme parity evidenced"
+  ],
+  "fallback": "Do not mutate tokens; propose scoped CSS when ownership unclear.",
+  "tools": [
+    "optional local scripts (.sh/.ps1)",
+    "project file reader",
+    "browser if available"
+  ],
+  "version": "1.0.0"
+}

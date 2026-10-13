@@ -1,0 +1,50 @@
+{
+  "name": "zanker-stack-sandbox",
+  "description": "Render real React/Vite components or standalone HTML in project-local isolated host.",
+  "triggers": [
+    "test single component",
+    "preview without backend",
+    "visual sandbox"
+  ],
+  "knowledge": [
+    "frontend-architecture",
+    "components-states"
+  ],
+  "workflow": [
+    {
+      "step": 1,
+      "instruction": "Run `bash ${CLAUDE_PLUGIN_ROOT}/scripts/inspect.sh --project PROJECT` to identify stack and global style entries."
+    },
+    {
+      "step": 2,
+      "instruction": "Prepare via `bash ${CLAUDE_PLUGIN_ROOT}/scripts/sandbox-prepare.sh --project PROJECT --entry src/MyCard.tsx --styles src/index.css --wrapper src/SandboxProviders.jsx --scenarios fixtures.json`."
+    },
+    {
+      "step": 3,
+      "instruction": "Review the generated workspace and ask permission to execute target code."
+    },
+    {
+      "step": 4,
+      "instruction": "Start via `bash ${CLAUDE_PLUGIN_ROOT}/scripts/sandbox-run.sh --project PROJECT --id mycard --allow-execution`; inspect states and viewport controls."
+    },
+    {
+      "step": 5,
+      "instruction": "Run screenshot audit on local URL; use project-native environment for unsupported stacks or SSR components."
+    }
+  ],
+  "outputs": [
+    ".zanker/sandboxes/ID",
+    "Running preview URL"
+  ],
+  "acceptance": [
+    "No synthetic visual replacement of real component",
+    "Parity limitations explicit"
+  ],
+  "fallback": "Attach to framework-native dev server and audit rendered route.",
+  "tools": [
+    "optional local scripts (.sh/.ps1)",
+    "project file reader",
+    "browser if available"
+  ],
+  "version": "1.0.0"
+}

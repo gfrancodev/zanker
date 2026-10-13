@@ -1,0 +1,50 @@
+{
+  "name": "zanker-visualspec-documentation",
+  "description": "Document already-created or conceptual visuals using Visual Spec as a reference only, never code generation.",
+  "triggers": [
+    "visualspec",
+    "visual documentation",
+    "screenshot reference"
+  ],
+  "knowledge": [
+    "quality-gates",
+    "governance"
+  ],
+  "workflow": [
+    {
+      "step": 1,
+      "instruction": "Inspect real code/screenshot as the implementation source of truth."
+    },
+    {
+      "step": 2,
+      "instruction": "Use https://visualspec.dev/specification/1.0 as documentation guidance; only author a spec document if schema is verified separately."
+    },
+    {
+      "step": 3,
+      "instruction": "Run `bash ${CLAUDE_PLUGIN_ROOT}/scripts/document.sh --project . --title \"Page\" --source src/page.tsx --screenshots .zanker/reports/X/1440x900.png --visualspec docs/page.visualspec.json` to register reference."
+    },
+    {
+      "step": 4,
+      "instruction": "Mark conceptual vs implemented and link source files and evidence."
+    },
+    {
+      "step": 5,
+      "instruction": "Never take the Visual Spec JSON and generate, modify or reconstruct executable UI from it."
+    }
+  ],
+  "outputs": [
+    ".zanker/documentation/.../document.json",
+    "VisualSpec reference if supplied"
+  ],
+  "acceptance": [
+    "Visual Spec never implementation source",
+    "Mark unverified schema rather than claiming conformance"
+  ],
+  "fallback": "Document screenshots and source links; omit unverified Visual Spec attachment.",
+  "tools": [
+    "optional local scripts (.sh/.ps1)",
+    "project file reader",
+    "browser if available"
+  ],
+  "version": "1.0.0"
+}

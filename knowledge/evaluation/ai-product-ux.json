@@ -1,0 +1,159 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ai-product-ux",
+  "title": "AI experience and trust",
+  "category": "evaluation",
+  "summary": "AI experience and trust operational rules curated for Zanker. Independent synthesis; consult primary sources for exact normative requirements.",
+  "updatedAt": "2026-10-12",
+  "sources": [
+    {
+      "name": "AIUX",
+      "url": "https://www.microsoft.com/en-us/haxtoolkit/ai-guidelines/",
+      "verifiedAt": null
+    }
+  ],
+  "rules": [
+    {
+      "id": "ai-product-ux.explain-ai",
+      "title": "AI state transparency",
+      "intent": "Show when AI is working, what it used and what it can do",
+      "tags": [
+        "ai",
+        "product",
+        "ux.explain",
+        "ai"
+      ],
+      "principles": [
+        "Show when AI is working, what it used and what it can do"
+      ],
+      "antiPatterns": [
+        "Pretending uncertain AI output is authoritative"
+      ],
+      "acceptance": [
+        "User can understand output status"
+      ],
+      "sources": [
+        {
+          "name": "AIUX",
+          "url": "https://www.microsoft.com/en-us/haxtoolkit/ai-guidelines/",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "ai-product-ux.human-control",
+      "title": "Human control",
+      "intent": "Provide correction, undo and approval for consequential AI actions",
+      "tags": [
+        "ai",
+        "product",
+        "ux.human",
+        "control"
+      ],
+      "principles": [
+        "Provide correction, undo and approval for consequential AI actions"
+      ],
+      "antiPatterns": [
+        "AI commits costly actions without review"
+      ],
+      "acceptance": [
+        "Consequential steps require approval"
+      ],
+      "sources": [
+        {
+          "name": "AIUX",
+          "url": "https://www.microsoft.com/en-us/haxtoolkit/ai-guidelines/",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "ai-product-ux.uncertainty",
+      "title": "Communicate uncertainty",
+      "intent": "Distinguish predictions, facts and assumptions",
+      "tags": [
+        "ai",
+        "product",
+        "ux.uncertainty"
+      ],
+      "principles": [
+        "Distinguish predictions, facts and assumptions"
+      ],
+      "antiPatterns": [
+        "Fake certainty in recommendations"
+      ],
+      "acceptance": [
+        "Uncertainty observable where relevant"
+      ],
+      "sources": [
+        {
+          "name": "AIUX",
+          "url": "https://www.microsoft.com/en-us/haxtoolkit/ai-guidelines/",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "ai-product-ux.fallback",
+      "title": "Graceful failure",
+      "intent": "Provide recovery when generation fails or tool is unavailable",
+      "tags": [
+        "ai",
+        "product",
+        "ux.fallback"
+      ],
+      "principles": [
+        "Provide recovery when generation fails or tool is unavailable"
+      ],
+      "antiPatterns": [
+        "Infinite shimmer without exit"
+      ],
+      "acceptance": [
+        "Timeout and retry guidance present"
+      ],
+      "sources": [
+        {
+          "name": "AIUX",
+          "url": "https://www.microsoft.com/en-us/haxtoolkit/ai-guidelines/",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "ai-product-ux.privacy",
+      "title": "Sensitive context handling",
+      "intent": "Avoid exposing private data in screenshots, prompts and design demos",
+      "tags": [
+        "ai",
+        "product",
+        "ux.privacy"
+      ],
+      "principles": [
+        "Avoid exposing private data in screenshots, prompts and design demos"
+      ],
+      "antiPatterns": [
+        "Production user records used as showcase fixtures"
+      ],
+      "acceptance": [
+        "Synthetic/redacted data used"
+      ],
+      "sources": [
+        {
+          "name": "AIUX",
+          "url": "https://www.microsoft.com/en-us/haxtoolkit/ai-guidelines/",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    }
+  ]
+}

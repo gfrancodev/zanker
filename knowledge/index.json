@@ -1,0 +1,283 @@
+{
+  "schemaVersion": "1.0",
+  "packs": [
+    {
+      "id": "product-discovery",
+      "title": "Product discovery and audience",
+      "category": "product",
+      "path": "knowledge/product/product-discovery.json",
+      "rules": 6,
+      "tags": [
+        "product",
+        "product-discovery"
+      ],
+      "summary": "Product discovery and audience operational rules curated for Zanker. Independent synthesis; consult primary sources for exact normative requirements."
+    },
+    {
+      "id": "ux-research",
+      "title": "UX research methods and evidence",
+      "category": "product",
+      "path": "knowledge/product/ux-research.json",
+      "rules": 6,
+      "tags": [
+        "product",
+        "ux-research"
+      ],
+      "summary": "UX research methods and evidence operational rules curated for Zanker. Independent synthesis; consult primary sources for exact normative requirements."
+    },
+    {
+      "id": "information-architecture",
+      "title": "Information architecture",
+      "category": "product",
+      "path": "knowledge/product/information-architecture.json",
+      "rules": 6,
+      "tags": [
+        "product",
+        "information-architecture"
+      ],
+      "summary": "Information architecture operational rules curated for Zanker. Independent synthesis; consult primary sources for exact normative requirements."
+    },
+    {
+      "id": "visual-hierarchy",
+      "title": "Visual hierarchy and composition",
+      "category": "foundations",
+      "path": "knowledge/foundations/visual-hierarchy.json",
+      "rules": 6,
+      "tags": [
+        "foundations",
+        "visual-hierarchy"
+      ],
+      "summary": "Visual hierarchy and composition operational rules curated for Zanker. Independent synthesis; consult primary sources for exact normative requirements."
+    },
+    {
+      "id": "typography",
+      "title": "Typography and readability",
+      "category": "foundations",
+      "path": "knowledge/foundations/typography.json",
+      "rules": 6,
+      "tags": [
+        "foundations",
+        "typography"
+      ],
+      "summary": "Typography and readability operational rules curated for Zanker. Independent synthesis; consult primary sources for exact normative requirements."
+    },
+    {
+      "id": "color-systems",
+      "title": "Color systems and semantics",
+      "category": "foundations",
+      "path": "knowledge/foundations/color-systems.json",
+      "rules": 6,
+      "tags": [
+        "foundations",
+        "color-systems"
+      ],
+      "summary": "Color systems and semantics operational rules curated for Zanker. Independent synthesis; consult primary sources for exact normative requirements."
+    },
+    {
+      "id": "layout-responsive",
+      "title": "Responsive and container-aware layouts",
+      "category": "foundations",
+      "path": "knowledge/foundations/layout-responsive.json",
+      "rules": 6,
+      "tags": [
+        "foundations",
+        "layout-responsive"
+      ],
+      "summary": "Responsive and container-aware layouts operational rules curated for Zanker. Independent synthesis; consult primary sources for exact normative requirements."
+    },
+    {
+      "id": "components-states",
+      "title": "UI component states and behaviors",
+      "category": "patterns",
+      "path": "knowledge/patterns/components-states.json",
+      "rules": 6,
+      "tags": [
+        "patterns",
+        "components-states"
+      ],
+      "summary": "UI component states and behaviors operational rules curated for Zanker. Independent synthesis; consult primary sources for exact normative requirements."
+    },
+    {
+      "id": "forms-validation",
+      "title": "Forms and error management",
+      "category": "patterns",
+      "path": "knowledge/patterns/forms-validation.json",
+      "rules": 6,
+      "tags": [
+        "patterns",
+        "forms-validation"
+      ],
+      "summary": "Forms and error management operational rules curated for Zanker. Independent synthesis; consult primary sources for exact normative requirements."
+    },
+    {
+      "id": "navigation-data",
+      "title": "Navigation, tables, dashboards",
+      "category": "patterns",
+      "path": "knowledge/patterns/navigation-data.json",
+      "rules": 6,
+      "tags": [
+        "patterns",
+        "navigation-data"
+      ],
+      "summary": "Navigation, tables, dashboards operational rules curated for Zanker. Independent synthesis; consult primary sources for exact normative requirements."
+    },
+    {
+      "id": "iconography",
+      "title": "Icon systems and curation",
+      "category": "media",
+      "path": "knowledge/media/iconography.json",
+      "rules": 6,
+      "tags": [
+        "media",
+        "iconography"
+      ],
+      "summary": "Operational rules for icon meaning, one visual family, reusing the project set, accessible names, decorative hiding, and license metadata. Each rule links the page for that subject."
+    },
+    {
+      "id": "motion-design",
+      "title": "Motion design and transitions",
+      "category": "media",
+      "path": "knowledge/media/motion-design.json",
+      "rules": 6,
+      "tags": [
+        "media",
+        "motion-design"
+      ],
+      "summary": "Operational rules for purposeful motion, reduced motion, shared easing, compositor-friendly properties, focus during transitions, and autoplay loops. Each rule links the CSS or WCAG page for that subject."
+    },
+    {
+      "id": "media-production",
+      "title": "Media generation and production",
+      "category": "media",
+      "path": "knowledge/media/media-production.json",
+      "rules": 6,
+      "tags": [
+        "media",
+        "media-production"
+      ],
+      "summary": "Operational rules for why an image exists, its license, raster format, responsive delivery, SVG trust, and alt text. Each rule links the page for that subject."
+    },
+    {
+      "id": "web-design",
+      "title": "Web platform patterns",
+      "category": "platforms",
+      "path": "knowledge/platforms/web-design.json",
+      "rules": 5,
+      "tags": [
+        "platforms",
+        "web-design"
+      ],
+      "summary": "Operational web rules for semantic HTML, familiar UI patterns, pointer and viewport diversity, native browser behavior, and content-shaped layout. Each rule links the page for that subject."
+    },
+    {
+      "id": "apple-guidelines",
+      "title": "Apple human interface guidance",
+      "category": "platforms",
+      "path": "knowledge/platforms/apple-guidelines.json",
+      "rules": 4,
+      "tags": [
+        "platforms",
+        "apple-guidelines"
+      ],
+      "summary": "Operational Apple HIG rules for platform familiarity, clarity, feedback, and system accessibility settings. Each rule links the HIG page for that subject."
+    },
+    {
+      "id": "material-fluent-carbon",
+      "title": "Cross-system UI guidance",
+      "category": "platforms",
+      "path": "knowledge/platforms/material-fluent-carbon.json",
+      "rules": 4,
+      "tags": [
+        "platforms",
+        "material-fluent-carbon"
+      ],
+      "summary": "Operational rules for Material on Android, Fluent on Microsoft platforms, Carbon for enterprise density, and keeping the product design system in charge. Each rule links the page for that system."
+    },
+    {
+      "id": "design-tokens",
+      "title": "Design tokens and theming",
+      "category": "engineering",
+      "path": "knowledge/engineering/design-tokens.json",
+      "rules": 6,
+      "tags": [
+        "engineering",
+        "design-tokens"
+      ],
+      "summary": "Design tokens and theming operational rules curated for Zanker. Independent synthesis; consult primary sources for exact normative requirements."
+    },
+    {
+      "id": "frontend-architecture",
+      "title": "Frontend architecture and fidelity",
+      "category": "engineering",
+      "path": "knowledge/engineering/frontend-architecture.json",
+      "rules": 6,
+      "tags": [
+        "engineering",
+        "frontend-architecture"
+      ],
+      "summary": "Operational rules for diagnosing computed CSS, keeping a change in the right cascade layer, matching the real runtime, previewing before production, and letting utilities serve tokens. Each rule links the CSS Snapshot 2026 section or module for that subject."
+    },
+    {
+      "id": "performance",
+      "title": "Visual performance and resource usage",
+      "category": "engineering",
+      "path": "knowledge/engineering/performance.json",
+      "rules": 6,
+      "tags": [
+        "engineering",
+        "performance"
+      ],
+      "summary": "Visual performance and resource usage operational rules curated for Zanker. Independent synthesis; consult primary sources for exact normative requirements."
+    },
+    {
+      "id": "localization",
+      "title": "Content design and internationalization",
+      "category": "engineering",
+      "path": "knowledge/engineering/localization.json",
+      "rules": 5,
+      "tags": [
+        "engineering",
+        "localization"
+      ],
+      "summary": "Content design and internationalization operational rules curated for Zanker. Independent synthesis; consult primary sources for exact normative requirements."
+    },
+    {
+      "id": "quality-gates",
+      "title": "Visual validation and quality",
+      "category": "evaluation",
+      "path": "knowledge/evaluation/quality-gates.json",
+      "rules": 6,
+      "tags": [
+        "evaluation",
+        "quality-gates"
+      ],
+      "summary": "Visual validation and quality operational rules curated for Zanker. Independent synthesis; consult primary sources for exact normative requirements."
+    },
+    {
+      "id": "ai-product-ux",
+      "title": "AI experience and trust",
+      "category": "evaluation",
+      "path": "knowledge/evaluation/ai-product-ux.json",
+      "rules": 5,
+      "tags": [
+        "evaluation",
+        "ai-product-ux"
+      ],
+      "summary": "AI experience and trust operational rules curated for Zanker. Independent synthesis; consult primary sources for exact normative requirements."
+    },
+    {
+      "id": "governance",
+      "title": "References, licenses and provenance",
+      "category": "evaluation",
+      "path": "knowledge/evaluation/governance.json",
+      "rules": 5,
+      "tags": [
+        "evaluation",
+        "governance"
+      ],
+      "summary": "References, licenses and provenance operational rules curated for Zanker. Independent synthesis; consult primary sources for exact normative requirements."
+    }
+  ],
+  "usage": "Load index first, then only the relevant packs/rules; do not paste entire corpus into prompts.",
+  "policy": "Original synthesis of public guidance."
+}

@@ -1,0 +1,63 @@
+name: Feature request
+description: A skill, a knowledge pack, a harness, or a change to how the agent works.
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Zanker is for frontend UX and UI work inside a codebase that already exists. It is not a
+        general coding agent, not a backend tool and not a design file editor, so a proposal pulling
+        it that way is likely to be declined on scope rather than on merit.
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What kind of change
+      options:
+        - A new skill
+        - A change to an existing skill
+        - A new knowledge pack, or rules inside one
+        - Support for another harness
+        - A change to the agent's process or router
+        - A script or tooling change
+        - Something else
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: The problem
+      description: >
+        The situation where Zanker falls short today. Concrete beats abstract: the screen you were
+        building, what it produced, and why that was wrong.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What you propose
+      description: What should happen instead, and roughly where it belongs in the plugin.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: What you already tried
+      description: >
+        An existing skill that nearly worked, a prompt that got you partway, or a reason an obvious
+        simpler fix does not hold. This is the most useful box on the form.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Scope
+      options:
+        - label: This is about frontend UX, UI or visual quality
+          required: true
+        - label: I read CONTRIBUTING.md, and would consider sending the PR myself
+          required: false

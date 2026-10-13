@@ -1,0 +1,17 @@
+{
+  "name": "zanker",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Development scripts for the Zanker plugin: tests and coverage. Not published, no global CLI, no installer.",
+  "license": "MIT",
+  "author": {
+    "name": "Gustavo Franco",
+    "url": "https://github.com/gfrancodev"
+  },
+  "repository": "https://github.com/gfrancodev/zanker",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "coverage": "node --test --experimental-test-coverage tests/*.test.mjs"
+  }
+}

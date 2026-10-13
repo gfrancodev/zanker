@@ -1,0 +1,186 @@
+{
+  "schemaVersion": "1.0",
+  "id": "color-systems",
+  "title": "Color systems and semantics",
+  "category": "foundations",
+  "summary": "Color systems and semantics operational rules curated for Zanker. Independent synthesis; consult primary sources for exact normative requirements.",
+  "updatedAt": "2026-10-12",
+  "sources": [
+    {
+      "name": "W3C",
+      "url": "https://www.w3.org/WAI/WCAG22/quickref/",
+      "verifiedAt": null
+    }
+  ],
+  "rules": [
+    {
+      "id": "color-systems.semantic-colors",
+      "title": "Semantic token usage",
+      "intent": "Map status and purpose to semantic color roles",
+      "tags": [
+        "color",
+        "systems.semantic",
+        "colors"
+      ],
+      "principles": [
+        "Map status and purpose to semantic color roles"
+      ],
+      "antiPatterns": [
+        "Hard-coded blue or red as only indicator"
+      ],
+      "acceptance": [
+        "Status combines text/icon and adequate contrast"
+      ],
+      "sources": [
+        {
+          "name": "W3C",
+          "url": "https://www.w3.org/WAI/WCAG22/quickref/",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "color-systems.contrast-body",
+      "title": "Normal text contrast",
+      "intent": "Target WCAG AA text contrast for ordinary text",
+      "tags": [
+        "color",
+        "systems.contrast",
+        "body"
+      ],
+      "principles": [
+        "Target WCAG AA text contrast for ordinary text"
+      ],
+      "antiPatterns": [
+        "Decorative low-contrast small text"
+      ],
+      "acceptance": [
+        "Normal text contrast checked for 4.5:1 unless applicable exception"
+      ],
+      "sources": [
+        {
+          "name": "W3C",
+          "url": "https://www.w3.org/WAI/WCAG22/quickref/",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "color-systems.contrast-large",
+      "title": "Large text contrast",
+      "intent": "Apply WCAG thresholds appropriate to large text",
+      "tags": [
+        "color",
+        "systems.contrast",
+        "large"
+      ],
+      "principles": [
+        "Apply WCAG thresholds appropriate to large text"
+      ],
+      "antiPatterns": [
+        "Assuming one universal contrast threshold"
+      ],
+      "acceptance": [
+        "Large text contrast checked for 3:1 when applicable"
+      ],
+      "sources": [
+        {
+          "name": "W3C",
+          "url": "https://www.w3.org/WAI/WCAG22/quickref/",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "color-systems.palette-economy",
+      "title": "Controlled color palette",
+      "intent": "Maintain brand palette with predictable surfaces and accents",
+      "tags": [
+        "color",
+        "systems.palette",
+        "economy"
+      ],
+      "principles": [
+        "Maintain brand palette with predictable surfaces and accents"
+      ],
+      "antiPatterns": [
+        "Gradient accents on every container"
+      ],
+      "acceptance": [
+        "Roles documented in tokens"
+      ],
+      "sources": [
+        {
+          "name": "W3C",
+          "url": "https://www.w3.org/WAI/WCAG22/quickref/",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "color-systems.dark-mode",
+      "title": "Theme parity",
+      "intent": "Check surfaces, disabled, hover, shadows and charts in dark theme",
+      "tags": [
+        "color",
+        "systems.dark",
+        "mode"
+      ],
+      "principles": [
+        "Check surfaces, disabled, hover, shadows and charts in dark theme"
+      ],
+      "antiPatterns": [
+        "Inverting background only"
+      ],
+      "acceptance": [
+        "Dark theme visual review passes"
+      ],
+      "sources": [
+        {
+          "name": "W3C",
+          "url": "https://www.w3.org/WAI/WCAG22/quickref/",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "color-systems.meaning-without-color",
+      "title": "Non-color cues",
+      "intent": "Pair color semantics with symbols, text or shape",
+      "tags": [
+        "color",
+        "systems.meaning",
+        "without",
+        "color"
+      ],
+      "principles": [
+        "Pair color semantics with symbols, text or shape"
+      ],
+      "antiPatterns": [
+        "Color-only form errors"
+      ],
+      "acceptance": [
+        "Meaning survives grayscale review"
+      ],
+      "sources": [
+        {
+          "name": "W3C",
+          "url": "https://www.w3.org/WAI/WCAG22/quickref/",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    }
+  ]
+}

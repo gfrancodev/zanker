@@ -1,0 +1,47 @@
+{
+  "name": "zanker-frontend-inspection",
+  "description": "Map runtime UI elements to DOM, computed styles, component files and dependencies.",
+  "triggers": [
+    "broken component",
+    "locate element",
+    "CSS diagnosis"
+  ],
+  "knowledge": [
+    "frontend-architecture",
+    "layout-responsive",
+    "web-design"
+  ],
+  "workflow": [
+    {
+      "step": 1,
+      "instruction": "Inspect relevant code and find the entrypoint; use component name or route to narrow scope."
+    },
+    {
+      "step": 2,
+      "instruction": "If a local app is running, use `bash ${CLAUDE_PLUGIN_ROOT}/scripts/diagnose.sh --url ... --selector ...` to capture computed layout."
+    },
+    {
+      "step": 3,
+      "instruction": "Compare browser evidence with CSS selectors, imports and shared token definitions."
+    },
+    {
+      "step": 4,
+      "instruction": "Record source candidates; do not claim precise source map where unavailable."
+    }
+  ],
+  "outputs": [
+    "DOM/CSS diagnosis",
+    "Suspected source files"
+  ],
+  "acceptance": [
+    "Evidence accompanies hypotheses",
+    "No blind global overrides"
+  ],
+  "fallback": "If Playwright is absent, use static code inspection and mark browser validation pending.",
+  "tools": [
+    "optional local scripts (.sh/.ps1)",
+    "project file reader",
+    "browser if available"
+  ],
+  "version": "1.0.0"
+}

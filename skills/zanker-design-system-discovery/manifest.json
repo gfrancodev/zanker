@@ -1,0 +1,50 @@
+{
+  "name": "zanker-design-system-discovery",
+  "description": "Extract and prioritize real project tokens, components and visual conventions.",
+  "triggers": [
+    "existing UI",
+    "rebrand",
+    "inconsistent components"
+  ],
+  "knowledge": [
+    "design-tokens",
+    "visual-hierarchy",
+    "typography",
+    "color-systems",
+    "apple-guidelines",
+    "material-fluent-carbon"
+  ],
+  "workflow": [
+    {
+      "step": 1,
+      "instruction": "Read project.manifest.json and key CSS or theme files."
+    },
+    {
+      "step": 2,
+      "instruction": "Create a semantic map of typography, color roles, spacing, radius, shadow and motion."
+    },
+    {
+      "step": 3,
+      "instruction": "Locate canonical components and note where consuming screens might regress."
+    },
+    {
+      "step": 4,
+      "instruction": "Describe discrepancies as proposals; do not overwrite global tokens during analysis."
+    }
+  ],
+  "outputs": [
+    "Token map",
+    "Reusable component inventory"
+  ],
+  "acceptance": [
+    "Design system precedes generic Zanker defaults",
+    "Global changes require impact review"
+  ],
+  "fallback": "Use a provisional token map clearly labeled as inferred.",
+  "tools": [
+    "optional local scripts (.sh/.ps1)",
+    "project file reader",
+    "browser if available"
+  ],
+  "version": "1.0.0"
+}

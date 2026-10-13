@@ -1,0 +1,48 @@
+{
+  "name": "zanker-art-direction",
+  "description": "Develop distinctive, product-appropriate visual direction grounded in the user context.",
+  "triggers": [
+    "new interface",
+    "premium visual",
+    "landing page",
+    "branding"
+  ],
+  "knowledge": [
+    "visual-hierarchy",
+    "typography",
+    "color-systems"
+  ],
+  "workflow": [
+    {
+      "step": 1,
+      "instruction": "Read Product DNA and Design System; formulate art direction as an explicit sentence."
+    },
+    {
+      "step": 2,
+      "instruction": "Choose typographic character, composition, palette, density, imagery and motion purpose."
+    },
+    {
+      "step": 3,
+      "instruction": "Avoid default identical card grids, violet gradients and decorative noise without justification."
+    },
+    {
+      "step": 4,
+      "instruction": "Present two or three meaningfully different options through the Design Studio."
+    }
+  ],
+  "outputs": [
+    "Direction statement",
+    "Concept alternatives and rationale"
+  ],
+  "acceptance": [
+    "Product suitability beats trend following",
+    "Contrast and clarity are maintained"
+  ],
+  "fallback": "If no product context exists, show assumptions with alternatives.",
+  "tools": [
+    "optional local scripts (.sh/.ps1)",
+    "project file reader",
+    "browser if available"
+  ],
+  "version": "1.0.0"
+}

@@ -1,0 +1,15 @@
+{
+  "taskId": "UI-001",
+  "status": "needs-review",
+  "findings": [
+    {
+      "category": "responsive",
+      "severity": "major",
+      "description": "Mobile overflow detected",
+      "reproduction": "375px viewport",
+      "recommendation": "Investigate intrinsic widths"
+    }
+  ],
+  "evidence": [],
+  "productionParity": "not-verified"
+}

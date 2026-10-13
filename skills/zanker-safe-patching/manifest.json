@@ -1,0 +1,46 @@
+{
+  "name": "zanker-safe-patching",
+  "description": "Apply smallest reasonable frontend change and produce reviewable integration evidence.",
+  "triggers": [
+    "implement approved design",
+    "fix bug",
+    "PR"
+  ],
+  "knowledge": [
+    "frontend-architecture",
+    "quality-gates"
+  ],
+  "workflow": [
+    {
+      "step": 1,
+      "instruction": "Prefer git worktree or isolated branch; preserve existing source and conventions."
+    },
+    {
+      "step": 2,
+      "instruction": "Summarize exact changed files, potential blast radius and test plan."
+    },
+    {
+      "step": 3,
+      "instruction": "Run project tests/build only with user authorization and documented commands."
+    },
+    {
+      "step": 4,
+      "instruction": "Deliver patch with before/after, unresolved risks and optional manual approval."
+    }
+  ],
+  "outputs": [
+    "Patch/diff",
+    "Integration notes"
+  ],
+  "acceptance": [
+    "No unreviewed destructive edits",
+    "Tests appropriately scoped"
+  ],
+  "fallback": "Provide proposed diff without applying changes.",
+  "tools": [
+    "optional local scripts (.sh/.ps1)",
+    "project file reader",
+    "browser if available"
+  ],
+  "version": "1.0.0"
+}

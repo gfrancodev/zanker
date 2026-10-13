@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Report a security vulnerability
+    url: https://github.com/gfrancodev/zanker/security/advisories/new
+    about: Privately, never in a public issue. See SECURITY.md for what is in scope.
+  - name: How to install and use Zanker
+    url: https://github.com/gfrancodev/zanker#install
+    about: Install instructions for Claude Code, Cursor, Kiro, Copilot, Codex and OpenCode.
+  - name: How to contribute
+    url: https://github.com/gfrancodev/zanker/blob/main/CONTRIBUTING.md
+    about: The prompt contract, the gate commands, and how to add a skill or a knowledge pack.

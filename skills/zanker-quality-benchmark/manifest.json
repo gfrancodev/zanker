@@ -1,0 +1,46 @@
+{
+  "name": "zanker-quality-benchmark",
+  "description": "Evaluate Zanker with reproducible UX/UI tasks across frameworks and scenarios.",
+  "triggers": [
+    "benchmark",
+    "release gate",
+    "quality comparison"
+  ],
+  "knowledge": [
+    "quality-gates",
+    "governance"
+  ],
+  "workflow": [
+    {
+      "step": 1,
+      "instruction": "Select representative tasks: broken mobile modal, form error, dashboard redesign, new marketing page, shared component regression."
+    },
+    {
+      "step": 2,
+      "instruction": "Prepare fixed fixture, source baseline, rubric and screenshot configuration."
+    },
+    {
+      "step": 3,
+      "instruction": "Have human judge independently score product suitability, visuals, usability and maintainability."
+    },
+    {
+      "step": 4,
+      "instruction": "Compare failure rates and regressions across agent revisions, not only average aesthetic score."
+    }
+  ],
+  "outputs": [
+    "Benchmark report",
+    "Release readiness"
+  ],
+  "acceptance": [
+    "Blind or independent review",
+    "All claims backed by test results"
+  ],
+  "fallback": "Use small curated task suite and mark low statistical confidence.",
+  "tools": [
+    "optional local scripts (.sh/.ps1)",
+    "project file reader",
+    "browser if available"
+  ],
+  "version": "1.0.0"
+}

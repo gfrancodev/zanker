@@ -1,0 +1,50 @@
+{
+  "name": "zanker-visual-forensics",
+  "description": "Reproduce a visual defect, isolate root cause, apply the smallest appropriate fix and verify.",
+  "triggers": [
+    "screenshot mismatch",
+    "overflow",
+    "misalignment",
+    "typography clipping"
+  ],
+  "knowledge": [
+    "frontend-architecture",
+    "layout-responsive",
+    "quality-gates"
+  ],
+  "workflow": [
+    {
+      "step": 1,
+      "instruction": "Record viewport, state, reproduction path and original screenshot."
+    },
+    {
+      "step": 2,
+      "instruction": "Use `bash ${CLAUDE_PLUGIN_ROOT}/scripts/diagnose.sh` and `bash ${CLAUDE_PLUGIN_ROOT}/scripts/audit.sh` for browser evidence where available."
+    },
+    {
+      "step": 3,
+      "instruction": "Form two or more hypotheses, test one variable at a time, trace shared component usage."
+    },
+    {
+      "step": 4,
+      "instruction": "Apply minimal patch in worktree; compare before/after and verify neighboring layouts."
+    }
+  ],
+  "outputs": [
+    "Cause and evidence",
+    "Before/after screenshots",
+    "Reproducible fix"
+  ],
+  "acceptance": [
+    "Explain what caused the problem",
+    "No unrelated redesign",
+    "Affected shared components checked"
+  ],
+  "fallback": "Supply hypothesis plus a concrete reproducible browser check; do not pretend certainty.",
+  "tools": [
+    "optional local scripts (.sh/.ps1)",
+    "project file reader",
+    "browser if available"
+  ],
+  "version": "1.0.0"
+}

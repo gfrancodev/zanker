@@ -1,0 +1,46 @@
+{
+  "name": "zanker-icon-curation",
+  "description": "Select semantically correct icons with coherent family/weight and license metadata.",
+  "triggers": [
+    "change icons",
+    "repeated icon problem",
+    "navigation iconography"
+  ],
+  "knowledge": [
+    "iconography",
+    "components-states"
+  ],
+  "workflow": [
+    {
+      "step": 1,
+      "instruction": "Inventory project icon library and existing semantic mappings."
+    },
+    {
+      "step": 2,
+      "instruction": "Run `bash ${CLAUDE_PLUGIN_ROOT}/scripts/icons.sh --query analytics` to get cross-family candidates."
+    },
+    {
+      "step": 3,
+      "instruction": "Choose single dominant visual grammar; evaluate meaning, recognition and accessible names."
+    },
+    {
+      "step": 4,
+      "instruction": "Add source/license metadata; replace icons only when they improve meaning or consistency."
+    }
+  ],
+  "outputs": [
+    "Icon decision map",
+    "Selected icon IDs"
+  ],
+  "acceptance": [
+    "No arbitrary novelty",
+    "No icon-only button without accessible name"
+  ],
+  "fallback": "Describe candidate glyph in words and preserve project library.",
+  "tools": [
+    "optional local scripts (.sh/.ps1)",
+    "project file reader",
+    "browser if available"
+  ],
+  "version": "1.0.0"
+}

@@ -1,0 +1,178 @@
+{
+  "schemaVersion": "1.0",
+  "id": "typography",
+  "title": "Typography and readability",
+  "category": "foundations",
+  "summary": "Typography and readability operational rules curated for Zanker. Independent synthesis; consult primary sources for exact normative requirements.",
+  "updatedAt": "2026-10-12",
+  "sources": [
+    {
+      "name": "WEB",
+      "url": "https://web.dev/learn/design/",
+      "verifiedAt": null
+    }
+  ],
+  "rules": [
+    {
+      "id": "typography.type-scale",
+      "title": "Semantic type scale",
+      "intent": "Use restrained size/weight scale with clear heading structure",
+      "tags": [
+        "typography.type",
+        "scale"
+      ],
+      "principles": [
+        "Use restrained size/weight scale with clear heading structure"
+      ],
+      "antiPatterns": [
+        "Arbitrary font sizes in each component"
+      ],
+      "acceptance": [
+        "Text styles reusable across screens"
+      ],
+      "sources": [
+        {
+          "name": "WEB",
+          "url": "https://web.dev/learn/design/",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "typography.body-measure",
+      "title": "Line length and rhythm",
+      "intent": "Constrain long prose line length for readability",
+      "tags": [
+        "typography.body",
+        "measure"
+      ],
+      "principles": [
+        "Constrain long prose line length for readability"
+      ],
+      "antiPatterns": [
+        "Long line spans on ultrawide monitors"
+      ],
+      "acceptance": [
+        "Copy remains comfortable on desktop and mobile"
+      ],
+      "sources": [
+        {
+          "name": "WEB",
+          "url": "https://web.dev/learn/design/",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "typography.font-loading",
+      "title": "Font fallback and rendering",
+      "intent": "Provide stable fallbacks and appropriate font loading behavior",
+      "tags": [
+        "typography.font",
+        "loading"
+      ],
+      "principles": [
+        "Provide stable fallbacks and appropriate font loading behavior"
+      ],
+      "antiPatterns": [
+        "Fonts that cause major layout shifts"
+      ],
+      "acceptance": [
+        "Font loading tested under throttling"
+      ],
+      "sources": [
+        {
+          "name": "WEB",
+          "url": "https://web.dev/learn/design/",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "typography.numerics",
+      "title": "Tabular alignment",
+      "intent": "Use tabular numerals when scanning columns of values",
+      "tags": [
+        "typography.numerics"
+      ],
+      "principles": [
+        "Use tabular numerals when scanning columns of values"
+      ],
+      "antiPatterns": [
+        "Variable glyph widths misalign financial comparisons"
+      ],
+      "acceptance": [
+        "Numbers align in representative tables"
+      ],
+      "sources": [
+        {
+          "name": "WEB",
+          "url": "https://web.dev/learn/design/",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "typography.contrast-perception",
+      "title": "Weight contrast and scale",
+      "intent": "Use contrast among size, weight, space without excess color",
+      "tags": [
+        "typography.contrast",
+        "perception"
+      ],
+      "principles": [
+        "Use contrast among size, weight, space without excess color"
+      ],
+      "antiPatterns": [
+        "All emphasis achieved through saturated colors"
+      ],
+      "acceptance": [
+        "Reading order clear in grayscale"
+      ],
+      "sources": [
+        {
+          "name": "WEB",
+          "url": "https://web.dev/learn/design/",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "typography.localization-type",
+      "title": "Localization resilience",
+      "intent": "Verify typography with accents and longer translations",
+      "tags": [
+        "typography.localization",
+        "type"
+      ],
+      "principles": [
+        "Verify typography with accents and longer translations"
+      ],
+      "antiPatterns": [
+        "Latin-only test content"
+      ],
+      "acceptance": [
+        "No clipped localized labels"
+      ],
+      "sources": [
+        {
+          "name": "WEB",
+          "url": "https://web.dev/learn/design/",
+          "kind": "official-or-primary",
+          "verifiedAt": null
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    }
+  ]
+}

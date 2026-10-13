@@ -1,0 +1,46 @@
+{
+  "name": "zanker-preview-server",
+  "description": "Launch a local studio to present visual options and capture approvals.",
+  "triggers": [
+    "visual companion",
+    "compare mockups",
+    "design preview"
+  ],
+  "knowledge": [
+    "visual-hierarchy",
+    "quality-gates"
+  ],
+  "workflow": [
+    {
+      "step": 1,
+      "instruction": "Prepare concepts file according to schemas/concept.schema.json."
+    },
+    {
+      "step": 2,
+      "instruction": "Run `bash ${CLAUDE_PLUGIN_ROOT}/scripts/studio.sh --project . --concepts PATH` (default binds loopback and generates session token)."
+    },
+    {
+      "step": 3,
+      "instruction": "Share local URL with project owner; inspect saved feedback events."
+    },
+    {
+      "step": 4,
+      "instruction": "Shut down server when finished; do not expose it publicly."
+    }
+  ],
+  "outputs": [
+    "Local preview URL",
+    "JSONL events"
+  ],
+  "acceptance": [
+    "No production modifications",
+    "Selection and feedback recorded"
+  ],
+  "fallback": "Present HTML mockups or screenshot set without server.",
+  "tools": [
+    "optional local scripts (.sh/.ps1)",
+    "project file reader",
+    "browser if available"
+  ],
+  "version": "1.0.0"
+}

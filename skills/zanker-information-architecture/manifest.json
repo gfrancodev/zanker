@@ -1,0 +1,48 @@
+{
+  "name": "zanker-information-architecture",
+  "description": "Improve labels, navigation, content grouping and findability.",
+  "triggers": [
+    "menu overhaul",
+    "labels and grouping",
+    "dashboard navigation"
+  ],
+  "knowledge": [
+    "information-architecture",
+    "ux-research",
+    "navigation-data",
+    "product-discovery"
+  ],
+  "workflow": [
+    {
+      "step": 1,
+      "instruction": "List tasks and user terminology; identify high-frequency journeys."
+    },
+    {
+      "step": 2,
+      "instruction": "Sketch categories and routes; check current information architecture."
+    },
+    {
+      "step": 3,
+      "instruction": "Test whether key tasks remain discoverable without guessing or magic icons."
+    },
+    {
+      "step": 4,
+      "instruction": "Document redirects, active states, breadcrumbs and back behavior."
+    }
+  ],
+  "outputs": [
+    "Navigation map",
+    "Label proposals"
+  ],
+  "acceptance": [
+    "Main tasks reachable",
+    "No hidden critical terms"
+  ],
+  "fallback": "Mark proposed structure as untested if no user testing is available.",
+  "tools": [
+    "optional local scripts (.sh/.ps1)",
+    "project file reader",
+    "browser if available"
+  ],
+  "version": "1.0.0"
+}

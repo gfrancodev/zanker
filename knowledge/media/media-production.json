@@ -1,0 +1,270 @@
+{
+  "schemaVersion": "1.0",
+  "id": "media-production",
+  "title": "Media generation and production",
+  "category": "media",
+  "summary": "Operational rules for why an image exists, its license, raster format, responsive delivery, SVG trust, and alt text. Each rule links the page for that subject.",
+  "updatedAt": "2026-10-12",
+  "sources": [
+    {
+      "name": "WAI images tutorial",
+      "url": "https://www.w3.org/WAI/tutorials/images/",
+      "verifiedAt": "2026-10-12"
+    },
+    {
+      "name": "web.dev Learn Images",
+      "url": "https://web.dev/learn/images/",
+      "verifiedAt": "2026-10-12"
+    }
+  ],
+  "rules": [
+    {
+      "id": "media-production.asset-purpose",
+      "title": "Purpose before asset",
+      "intent": "Decide what information or action the image adds before choosing a file",
+      "tags": [
+        "media",
+        "purpose",
+        "images"
+      ],
+      "principles": [
+        "Ask what a person would miss if the image were not there. That answer is the purpose: information, an action, or decoration",
+        "If the adjacent text already says it, the image is decorative and should not repeat the text",
+        "A hero or illustration with no information and no action does not earn a place in the layout"
+      ],
+      "antiPatterns": [
+        "Unrelated decorative hero backgrounds"
+      ],
+      "acceptance": [
+        "Each asset is marked informative, functional, or decorative, with the reason"
+      ],
+      "limitations": [
+        "The decision tree tells you how to treat the image after the purpose is known. It does not score whether a decorative image is worth designing"
+      ],
+      "sources": [
+        {
+          "name": "WAI alt decision tree",
+          "url": "https://www.w3.org/WAI/tutorials/images/decision-tree/",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        },
+        {
+          "name": "WAI decorative images",
+          "url": "https://www.w3.org/WAI/tutorials/images/decorative/",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "media-production.asset-license",
+      "title": "Asset provenance",
+      "intent": "Record who made the image, which license applies, and what that license restricts, before the file ships",
+      "tags": [
+        "media",
+        "license",
+        "provenance"
+      ],
+      "principles": [
+        "Name the creator, the source, and the license for every production image",
+        "Use a published license, such as a Creative Commons license, and keep its conditions: attribution, share-alike, noncommercial, or no derivatives",
+        "For a generated image, also record the provider and the model. Those terms are the provider's, and they are separate from a Creative Commons license on the file"
+      ],
+      "antiPatterns": [
+        "Unknown-origin production imagery"
+      ],
+      "acceptance": [
+        "Metadata for each production asset includes origin, creator, license, and, when generated, provider and model"
+      ],
+      "limitations": [
+        "The Creative Commons license list does not cover a model's terms of use. Those stay on the provider's own terms, which this pack does not restate"
+      ],
+      "sources": [
+        {
+          "name": "Creative Commons licenses",
+          "url": "https://creativecommons.org/licenses/",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "media-production.raster-optimization",
+      "title": "Raster optimization",
+      "intent": "Pick a raster format the browser can decode, at the pixel size the layout actually displays",
+      "tags": [
+        "media",
+        "raster",
+        "avif",
+        "formats"
+      ],
+      "principles": [
+        "Choose the format for the job: a photographic raster, a transparent raster, or an SVG for a UI glyph that must stay sharp",
+        "AVIF and WebP can be smaller than JPEG or PNG. Ship a fallback the browser can decode, because an unsupported encoding is discarded after the download",
+        "Export at the displayed size. A multi-megabyte hero that is shown much smaller wastes the transfer"
+      ],
+      "antiPatterns": [
+        "Uncompressed hero image multi-megabytes"
+      ],
+      "acceptance": [
+        "The file's pixel dimensions are compared with the displayed size, and a fallback exists for a newer encoding"
+      ],
+      "limitations": [
+        "Format support moves. The AVIF lesson and the MDN format guide describe the tradeoff. They are not a frozen browser matrix"
+      ],
+      "sources": [
+        {
+          "name": "MDN image file types",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/Media/Guides/Formats/Image_types",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        },
+        {
+          "name": "web.dev AVIF",
+          "url": "https://web.dev/learn/images/avif",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "media-production.responsive-images",
+      "title": "Responsive image delivery",
+      "intent": "Give the browser a choice of sources, and reserve the aspect ratio so the layout does not jump",
+      "tags": [
+        "media",
+        "responsive-images",
+        "srcset",
+        "aspect-ratio"
+      ],
+      "principles": [
+        "Use srcset and sizes when the browser should pick the smallest adequate file. Use picture when you must prescribe the source, such as a different crop or a format fallback",
+        "Do not send one large file to every viewport",
+        "Set aspect-ratio, or width and height, so the slot matches the image before it loads"
+      ],
+      "antiPatterns": [
+        "Same large image to all devices"
+      ],
+      "acceptance": [
+        "A narrow and a wide viewport request different sources when the savings are real, and the slot does not collapse"
+      ],
+      "limitations": [
+        "aspect-ratio is listed in CSS Snapshot 2026 as safe to release before Candidate Recommendation, in CSS Sizing Level 4. It is not part of the snapshot's official definition"
+      ],
+      "sources": [
+        {
+          "name": "web.dev responsive images",
+          "url": "https://web.dev/learn/images/responsive-images",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        },
+        {
+          "name": "HTML, picture",
+          "url": "https://html.spec.whatwg.org/multipage/embedded-content.html#the-picture-element",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        },
+        {
+          "name": "HTML, img srcset",
+          "url": "https://html.spec.whatwg.org/multipage/embedded-content.html#attr-img-srcset",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        },
+        {
+          "name": "CSS Sizing 4, aspect-ratio",
+          "url": "https://www.w3.org/TR/css-sizing-4/#aspect-ratio",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "media-production.svg-safety",
+      "title": "SVG security",
+      "intent": "Use SVG as an image when it is static, and review script before inserting SVG into the document",
+      "tags": [
+        "media",
+        "svg",
+        "security"
+      ],
+      "principles": [
+        "In an img, background-image, or similar image context, browsers disable SVG script and external resources",
+        "Those restrictions do not apply to inline SVG or to SVG embedded with object, embed, or iframe. Script and event handlers there run in the page",
+        "Treat an external or user-supplied SVG as untrusted. Review it, or sanitize it, before insertion. An SVG script href that loads an arbitrary URL is an XSS sink"
+      ],
+      "antiPatterns": [
+        "Raw remote SVG inserted into HTML"
+      ],
+      "acceptance": [
+        "Static icons are referenced as images. Any inline SVG was reviewed or sanitized"
+      ],
+      "limitations": [
+        "MDN describes the image-context restrictions as what some browsers do. A sanitizer's allowlist is an implementation choice this page does not specify"
+      ],
+      "sources": [
+        {
+          "name": "MDN SVG as an image",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/SVG_as_an_image",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        },
+        {
+          "name": "MDN SVGScriptElement.href",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/API/SVGScriptElement/href",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "media-production.alt-text",
+      "title": "Informational alt text",
+      "intent": "Put the image's information in alt when that information is not already in the text nearby",
+      "tags": [
+        "media",
+        "alt",
+        "informative"
+      ],
+      "principles": [
+        "An informative image gets a short alt that carries the meaning, not the file name and not the word image",
+        "If the same meaning is already in adjacent text, use an empty alt so it is not read twice",
+        "A complex image, such as a chart, puts the data in text on the page. Alt points at that meaning. It does not replace the data"
+      ],
+      "antiPatterns": [
+        "Every image alt=\"image\""
+      ],
+      "acceptance": [
+        "The image's meaning is in alt or in the surrounding text, and decorative images use an empty alt"
+      ],
+      "limitations": [
+        "The informative-images tutorial covers simple images. Charts and groups of images have their own WAI pages, which this rule does not copy"
+      ],
+      "sources": [
+        {
+          "name": "WAI informative images",
+          "url": "https://www.w3.org/WAI/tutorials/images/informative/",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        },
+        {
+          "name": "WAI alt decision tree",
+          "url": "https://www.w3.org/WAI/tutorials/images/decision-tree/",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        },
+        {
+          "name": "HTML, the alt attribute",
+          "url": "https://html.spec.whatwg.org/multipage/embedded-content.html#attr-img-alt",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    }
+  ]
+}

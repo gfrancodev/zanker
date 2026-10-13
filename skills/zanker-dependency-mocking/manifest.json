@@ -1,0 +1,46 @@
+{
+  "name": "zanker-dependency-mocking",
+  "description": "Supply deterministic providers and mock APIs to reproduce component behavior without production services.",
+  "triggers": [
+    "auth provider",
+    "API down",
+    "complex page sandbox"
+  ],
+  "knowledge": [
+    "frontend-architecture",
+    "components-states"
+  ],
+  "workflow": [
+    {
+      "step": 1,
+      "instruction": "Identify runtime dependencies before attempting mock."
+    },
+    {
+      "step": 2,
+      "instruction": "Prefer adapting existing DI/providers, Storybook decorators or MSW handlers."
+    },
+    {
+      "step": 3,
+      "instruction": "Use synthetic fixtures and explicit roles, flags and locales."
+    },
+    {
+      "step": 4,
+      "instruction": "Record mocked dependencies and validate with integrated runtime before claiming parity."
+    }
+  ],
+  "outputs": [
+    "Mock adapters",
+    "Parity disclosure"
+  ],
+  "acceptance": [
+    "No production credentials",
+    "Mock semantics documented"
+  ],
+  "fallback": "Use native project dev environment if provider cannot be safely simulated.",
+  "tools": [
+    "optional local scripts (.sh/.ps1)",
+    "project file reader",
+    "browser if available"
+  ],
+  "version": "1.0.0"
+}

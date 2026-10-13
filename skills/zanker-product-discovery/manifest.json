@@ -1,0 +1,46 @@
+{
+  "name": "zanker-product-discovery",
+  "description": "Discover product goals, users, jobs and evidence before redesigning a screen.",
+  "triggers": [
+    "new page",
+    "redesign",
+    "unclear audience"
+  ],
+  "knowledge": [
+    "product-discovery",
+    "ux-research"
+  ],
+  "workflow": [
+    {
+      "step": 1,
+      "instruction": "Inspect product docs, language strings, route names and existing analytics definitions without assuming these prove user motivations."
+    },
+    {
+      "step": 2,
+      "instruction": "Produce facts, hypotheses and unknowns separately; identify primary user task and success metric."
+    },
+    {
+      "step": 3,
+      "instruction": "Ask only questions whose answers materially change user experience or risk."
+    },
+    {
+      "step": 4,
+      "instruction": "Record a concise product.context.json and reference sources."
+    }
+  ],
+  "outputs": [
+    ".zanker/product.context.json",
+    "Primary user outcome and evidence confidence"
+  ],
+  "acceptance": [
+    "Never assert user research happened unless it did",
+    "Distinguish user needs from stakeholder requests"
+  ],
+  "fallback": "Use explicit hypotheses and document missing evidence.",
+  "tools": [
+    "optional local scripts (.sh/.ps1)",
+    "project file reader",
+    "browser if available"
+  ],
+  "version": "1.0.0"
+}

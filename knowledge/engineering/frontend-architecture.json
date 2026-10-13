@@ -1,0 +1,286 @@
+{
+  "schemaVersion": "1.0",
+  "id": "frontend-architecture",
+  "title": "Frontend architecture and fidelity",
+  "category": "engineering",
+  "summary": "Operational rules for diagnosing computed CSS, keeping a change in the right cascade layer, matching the real runtime, previewing before production, and letting utilities serve tokens. Each rule links the CSS Snapshot 2026 section or module for that subject.",
+  "updatedAt": "2026-10-12",
+  "sources": [
+    {
+      "name": "CSS Snapshot 2026",
+      "url": "https://www.w3.org/TR/css-2026/",
+      "verifiedAt": "2026-10-12"
+    },
+    {
+      "name": "CSS Cascading and Inheritance Level 5",
+      "url": "https://www.w3.org/TR/css-cascade-5/",
+      "verifiedAt": "2026-10-12"
+    }
+  ],
+  "rules": [
+    {
+      "id": "frontend-architecture.root-cause",
+      "title": "Fix source of visual defects",
+      "intent": "Read the computed value and the cascade step that produced it before adding !important",
+      "tags": [
+        "frontend",
+        "cascade",
+        "computed-value",
+        "important"
+      ],
+      "principles": [
+        "Inspect the computed value with getComputedStyle before editing the stylesheet",
+        "A declaration wins by origin and importance, then cascade layer, then specificity and order. Name the step that is already winning",
+        "!important raises a declaration and reverses layer order: for important rules, the earlier layer wins. It is not a diagnosis"
+      ],
+      "antiPatterns": [
+        "Adding !important without diagnosing cause"
+      ],
+      "acceptance": [
+        "Before and after, plus the cascade step that caused the defect, are recorded"
+      ],
+      "limitations": [
+        "Cascade 5 is a reliable Candidate Recommendation in CSS Snapshot 2026. The official definition still lists Cascade 4, which Cascade 5 extends",
+        "CSSOM, which defines getComputedStyle, is grouped with modules of rough interoperability"
+      ],
+      "sources": [
+        {
+          "name": "CSS Snapshot 2026, official definition",
+          "url": "https://www.w3.org/TR/css-2026/#css-official",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        },
+        {
+          "name": "CSS Cascade 5, computed value",
+          "url": "https://www.w3.org/TR/css-cascade-5/#computed",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        },
+        {
+          "name": "CSS Cascade 5, importance",
+          "url": "https://www.w3.org/TR/css-cascade-5/#importance",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        },
+        {
+          "name": "CSSOM, getComputedStyle",
+          "url": "https://www.w3.org/TR/cssom-1/#dom-window-getcomputedstyle",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "frontend-architecture.dependency-boundaries",
+      "title": "Minimize affected scope",
+      "intent": "Keep a local correction inside the component's layer so it does not interleave with the rest of the origin",
+      "tags": [
+        "frontend",
+        "cascade-layers",
+        "containment"
+      ],
+      "principles": [
+        "Put a local fix in that component's rule or cascade layer. Layers keep one concern from interleaving with rules outside the layer",
+        "An unlayered author rule joins an implicit final layer, so a document-wide patch beats layered component styles for normal declarations",
+        "Use containment when the subtree's layout must be processed independently of the rest of the page"
+      ],
+      "antiPatterns": [
+        "Broad global rule for local defect"
+      ],
+      "acceptance": [
+        "Shared consumers of a changed layer or shared rule are rechecked"
+      ],
+      "limitations": [
+        "Cascade layers are in the snapshot's reliable Candidate Recommendations, not yet in the official definition",
+        "CSS Nesting is listed with rough interoperability. It can group a component's rules, and it is not a stability guarantee",
+        "Containment isolates rendering. It does not choose which cascade layer wins"
+      ],
+      "sources": [
+        {
+          "name": "CSS Cascade 5, cascade layers",
+          "url": "https://www.w3.org/TR/css-cascade-5/#cascade-layers",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        },
+        {
+          "name": "CSS Nesting",
+          "url": "https://www.w3.org/TR/css-nesting-1/",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        },
+        {
+          "name": "CSS Containment, contain",
+          "url": "https://www.w3.org/TR/css-contain-1/#contain-property",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "frontend-architecture.stack-fidelity",
+      "title": "Match target runtime",
+      "intent": "Preview in the project's CSS engine, because an unsupported value drops the whole declaration and a pre-CR feature is not stable CSS",
+      "tags": [
+        "frontend",
+        "runtime",
+        "supports",
+        "fidelity"
+      ],
+      "principles": [
+        "CSS Snapshot 2026 defines CSS by module stability, not by what one browser has shipped",
+        "A renderer with no support for a value must ignore the entire declaration, not the unsupported piece. A different pipeline will not show that fallback",
+        "Treat a feature as unstable until its spec is a Candidate Recommendation, unless the snapshot lists it as safe to release. Branch on real support with @supports",
+        "Use the project framework, CSS pipeline, providers, and fonts in the preview"
+      ],
+      "antiPatterns": [
+        "Vanilla recreation claimed as exact component"
+      ],
+      "acceptance": [
+        "Runtime parity limitations are disclosed, including any pre-CR feature in use"
+      ],
+      "limitations": [
+        "Section 3 of the snapshot is written for implementers. The author-facing rule, that a partial environment is not the product, is derived from those requirements"
+      ],
+      "sources": [
+        {
+          "name": "CSS Snapshot 2026, partial implementations",
+          "url": "https://www.w3.org/TR/css-2026/#partial",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        },
+        {
+          "name": "CSS Snapshot 2026, unstable features",
+          "url": "https://www.w3.org/TR/css-2026/#unstable",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        },
+        {
+          "name": "CSS Conditional Rules, @supports",
+          "url": "https://www.w3.org/TR/css-conditional-3/#at-supports",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "frontend-architecture.safe-isolation",
+      "title": "Isolated workspace",
+      "intent": "Try an unproven visual change in a controlled preview so production content does not depend on it",
+      "tags": [
+        "frontend",
+        "preview",
+        "isolation"
+      ],
+      "principles": [
+        "The snapshot allows unstable CSS in a limited, controlled environment and warns against content that depends on it in production",
+        "Review the preview, then integrate a patch. The first look does not land in the live stylesheet"
+      ],
+      "antiPatterns": [
+        "Editing live production app for first preview"
+      ],
+      "acceptance": [
+        "Patch review happens before integration"
+      ],
+      "limitations": [
+        "The spec's controlled environment is about shipping unstable CSS, not about a code sandbox. Using a sandbox to satisfy that warning is operational guidance"
+      ],
+      "sources": [
+        {
+          "name": "CSS Snapshot 2026, unstable features",
+          "url": "https://www.w3.org/TR/css-2026/#unstable",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "frontend-architecture.tailwind-quality",
+      "title": "Utility CSS with design intent",
+      "intent": "Let utility classes resolve to shared custom properties, which are the CSS mechanism for a value defined once",
+      "tags": [
+        "frontend",
+        "custom-properties",
+        "tailwind",
+        "tokens"
+      ],
+      "principles": [
+        "A custom property holds a value in one place and propagates it. Utilities implement those tokens",
+        "Define the product's values in the theme the project already uses, such as Tailwind's theme, instead of a one-off utility that hardcodes a look",
+        "Judge the result visually. The utility syntax is not the design"
+      ],
+      "antiPatterns": [
+        "Default template aesthetic everywhere"
+      ],
+      "acceptance": [
+        "Repeated colors, type, and spacing trace back to a custom property or the project theme"
+      ],
+      "limitations": [
+        "Tailwind is not part of CSS Snapshot 2026. Custom properties are the platform primitive. The theme page is the library's own documentation"
+      ],
+      "sources": [
+        {
+          "name": "CSS Custom Properties",
+          "url": "https://www.w3.org/TR/css-variables-1/",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        },
+        {
+          "name": "CSS Snapshot 2026, official definition",
+          "url": "https://www.w3.org/TR/css-2026/#css-official",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        },
+        {
+          "name": "Tailwind theme",
+          "url": "https://tailwindcss.com/docs/theme",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    },
+    {
+      "id": "frontend-architecture.preserve-working",
+      "title": "Preserve behavior",
+      "intent": "Change presentation without changing the document's semantics or the control's behavior",
+      "tags": [
+        "frontend",
+        "semantics",
+        "appearance"
+      ],
+      "principles": [
+        "CSS describes presentation and usually does not change the semantics of the document language. A visual fix keeps the element that already has the behavior",
+        "The appearance property switches how a native control is drawn. The control remains that control",
+        "Keyboard operation, accessible name, and application logic stay intact after the visual change"
+      ],
+      "antiPatterns": [
+        "Replacing functional inputs with static look-alikes"
+      ],
+      "acceptance": [
+        "The same actions still run after the visual change"
+      ],
+      "limitations": [
+        "The snapshot states the semantics boundary. It does not list every HTML control. Component behavior stays in the HTML and ARIA specs"
+      ],
+      "sources": [
+        {
+          "name": "CSS Snapshot 2026, what CSS is",
+          "url": "https://www.w3.org/TR/css-2026/#css",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        },
+        {
+          "name": "CSS UI 4, appearance",
+          "url": "https://www.w3.org/TR/css-ui-4/#appearance-switching",
+          "kind": "official-or-primary",
+          "verifiedAt": "2026-10-12"
+        }
+      ],
+      "evidenceLevel": "derived-guidance-not-verbatim"
+    }
+  ]
+}

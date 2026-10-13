@@ -1,0 +1,47 @@
+{
+  "name": "zanker-media-generation",
+  "description": "Create and optimize SVG/raster media with provenance and explicit project purpose.",
+  "triggers": [
+    "illustration",
+    "hero art",
+    "banner",
+    "media"
+  ],
+  "knowledge": [
+    "media-production",
+    "visual-hierarchy"
+  ],
+  "workflow": [
+    {
+      "step": 1,
+      "instruction": "Specify art purpose, dimensions, platform, license requirements, alt text and style."
+    },
+    {
+      "step": 2,
+      "instruction": "For simple original SVG run `bash ${CLAUDE_PLUGIN_ROOT}/scripts/media-svg.sh --project . --kind empty --out public/assets/empty.svg`."
+    },
+    {
+      "step": 3,
+      "instruction": "For raster use an authorized image-generation provider, then optimize with `bash ${CLAUDE_PLUGIN_ROOT}/scripts/media-optimize.sh` if Sharp installed."
+    },
+    {
+      "step": 4,
+      "instruction": "Record source/provider, license, final dimensions and visual review; do not fabricate media generation when provider unavailable."
+    }
+  ],
+  "outputs": [
+    "Asset files",
+    "Asset manifest and alt text"
+  ],
+  "acceptance": [
+    "No unlicensed assets",
+    "Optimized and visually validated"
+  ],
+  "fallback": "Use procedural SVG or a documented asset brief when no image provider exists.",
+  "tools": [
+    "optional local scripts (.sh/.ps1)",
+    "project file reader",
+    "browser if available"
+  ],
+  "version": "1.0.0"
+}

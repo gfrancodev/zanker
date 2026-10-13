@@ -1,0 +1,46 @@
+{
+  "name": "zanker-root-cause-analysis",
+  "description": "Trace visual defects to the responsible style, component state or runtime context.",
+  "triggers": [
+    "persistent UI bug",
+    "regression",
+    "inconsistent render"
+  ],
+  "knowledge": [
+    "frontend-architecture",
+    "quality-gates"
+  ],
+  "workflow": [
+    {
+      "step": 1,
+      "instruction": "Record the smallest failing scenario."
+    },
+    {
+      "step": 2,
+      "instruction": "Inspect cascade, inherited styles, font loading, intrinsic sizes, layout container and viewport."
+    },
+    {
+      "step": 3,
+      "instruction": "Differentiate implementation defect from sandbox mismatch."
+    },
+    {
+      "step": 4,
+      "instruction": "Fix at correct abstraction layer, then test related consumers."
+    }
+  ],
+  "outputs": [
+    "Root-cause note",
+    "Regression test suggestion"
+  ],
+  "acceptance": [
+    "Avoid CSS !important band-aids",
+    "Record unresolved uncertainty"
+  ],
+  "fallback": "Escalate to integrated-mode reproduction if sandbox lacks parity.",
+  "tools": [
+    "optional local scripts (.sh/.ps1)",
+    "project file reader",
+    "browser if available"
+  ],
+  "version": "1.0.0"
+}
