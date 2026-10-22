@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import {collectFiles, pathExists, readJsonFile, toPosixPath, writeJsonFile} from './common.mjs';
+import {buildPageGraph} from './page-graph.mjs';
 
 /**
  * Reads an unfamiliar frontend repository and reports what it is built from.
@@ -204,6 +205,9 @@ export function inspectProject(project, save = true) {
     limits: SCAN_LIMITS,
   };
 
-  if (save) writeJsonFile(path.join(projectRoot, '.zanker', 'project.manifest.json'), manifest);
+  if (save) {
+    writeJsonFile(path.join(projectRoot, '.zanker', 'project.manifest.json'), manifest);
+    writeJsonFile(path.join(projectRoot, '.zanker', 'page-graph.json'), buildPageGraph(projectRoot, manifest.frameworks));
+  }
   return manifest;
 }

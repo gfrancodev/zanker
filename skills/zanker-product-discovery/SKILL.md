@@ -3,7 +3,7 @@ name: zanker-product-discovery
 description: Discover product goals, users, jobs and evidence before redesigning a screen. Use for new page, redesign, unclear audience.
 metadata:
   author: zanker
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 <skill name="zanker-product-discovery">

@@ -29,7 +29,7 @@ body:
     attributes:
       label: Zanker version
       description: From .claude-plugin/plugin.json, or the commit you installed.
-      placeholder: 1.0.0
+      placeholder: 1.1.0
     validations:
       required: true
 

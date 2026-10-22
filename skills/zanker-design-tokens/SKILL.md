@@ -3,7 +3,7 @@ name: zanker-design-tokens
 description: Map, author and validate semantic design tokens while preserving existing brand contracts. Use for theme changes, whitelabel, token migration.
 metadata:
   author: zanker
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 <skill name="zanker-design-tokens">
@@ -39,7 +39,7 @@ into context, and read the project manifest before proposing any implementation 
 </knowledge>
 
 <process>
-<step n="1">Inspect raw scales and semantic aliases.</step>
+<step n="1">When the user requested a new system or supplied a reference image, read `.zanker/design-intelligence/` first. Inspect raw scales and semantic aliases.</step>
 <step n="2">Map proposed decisions to existing tokens before defining new ones.</step>
 <step n="3">Check light/dark/high contrast/brand variants.</step>
 <step n="4">Limit global token changes; enumerate affected consumers and write migration note.</step>

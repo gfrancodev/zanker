@@ -3,7 +3,7 @@ name: zanker-scenario-engine
 description: Build deterministic mock states for loading, error, empty, overflow and user permissions. Use for component states, fixture design, no backend.
 metadata:
   author: zanker
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 <skill name="zanker-scenario-engine">

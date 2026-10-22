@@ -3,7 +3,7 @@ name: zanker-responsive-audit
 description: Review viewport, container, zoom, long content and touch usability. Use when checking a layout across mobile, tablet, and desktop for the first time.
 metadata:
   author: zanker
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 <skill name="zanker-responsive-audit">

@@ -3,7 +3,7 @@ name: zanker-visual-brainstorm
 description: Serve multiple design explorations and collect user selections locally. Use when two or three genuinely different UI directions must exist before anyone commits.
 metadata:
   author: zanker
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 <skill name="zanker-visual-brainstorm">
@@ -23,7 +23,7 @@ Three near-identical options are a single proposal wearing a disguise, and they 
 <trigger>visual brainstorming</trigger>
 </triggers>
 <not_for>
-Not for committing to one direction and detailing it - use `zanker-art-direction`.
+Not for committing to one direction and detailing it - use `zanker-art-direction`. Not when the user already attached a reference image.
 </not_for>
 </when_to_use>
 
@@ -37,10 +37,11 @@ into context, and read the project manifest before proposing any implementation 
 </knowledge>
 
 <process>
-<step n="1">Create a concepts.json with 2-3 visual directions; HTML/CSS concepts allowed.</step>
-<step n="2">Run the applicable script in `${CLAUDE_PLUGIN_ROOT}/scripts/`.</step>
-<step n="3">User opens URL and selects or comments; inspect .zanker/studio/events-*.jsonl.</step>
-<step n="4">Translate approved direction into implementation plan; concepts are not production code.</step>
+<step n="1">Confirm no user reference image is present. Run design-search with different `--variance` values and reference-search for each direction.</step>
+<step n="2">Create a concepts.json with 2-3 visual directions; HTML/CSS concepts allowed.</step>
+<step n="3">Run the applicable script in `${CLAUDE_PLUGIN_ROOT}/scripts/`.</step>
+<step n="4">User opens URL and selects or comments; inspect .zanker/studio/events-*.jsonl.</step>
+<step n="5">Translate approved direction into implementation plan; concepts are not production code.</step>
 </process>
 
 <deliverables>

@@ -3,7 +3,7 @@ name: zanker-content-design
 description: Design UI microcopy, errors, empty states and translations consistent with user tasks. Use when the words must change: form labels, onboarding copy, error messages, or translations.
 metadata:
   author: zanker
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 <skill name="zanker-content-design">

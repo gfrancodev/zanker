@@ -3,7 +3,7 @@ name: zanker-accessibility-audit
 description: Audit semantic controls, keyboard interaction, contrast and WCAG-related requirements. Use for WCAG, a11y, accessible forms, keyboard.
 metadata:
   author: zanker
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 <skill name="zanker-accessibility-audit">

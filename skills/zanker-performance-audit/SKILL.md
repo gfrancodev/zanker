@@ -3,7 +3,7 @@ name: zanker-performance-audit
 description: Check UI media cost, font behavior, interactions and layout instability. Use for slow landing page, heavy animation, images.
 metadata:
   author: zanker
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 <skill name="zanker-performance-audit">

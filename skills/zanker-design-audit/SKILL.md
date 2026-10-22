@@ -3,7 +3,7 @@ name: zanker-design-audit
 description: Audit an existing product UI across hierarchy, affordances, consistency and accessibility. Use when a page needs a structural review of hierarchy, affordances, and consistency with the system.
 metadata:
   author: zanker
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 <skill name="zanker-design-audit">

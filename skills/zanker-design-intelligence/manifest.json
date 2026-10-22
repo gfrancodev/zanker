@@ -1,0 +1,51 @@
+{
+  "name": "zanker-design-intelligence",
+  "description": "Run design-system generation, reference-site lookup, page-graph context, and component-catalog search for open visual decisions.",
+  "triggers": [
+    "design system",
+    "visual reference",
+    "open visual direction",
+    "component catalog"
+  ],
+  "knowledge": [
+    "color-systems",
+    "typography",
+    "visual-hierarchy",
+    "design-tokens"
+  ],
+  "workflow": [
+    {
+      "step": 1,
+      "instruction": "If the user attached an image or screenshot, read it and write .zanker/design-intelligence/<slug>.md before any catalog search. Do not open Studio."
+    },
+    {
+      "step": 2,
+      "instruction": "Read .zanker/page-graph.json from inspect when proposing page structure."
+    },
+    {
+      "step": 3,
+      "instruction": "Without a user image, run design-search.sh --design-system and reference-search.sh; save output under .zanker/design-intelligence/."
+    },
+    {
+      "step": 4,
+      "instruction": "For component work, run component-search.sh for the named primitives and respect dependency order."
+    }
+  ],
+  "outputs": [
+    "Design intelligence brief",
+    "Reference site fichas",
+    "Component catalog matches"
+  ],
+  "acceptance": [
+    "User visual reference overrides catalog recommendations",
+    "Catalog never replaces existing project tokens without explicit new-system request"
+  ],
+  "fallback": "When python3 is missing, state that design-search did not run and use knowledge packs only.",
+  "tools": [
+    "design-search.sh",
+    "reference-search.sh",
+    "component-search.sh",
+    "inspect.sh"
+  ],
+  "version": "1.1.0"
+}

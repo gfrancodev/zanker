@@ -3,7 +3,7 @@ name: zanker-media-generation
 description: Create and optimize SVG/raster media with provenance and explicit project purpose. Use for illustration, hero art, banner, media.
 metadata:
   author: zanker
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 <skill name="zanker-media-generation">

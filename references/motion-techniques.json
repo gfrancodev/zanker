@@ -1,0 +1,175 @@
+{
+  "schemaVersion": "1.0",
+  "attribution": {
+    "project": "Extreme Motion Design",
+    "author": "Isaac Mello",
+    "license": "MIT",
+    "url": "https://github.com/dev-isaacmello/extreme-motion-design",
+    "year": 2026,
+    "note": "Catálogo Zanker: síntese original de técnicas e direção publicadas no README upstream. Pipeline Remotion, voz, stock e download de site não são redistribuídos."
+  },
+  "directionContract": {
+    "summary": "Declarar intenção antes de animar: o que a peça comunica, a lei visual, o motivo recorrente e a entrada de cada cena ou estado.",
+    "rules": [
+      "Antes de qualquer keyframe: propósito da transição, lei visual (ritmo, peso, escala) e motivo que se repete com variação.",
+      "Cada cena ou estado precisa de uma entrada distinta; rejeitar a mesma composição copiada em loop.",
+      "Superfície padrão: CSS nativo ou a biblioteca de motion já usada no repositório; vídeo só quando o usuário pedir reel, filme ou loop de logo.",
+      "Respeitar prefers-reduced-motion com equivalente estático ou instantâneo.",
+      "Não instalar Remotion, ElevenLabs nem baixar mídia de terceiros por padrão; apontar o upstream e a licença do Remotion se o pedido for vídeo."
+    ]
+  },
+  "designMeter": {
+    "summary": "Sinais de motion genérico a evitar; medições de UI durante transições.",
+    "genericSignals": [
+      "Fundo quase preto com um único acento neon em toda cena",
+      "Tipografia condensada gigante sempre na margem esquerda",
+      "Mono decorativo sem função semântica",
+      "Tudo em caixa alta sem hierarquia",
+      "O mesmo card deslizando da mesma direção em toda entrada"
+    ],
+    "uiChecks": [
+      "Texto legível e não cortado durante a animação",
+      "Contraste e foco visível em estados intermediários",
+      "No máximo o equivalente a três flashes por segundo",
+      "prefers-reduced-motion desativa ou simplifica o movimento",
+      "Área segura e hit targets estáveis em microinterações"
+    ]
+  },
+  "techniques": [
+    {
+      "id": "easing",
+      "name": "Easing",
+      "category": "entry-physics",
+      "surfaces": ["css", "component"],
+      "whenToUse": "Transições simples de opacidade, cor ou posição onde a curva comunica peso ou urgência.",
+      "whenNotToUse": "Quando a física precisa de overshoot ou interação contínua; preferir spring.",
+      "terms": ["easing", "ease", "cubic-bezier", "timing", "transition", "curve"]
+    },
+    {
+      "id": "spring",
+      "name": "Spring",
+      "category": "entry-physics",
+      "surfaces": ["css", "component"],
+      "whenToUse": "Feedback de interface, drawers, modais e elementos que devem parecer elásticos mas controlados.",
+      "whenNotToUse": "Conteúdo denso que precisa parar sem oscilação; reduzir damping ou usar easing.",
+      "terms": ["spring", "physics", "bounce", "damping", "stiffness", "motion library"]
+    },
+    {
+      "id": "anticipation",
+      "name": "Anticipation",
+      "category": "entry-physics",
+      "surfaces": ["css", "component", "video"],
+      "whenToUse": "Antes de um movimento grande: pequeno recuo ou pause que prepara o olhar.",
+      "whenNotToUse": "Microinterações rápidas onde o atraso atrapalha a tarefa.",
+      "terms": ["anticipation", "wind-up", "prepare", "before", "entry"]
+    },
+    {
+      "id": "overshoot",
+      "name": "Overshoot",
+      "category": "entry-physics",
+      "surfaces": ["css", "component"],
+      "whenToUse": "Botões, toggles e confirmações que precisam de ênfase sem exagero prolongado.",
+      "whenNotToUse": "Formulários longos, leitura contínua ou usuários com reduced-motion.",
+      "terms": ["overshoot", "overshoot button", "bounce", "settle", "emphasis", "button", "press"]
+    },
+    {
+      "id": "squash-stretch",
+      "name": "Squash and Stretch",
+      "category": "entry-physics",
+      "surfaces": ["css", "component", "video"],
+      "whenToUse": "Ícones, badges ou personagens que precisam de volume e impacto ao mudar de estado.",
+      "whenNotToUse": "Layouts rígidos de dados ou tabelas onde deformar o container confunde escala.",
+      "terms": ["squash", "stretch", "squash and stretch", "deform", "impact"]
+    },
+    {
+      "id": "smear",
+      "name": "Smear",
+      "category": "entry-physics",
+      "surfaces": ["css", "video"],
+      "whenToUse": "Movimentos muito rápidos em loops ou reels onde o olho precisa de continuidade entre frames.",
+      "whenNotToUse": "UI de produto com texto nítido; blur excessivo prejudica leitura.",
+      "terms": ["smear", "motion blur", "fast", "streak", "blur"]
+    },
+    {
+      "id": "speed-ramp",
+      "name": "Speed Ramp",
+      "category": "rhythm",
+      "surfaces": ["css", "component", "video"],
+      "whenToUse": "Destacar um momento: acelerar entrada e desacelerar na informação principal.",
+      "whenNotToUse": "Navegação utilitária onde velocidade constante reduz desorientação.",
+      "terms": ["speed ramp", "ramp", "ease in", "ease out", "rhythm", "tempo"]
+    },
+    {
+      "id": "match-cut",
+      "name": "Match Cut",
+      "category": "rhythm",
+      "surfaces": ["video", "component"],
+      "whenToUse": "Trocar de tela ou seção alinhando forma, cor ou movimento entre estados.",
+      "whenNotToUse": "Quando não há elemento compartilhado; o corte fica arbitrário.",
+      "terms": ["match cut", "match", "cut", "continuity", "scene", "transition"]
+    },
+    {
+      "id": "seamless-loop",
+      "name": "Seamless Loop",
+      "category": "rhythm",
+      "surfaces": ["css", "video"],
+      "whenToUse": "Loaders, backgrounds e logos onde o loop não pode mostrar salto.",
+      "whenNotToUse": "Fluxos lineares com início e fim claros; prefira entrada e saída distintas.",
+      "terms": ["seamless loop", "loop", "infinite", "loader", "background"]
+    },
+    {
+      "id": "camera-move",
+      "name": "Camera Move",
+      "category": "camera",
+      "surfaces": ["css", "component", "video"],
+      "whenToUse": "Revelar hierarquia com pan, zoom ou dolly em hero ou storytelling.",
+      "whenNotToUse": "Painéis densos de trabalho onde o movimento de câmera causa enjoo.",
+      "terms": ["camera", "move", "pan", "zoom", "dolly", "ken burns"]
+    },
+    {
+      "id": "parallax",
+      "name": "Parallax",
+      "category": "camera",
+      "surfaces": ["css", "component"],
+      "whenToUse": "Profundidade em landing pages com camadas que se movem em velocidades diferentes.",
+      "whenNotToUse": "Conteúdo crítico de tarefa ou quando reduced-motion está ativo sem fallback.",
+      "terms": ["parallax", "depth", "layer", "scroll", "foreground", "background"]
+    },
+    {
+      "id": "kinetic-type",
+      "name": "Kinetic Type",
+      "category": "type",
+      "surfaces": ["css", "component", "video"],
+      "whenToUse": "Títulos e mensagens curtas onde o movimento reforça ênfase ou ritmo.",
+      "whenNotToUse": "Corpo de texto longo, formulários ou qualquer bloco que precise ser lido sem animação.",
+      "terms": ["kinetic type", "typography", "title", "text animation", "headline"]
+    },
+    {
+      "id": "microinteraction",
+      "name": "Microinteraction",
+      "category": "interface",
+      "surfaces": ["css", "component"],
+      "whenToUse": "Hover, press, toggle e validação imediata que confirma a ação do usuário.",
+      "whenNotToUse": "Quando a animação atrasa feedback além de ~300 ms sem motivo.",
+      "terms": ["microinteraction", "hover", "press", "feedback", "toggle", "button"]
+    },
+    {
+      "id": "shared-layout",
+      "name": "Shared Layout Transition",
+      "category": "interface",
+      "surfaces": ["component"],
+      "whenToUse": "Mesmo elemento mudando de tamanho ou posição entre rotas ou estados (layoutId, FLIP).",
+      "whenNotToUse": "Listas grandes sem elemento estável compartilhado; custo e confusão altos.",
+      "terms": ["shared layout", "layout transition", "layout id", "flip", "morph", "route"]
+    },
+    {
+      "id": "exit-timing",
+      "name": "Exit Timing",
+      "category": "interface",
+      "surfaces": ["css", "component"],
+      "whenToUse": "Saídas mais rápidas que entradas para liberar foco e reduzir sobreposição visual.",
+      "whenNotToUse": "Quando a saída precisa comunicar consequência; alinhar duração à mensagem.",
+      "terms": ["exit", "exit timing", "leave", "outro", "unmount", "close", "modal"]
+    }
+  ]
+}

@@ -3,7 +3,7 @@ name: zanker-visualspec-documentation
 description: Document already-created or conceptual visuals using Visual Spec as a reference only, never code generation. Use for visualspec, visual documentation, screenshot reference.
 metadata:
   author: zanker
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 <skill name="zanker-visualspec-documentation">

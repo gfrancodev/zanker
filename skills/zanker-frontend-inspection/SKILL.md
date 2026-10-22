@@ -3,7 +3,7 @@ name: zanker-frontend-inspection
 description: Map runtime UI elements to DOM, computed styles, component files and dependencies. Use for broken component, locate element, CSS diagnosis.
 metadata:
   author: zanker
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 <skill name="zanker-frontend-inspection">

@@ -18,15 +18,19 @@
     },
     {
       "step": 2,
-      "instruction": "Choose native CSS for simple transitions, framework library for interaction, advanced runtime only when justified."
+      "instruction": "Run motion-search.sh for the task; declare direction contract (purpose, law, motif, entry) and apply design meter anti-patterns from the JSON response."
     },
     {
       "step": 3,
-      "instruction": "Check Zanker motion presets `read ${CLAUDE_PLUGIN_ROOT}/knowledge/media/motion-design.json`; generate tokens via `bash ${CLAUDE_PLUGIN_ROOT}/scripts/motion-css.sh --out ...` if desired."
+      "instruction": "Default to css or component surfaces from the catalog; video only on explicit reel/film/logo-loop requests with upstream Remotion license note; no default install."
     },
     {
       "step": 4,
-      "instruction": "Test prefers-reduced-motion, focus behavior, exit timing and runtime performance."
+      "instruction": "Read knowledge/media/motion-design.json; optional motion-css.sh for tokens."
+    },
+    {
+      "step": 5,
+      "instruction": "Test prefers-reduced-motion, focus, exit timing, design meter UI checks and performance."
     }
   ],
   "outputs": [
@@ -35,13 +39,17 @@
   ],
   "acceptance": [
     "Animation aids task",
-    "Reduced-motion works"
+    "Reduced-motion works",
+    "Direction contract stated before implementation",
+    "No generic design-meter tropes without intent"
   ],
   "fallback": "Offer a static transition or simpler state feedback.",
   "tools": [
+    "motion-search.sh",
+    "motion-css.sh",
     "optional local scripts (.sh/.ps1)",
     "project file reader",
     "browser if available"
   ],
-  "version": "1.0.0"
+  "version": "1.1.0"
 }

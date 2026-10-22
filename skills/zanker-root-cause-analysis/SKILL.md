@@ -3,7 +3,7 @@ name: zanker-root-cause-analysis
 description: Trace visual defects to the responsible style, component state or runtime context. Use for persistent UI bug, regression, inconsistent render.
 metadata:
   author: zanker
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 <skill name="zanker-root-cause-analysis">

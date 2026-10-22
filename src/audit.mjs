@@ -316,3 +316,38 @@ export async function auditURL({
   writeJsonFile(path.join(outputDirectory, 'audit.json'), report);
   return {report, out: outputDirectory};
 }
+
+/**
+ * Lightweight accessibility outline for page-graph enrichment (roles and headings).
+ *
+ * @param {object} options
+ * @param {string} options.url Local URL to open.
+ * @param {boolean} [options.allowRemote]
+ * @returns {Promise<object>}
+ */
+export async function captureAccessibilityOutline({url, allowRemote = false}) {
+  parseSafeHttpUrl(url, allowRemote);
+  const browserType = await resolveChromium();
+  if (!browserType) {
+    return {ok: false, reason: 'playwright-missing', outline: []};
+  }
+  const browser = await browserType.launch({headless: true});
+  try {
+    const page = await browser.newPage();
+    await page.goto(url, {waitUntil: 'domcontentloaded', timeout: NAVIGATION_TIMEOUT_MS});
+    const outline = await page.evaluate(() => {
+      const nodes = [];
+      const selectors = 'header, nav, main, footer, aside, h1, h2, h3, [role]';
+      for (const el of document.querySelectorAll(selectors)) {
+        const role = el.getAttribute('role') || el.tagName.toLowerCase();
+        const name = (el.getAttribute('aria-label') || el.textContent || '').trim().slice(0, 80);
+        nodes.push({role, name});
+        if (nodes.length >= 80) break;
+      }
+      return nodes;
+    });
+    return {ok: true, url, outline};
+  } finally {
+    await browser.close();
+  }
+}

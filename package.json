@@ -1,6 +1,6 @@
 {
   "name": "zanker",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
   "type": "module",
   "description": "Development scripts for the Zanker plugin: tests and coverage. Not published, no global CLI, no installer.",

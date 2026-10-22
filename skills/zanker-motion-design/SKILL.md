@@ -3,7 +3,7 @@ name: zanker-motion-design
 description: Design purposeful CSS/Motion/GSAP animation with reduced-motion equivalents. Use for animation, microinteraction, transitions, interactive motion.
 metadata:
   author: zanker
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 <skill name="zanker-motion-design">
@@ -39,9 +39,10 @@ into context, and read the project manifest before proposing any implementation 
 
 <process>
 <step n="1">Explain state change or spatial relationship communicated by motion.</step>
-<step n="2">Choose native CSS for simple transitions, framework library for interaction, advanced runtime only when justified.</step>
-<step n="3">Check Zanker motion presets the applicable script in `${CLAUDE_PLUGIN_ROOT}/scripts/`; generate tokens via the applicable script in `${CLAUDE_PLUGIN_ROOT}/scripts/` if desired.</step>
-<step n="4">Test prefers-reduced-motion, focus behavior, exit timing and runtime performance.</step>
+<step n="2">Run `bash ${CLAUDE_PLUGIN_ROOT}/scripts/motion-search.sh --project <absolute path> --query "..."`. Declare the direction contract from the response (purpose, visual law, recurring motif, entry per scene or state). Scan the design meter generic signals and reject copy-paste compositions.</step>
+<step n="3">Choose surface from search results: native CSS or the project's existing motion library by default (`css` or `component`). Use `video` only when the user asks for reel, film or logo loop as video; point to https://github.com/dev-isaacmello/extreme-motion-design and Remotion licensing. Do not install Remotion, ElevenLabs or download stock by default.</step>
+<step n="4">Check Zanker motion presets via `read ${CLAUDE_PLUGIN_ROOT}/knowledge/media/motion-design.json`; generate tokens via `bash ${CLAUDE_PLUGIN_ROOT}/scripts/motion-css.sh --out ...` if desired.</step>
+<step n="5">Test prefers-reduced-motion, focus behavior, exit timing, design meter UI checks (contrast, no clipped text, flash rate) and runtime performance.</step>
 </process>
 
 <deliverables>

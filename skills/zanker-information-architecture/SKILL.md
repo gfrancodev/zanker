@@ -3,7 +3,7 @@ name: zanker-information-architecture
 description: Improve labels, navigation, content grouping and findability. Use when menus, labels, or dashboard grouping must change and the flow is already settled.
 metadata:
   author: zanker
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 <skill name="zanker-information-architecture">

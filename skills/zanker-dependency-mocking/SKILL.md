@@ -3,7 +3,7 @@ name: zanker-dependency-mocking
 description: Supply deterministic providers and mock APIs to reproduce component behavior without production services. Use for auth provider, API down, complex page sandbox.
 metadata:
   author: zanker
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 <skill name="zanker-dependency-mocking">

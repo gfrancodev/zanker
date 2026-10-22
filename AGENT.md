@@ -148,7 +148,7 @@ plugin update. `${CLAUDE_PLUGIN_ROOT}` is read-only and its path changes on ever
 variable is present in the environment of commands run through the Bash tool, so scripts must resolve
 their own data directory.
 
-In this file and under `docs/`, `{PLUGIN_ROOT}` is documentation notation only. It uses braces, not
+In this file, `{PLUGIN_ROOT}` is documentation notation only. It uses braces, not
 angle brackets, so it is never mistaken for a prompt tag.
 
 The plugin root is the directory containing `.claude-plugin/plugin.json`, `.cursor-plugin/plugin.json`,

@@ -3,7 +3,7 @@ name: zanker-design-system-evolution
 description: Safely extend shared components and token sets based on repeated needs. Use for new shared component, design system refactor.
 metadata:
   author: zanker
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 <skill name="zanker-design-system-evolution">

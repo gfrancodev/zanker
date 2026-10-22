@@ -15,8 +15,12 @@ Use the `zanker` agent. Before acting, read its `<skill_router>` and load only t
 This file is the methodology those skills apply: anti-slop, existing system first, and evidence.
 Do not paste the 130 knowledge rules into context.
 
-<step n="1">Inspect project conventions and the existing design system before proposing anything. The
-nearest sibling screen answers most design questions; diverging from it needs a stated reason.</step>
+<step n="1">Inspect project conventions and the existing design system before proposing anything. Read
+`.zanker/page-graph.json` when proposing page structure. The nearest sibling screen answers most
+design questions; diverging from it needs a stated reason.</step>
+<step n="1b">When the user attached a reference image, read it and write
+`.zanker/design-intelligence/` before asking for palette or type choices. Do not open Studio for that
+case.</step>
 <step n="2">Establish real content shape, meaning longest string, worst-case counts, empty and error
 states, before choosing a layout.</step>
 <step n="3">Render and validate in a browser or sandbox when possible. No screenshot means untested,

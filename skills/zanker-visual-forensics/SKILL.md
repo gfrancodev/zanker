@@ -3,7 +3,7 @@ name: zanker-visual-forensics
 description: Reproduce a visual defect, isolate root cause, apply the smallest appropriate fix and verify. Use when one screenshot disagrees with the intended pixels and the cause must be measured.
 metadata:
   author: zanker
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 <skill name="zanker-visual-forensics">

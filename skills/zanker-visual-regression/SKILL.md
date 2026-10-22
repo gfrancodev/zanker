@@ -3,7 +3,7 @@ name: zanker-visual-regression
 description: Capture deterministic browser screenshots and review meaningful changes. Use when proving which pixels changed between two captures of the same UI.
 metadata:
   author: zanker
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 <skill name="zanker-visual-regression">

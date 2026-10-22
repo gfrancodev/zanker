@@ -3,7 +3,7 @@ name: zanker-reference-curation
 description: Maintain trustworthy, attributable JSON knowledge without scraping proprietary courses. Use for update references, new UI guideline, knowledge authoring.
 metadata:
   author: zanker
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 <skill name="zanker-reference-curation">

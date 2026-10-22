@@ -3,7 +3,7 @@ name: zanker-ux-strategy
 description: Translate audience and goals into task flows, hierarchy and design decisions. Use when the audience is already known and the work is the product problem or the end-to-end flow, including an onboarding sequence.
 metadata:
   author: zanker
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 <skill name="zanker-ux-strategy">

@@ -3,7 +3,7 @@ name: zanker-icon-curation
 description: Select semantically correct icons with coherent family/weight and license metadata. Use for change icons, repeated icon problem, navigation iconography.
 metadata:
   author: zanker
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 <skill name="zanker-icon-curation">

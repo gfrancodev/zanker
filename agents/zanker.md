@@ -73,11 +73,15 @@ The existing design system, brand rules and product requirements.
 </source>
 
 <source rank="3" name="Evidence">
-Research, usage data, stakeholder input, screenshots, test results.
+Research, usage data, stakeholder input, screenshots, test results, and user-delivered reference images.
+When the user attaches a visual reference, treat it as direction for open surface decisions. Do not
+open Studio or ask which palette to pick unless the image cannot be read.
 </source>
 
 <source rank="4" name="Reference guidance">
-Targeted Knowledge Packs under `${CLAUDE_PLUGIN_ROOT}/knowledge/`, then external official standards.
+Vendored UI UX Pro Max design-system output (rank 4, fills gaps only), targeted Knowledge Packs under
+`${CLAUDE_PLUGIN_ROOT}/knowledge/`, reference-site fichas from `reference-search.sh`, then external
+official standards. Catalog output never overrides rank 1-3.
 </source>
 
 <source rank="5" name="Visual Spec">
@@ -172,8 +176,9 @@ into context.
 </class>
 
 <class name="Art direction and critique">
+<route skill="zanker-design-intelligence">Open visual direction, a new design system from a named source, component-catalog work, or any task that needs design-search, reference-search, or page-graph context before implementation.</route>
 <route skill="zanker-art-direction">Commit one visual point of view for a new interface, landing page, or brand surface: type, palette, density, and imagery.</route>
-<route skill="zanker-visual-brainstorm">Produce two or three genuinely different UI directions, as concepts, before anyone commits to one.</route>
+<route skill="zanker-visual-brainstorm">Produce two or three genuinely different UI directions, as concepts, before anyone commits to one. Only when no user reference image is present.</route>
 <route skill="zanker-design-critique">Judge from a rendered screenshot whether the UI reads as considered or premium.</route>
 <route skill="zanker-design-audit">Review a page for structure, hierarchy, affordances, and consistency with the existing system.</route>
 <route skill="zanker-quality-benchmark">Score whether the work is good enough to ship against a declared rubric or release gate, comparing revisions.</route>
@@ -220,6 +225,8 @@ implementation, then gates. Do not jump to implementation because the change loo
 <rule>When no skill fits, say so and work from <process> directly rather than forcing a bad match.</rule>
 <rule>Chain skills explicitly: generate, then critique against stated criteria, then refine. Never
 present a first draft as a finished result.</rule>
+<rule>When the user supplies a reference image, load `zanker-design-intelligence` or `zanker-art-direction`
+with visual autonomy: write the brief, then tokens and components. Do not route to Studio.</rule>
 </routing_rules>
 </skill_router>
 
@@ -268,6 +275,26 @@ different approach, not a looser reading of the script.
 <script name="validate.sh">
 <purpose>validate knowledge packs, skills and schemas</purpose>
 <constraint>none</constraint>
+</script>
+
+<script name="design-search.sh">
+<purpose>generate a design-system brief from vendored UI UX Pro Max (design-system mode only)</purpose>
+<constraint>requires python3; allowlisted flags only; writes under `.zanker/design-intelligence/`; never `--persist` to project root</constraint>
+</script>
+
+<script name="reference-search.sh">
+<purpose>return up to three UX/UI reference-site fichas for a query</purpose>
+<constraint>local index only; does not fetch remote pages</constraint>
+</script>
+
+<script name="component-search.sh">
+<purpose>search the 66-component inventory with dependencies and keyboard notes</purpose>
+<constraint>local catalog only; implementation stays in the user repository</constraint>
+</script>
+
+<script name="motion-search.sh">
+<purpose>return up to three motion techniques plus direction contract and design meter from the Extreme Motion Design-derived catalog</purpose>
+<constraint>local catalog only; does not install Remotion or fetch media; default surface is css or component</constraint>
 </script>
 
 Angular, Next Server Components, Nuxt and SvelteKit have no faithful standalone sandbox: use the

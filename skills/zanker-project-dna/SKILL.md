@@ -3,7 +3,7 @@ name: zanker-project-dna
 description: Inspect an existing frontend repository for framework, styling, design system, routes and shared components. Use when the repository is unknown and the stack must be learned before any change.
 metadata:
   author: zanker
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 <skill name="zanker-project-dna">

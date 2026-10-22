@@ -11,6 +11,30 @@ reorders the work is a minor at least.
 
 Nothing yet.
 
+## [1.1.0] - 2026-10-23
+
+### Added
+
+- `zanker-design-intelligence` skill and router entry for open visual direction, design systems from
+  named sources, and component-catalog work before implementation.
+- Local search tools: `design-search.sh` (UI UX Pro Max design-system mode, vendored subset),
+  `reference-search.sh` (curated UX/UI reference sites), `component-search.sh` (66-component
+  inventory with dependencies), and `motion-search.sh` (motion techniques, direction contract and
+  design meter derived from Extreme Motion Design, MIT).
+- `inspect` writes `.zanker/page-graph.json` with route landmarks and component imports for
+  App Router style layouts.
+- Art-direction and related skills: stronger independence when the user supplies reference images
+  (Studio gated when a reference image is present).
+
+### Changed
+
+- Agent tooling and generated adapters include the new search scripts; test suite now at 167 tests.
+- README honest limits are inlined; the separate `docs/` tree is no longer shipped with the plugin.
+
+### Removed
+
+- `docs/` directory (architecture, limitations, vision, install notes, and related prose).
+
 ## [1.0.0] - 2026-10-12
 
 First release.
@@ -50,5 +74,6 @@ First release.
 - No `bin/` directory and no compiled installer, enforced by a test, since several hosts refuse a
   plugin that ships an executable.
 
-[Unreleased]: https://github.com/gfrancodev/zanker/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/gfrancodev/zanker/compare/v1.1.0...HEAD
+[1.1.0]: https://github.com/gfrancodev/zanker/releases/tag/v1.1.0
 [1.0.0]: https://github.com/gfrancodev/zanker/releases/tag/v1.0.0

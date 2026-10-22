@@ -3,7 +3,7 @@ name: zanker-design-critique
 description: Critique rendered interface for coherence, hierarchy, suitability and visual polish. Use when judging a rendered screenshot for whether it reads as considered or premium.
 metadata:
   author: zanker
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 <skill name="zanker-design-critique">

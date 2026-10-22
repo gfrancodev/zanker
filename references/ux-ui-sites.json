@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "sites": [
+    {"name": "Mobbin", "url": "https://mobbin.com/", "type": "gallery", "access": "conta", "purpose": "Mobile and web UI patterns from real products", "terms": ["mobile", "app", "flow", "onboarding", "fintech", "saas"]},
+    {"name": "Refero", "url": "https://refero.design/", "type": "gallery", "access": "aberto", "purpose": "Curated web and product UI references", "terms": ["web", "landing", "dashboard", "saas"]},
+    {"name": "Godly", "url": "https://godly.website/", "type": "gallery", "access": "aberto", "purpose": "High-quality web design inspiration", "terms": ["landing", "marketing", "creative", "portfolio"]},
+    {"name": "Landbook", "url": "https://land-book.com/", "type": "gallery", "access": "aberto", "purpose": "Landing page gallery", "terms": ["landing", "hero", "marketing", "startup"]},
+    {"name": "Lapa Ninja", "url": "https://www.lapa.ninja/", "type": "gallery", "access": "aberto", "purpose": "Landing pages and marketing sites", "terms": ["landing", "marketing", "hero"]},
+    {"name": "Awwwards", "url": "https://www.awwwards.com/", "type": "gallery", "access": "aberto", "purpose": "Award-winning web experiences", "terms": ["creative", "animation", "portfolio", "premium"]},
+    {"name": "Saaspo", "url": "https://saaspo.com/", "type": "gallery", "access": "aberto", "purpose": "SaaS landing and marketing pages", "terms": ["saas", "b2b", "pricing", "landing"]},
+    {"name": "Screenlane", "url": "https://screenlane.com/", "type": "gallery", "access": "aberto", "purpose": "Mobile app screenshots and patterns", "terms": ["mobile", "ios", "android", "app"]},
+    {"name": "Page Flows", "url": "https://pageflows.com/", "type": "gallery", "access": "pago", "purpose": "User flow videos and screenshots", "terms": ["flow", "onboarding", "checkout", "signup"]},
+    {"name": "Nicelydone", "url": "https://nicelydone.club/", "type": "gallery", "access": "conta", "purpose": "Product UI patterns", "terms": ["product", "saas", "dashboard", "settings"]},
+    {"name": "Nielsen Norman Group", "url": "https://www.nngroup.com/articles/", "type": "research", "access": "aberto", "purpose": "UX research and heuristics", "terms": ["ux", "research", "heuristic", "usability", "form"]},
+    {"name": "Laws of UX", "url": "https://lawsofux.com/", "type": "research", "access": "aberto", "purpose": "Psychology principles for interface design", "terms": ["psychology", "principle", "ux", "hierarchy"]},
+    {"name": "Baymard", "url": "https://baymard.com/", "type": "research", "access": "pago", "purpose": "E-commerce UX benchmarks", "terms": ["ecommerce", "checkout", "cart", "retail"]},
+    {"name": "Growth.design", "url": "https://growth.design/", "type": "research", "access": "aberto", "purpose": "Case studies with UX breakdowns", "terms": ["case study", "conversion", "onboarding"]},
+    {"name": "Built for Mars", "url": "https://builtformars.com/", "type": "research", "access": "aberto", "purpose": "UX case studies from real products", "terms": ["case study", "product", "ux", "mobile"]},
+    {"name": "Apple HIG", "url": "https://developer.apple.com/design/human-interface-guidelines/", "type": "system", "access": "aberto", "purpose": "Apple platform design guidance", "terms": ["ios", "macos", "platform", "native"]},
+    {"name": "Material 3", "url": "https://m3.material.io/", "type": "system", "access": "aberto", "purpose": "Google Material Design system", "terms": ["android", "material", "google", "component"]},
+    {"name": "Fluent 2", "url": "https://fluent2.microsoft.design/", "type": "system", "access": "aberto", "purpose": "Microsoft Fluent design system", "terms": ["microsoft", "windows", "enterprise", "fluent"]},
+    {"name": "GOV.UK Design System", "url": "https://design-system.service.gov.uk/", "type": "system", "access": "aberto", "purpose": "Accessible government web patterns", "terms": ["government", "accessibility", "form", "content"]},
+    {"name": "Shopify Polaris", "url": "https://polaris.shopify.com/", "type": "system", "access": "aberto", "purpose": "Shopify admin and commerce UI", "terms": ["ecommerce", "admin", "commerce", "shopify"]},
+    {"name": "Carbon", "url": "https://carbondesignsystem.com/", "type": "system", "access": "aberto", "purpose": "IBM Carbon design system", "terms": ["enterprise", "data", "ibm", "dashboard"]},
+    {"name": "Primer", "url": "https://primer.style/", "type": "system", "access": "aberto", "purpose": "GitHub Primer design system", "terms": ["github", "developer", "open source", "saas"]},
+    {"name": "Atlassian Design System", "url": "https://atlassian.design/", "type": "system", "access": "aberto", "purpose": "Atlassian product design language", "terms": ["jira", "confluence", "enterprise", "saas"]},
+    {"name": "USWDS", "url": "https://designsystem.digital.gov/", "type": "system", "access": "aberto", "purpose": "U.S. federal web design system", "terms": ["government", "accessibility", "public sector"]}
+  ]
+}

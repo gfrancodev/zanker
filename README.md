@@ -19,7 +19,7 @@
 </p>
 
 <p align="center">
-  <img alt="version" src="https://img.shields.io/badge/version-1.0.0-1f6feb">
+  <img alt="version" src="https://img.shields.io/badge/version-1.1.0-1f6feb">
   <img alt="license" src="https://img.shields.io/badge/license-MIT-2ea043">
   <img alt="skills" src="https://img.shields.io/badge/skills-33-0ea5a4">
   <img alt="rules" src="https://img.shields.io/badge/knowledge-130%20rules-8957e5">
@@ -109,7 +109,7 @@ required to say which rank an answer came from.
 
 ## What it does
 
-- **33 skills** with an explicit router, so the agent picks the right one instead of improvising.
+- **34 skills** with an explicit router, so the agent picks the right one instead of improvising.
   21 of them declare what they are *not* for, naming the correct neighbour.
 - **23 Knowledge Packs**, 130 rules, loaded selectively rather than pasted wholesale.
 - **A local Design Studio** for putting visual alternatives in front of a human and recording the choice.
@@ -210,7 +210,7 @@ For the deeper integration each one supports, the per-tool guide has the exact c
 | GitHub Copilot | `.github/agents/*.agent.md` | [`adapters/copilot`](adapters/copilot/README.md) |
 | OpenCode | `.opencode/agents/`, `.claude/skills/` | [`adapters/opencode`](adapters/opencode/README.md) |
 
-**The 33 skills need no conversion.** Every `SKILL.md` already uses the Agent Skills frontmatter
+**The 34 skills need no conversion.** Every `SKILL.md` already uses the Agent Skills frontmatter
 contract, `name` plus `description`, which Claude Code, Copilot and OpenCode read natively. They only
 have to be visible at a path the tool scans, and each guide names it.
 
@@ -233,13 +233,13 @@ Without them, those commands say so rather than guessing.
 
 ## Honest limits
 
-Full list in [`docs/LIMITATIONS.md`](docs/LIMITATIONS.md). The ones that matter most:
-
 - **No faithful standalone sandbox** for Angular, Next Server Components, Nuxt or SvelteKit. Use the
   project's own dev server. Zanker discloses the parity gap rather than hiding it.
 - **axe-core covers part of WCAG, never all of it.** No automated claim of full conformance.
 - **No screenshot means untested, not passed.** The agent is required to say which checks did not run.
 - **No bundled model** and no media generation service.
+- **No site mirroring** (`wget`/`curl` recursive), third-party HTML/CSS copying, or bundled component libraries.
+- **Design-search** needs Python 3; it does not persist `MASTER.md` to the app root or accept blocked UUPM flags.
 
 ---
 
@@ -248,9 +248,8 @@ Full list in [`docs/LIMITATIONS.md`](docs/LIMITATIONS.md). The ones that matter 
 - [CONTRIBUTING.md](CONTRIBUTING.md) is where the construction lives: the repository layout, the
   prompt contract, what is generated and must not be hand edited, the commands that gate a change,
   and how to add a skill or a knowledge pack.
-- [`AGENT.md`](AGENT.md) is the operating contract itself, including the canonical source precedence
-  and the conventions every prompt in the repository follows.
-- [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) covers the layers and the two main flows.
+- [`AGENT.md`](AGENT.md) is the operating contract itself, including the canonical source precedence,
+  layer model, and the conventions every prompt in the repository follows.
 - [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) is the Contributor Covenant 2.1.
 - [SECURITY.md](SECURITY.md) explains how to report a vulnerability privately, and documents what the
   plugin actually does on your machine: where it writes, what it executes, and what is opt in.

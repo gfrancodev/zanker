@@ -3,7 +3,7 @@ name: zanker-stack-sandbox
 description: Render real React/Vite components or standalone HTML in project-local isolated host. Use for test single component, preview without backend, visual sandbox.
 metadata:
   author: zanker
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 <skill name="zanker-stack-sandbox">

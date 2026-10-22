@@ -2,7 +2,7 @@
 
 ## Supported versions
 
-Zanker is at 1.0.0 and has a single supported line: the latest release. Fixes land on `main` and ship
+Zanker is at 1.1.0 and has a single supported line: the latest release. Fixes land on `main` and ship
 in the next tag.
 
 | Version | Supported |

@@ -3,7 +3,7 @@ name: zanker-quality-benchmark
 description: Evaluate Zanker with reproducible UX/UI tasks across frameworks and scenarios. Use for benchmark, release gate, quality comparison.
 metadata:
   author: zanker
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 <skill name="zanker-quality-benchmark">

@@ -3,7 +3,7 @@ name: zanker-design-decisions
 description: Record visual alternatives, rationale, approvals, failures and evidence for future sessions. Use for user approval, decision memory, follow-up revision.
 metadata:
   author: zanker
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 <skill name="zanker-design-decisions">

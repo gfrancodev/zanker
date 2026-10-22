@@ -1,0 +1,1032 @@
+{
+  "schemaVersion": "1.0",
+  "components": [
+    {
+      "id": "button",
+      "name": "Button",
+      "group": "action",
+      "dependencies": [],
+      "terms": [
+        "button"
+      ],
+      "keyboard": true,
+      "states": [
+        "default",
+        "disabled",
+        "focus"
+      ]
+    },
+    {
+      "id": "button-group",
+      "name": "Button Group",
+      "group": "action",
+      "dependencies": [
+        "Button"
+      ],
+      "terms": [
+        "button",
+        "group"
+      ],
+      "keyboard": true,
+      "states": [
+        "default",
+        "disabled",
+        "focus"
+      ]
+    },
+    {
+      "id": "toggle",
+      "name": "Toggle",
+      "group": "action",
+      "dependencies": [],
+      "terms": [
+        "toggle"
+      ],
+      "keyboard": true,
+      "states": [
+        "default",
+        "disabled",
+        "focus"
+      ]
+    },
+    {
+      "id": "toggle-group",
+      "name": "Toggle Group",
+      "group": "action",
+      "dependencies": [
+        "Toggle"
+      ],
+      "terms": [
+        "toggle",
+        "group"
+      ],
+      "keyboard": true,
+      "states": [
+        "default",
+        "disabled",
+        "focus"
+      ]
+    },
+    {
+      "id": "label",
+      "name": "Label",
+      "group": "form",
+      "dependencies": [],
+      "terms": [
+        "label"
+      ],
+      "keyboard": true,
+      "states": [
+        "default",
+        "disabled",
+        "focus"
+      ]
+    },
+    {
+      "id": "field",
+      "name": "Field",
+      "group": "form",
+      "dependencies": [],
+      "terms": [
+        "field"
+      ],
+      "keyboard": true,
+      "states": [
+        "default",
+        "disabled",
+        "focus"
+      ]
+    },
+    {
+      "id": "input",
+      "name": "Input",
+      "group": "form",
+      "dependencies": [],
+      "terms": [
+        "input"
+      ],
+      "keyboard": true,
+      "states": [
+        "default",
+        "disabled",
+        "focus"
+      ]
+    },
+    {
+      "id": "input-group",
+      "name": "Input Group",
+      "group": "form",
+      "dependencies": [
+        "Input"
+      ],
+      "terms": [
+        "input",
+        "group"
+      ],
+      "keyboard": true,
+      "states": [
+        "default",
+        "disabled",
+        "focus"
+      ]
+    },
+    {
+      "id": "input-otp",
+      "name": "Input OTP",
+      "group": "form",
+      "dependencies": [
+        "Input"
+      ],
+      "terms": [
+        "input",
+        "otp"
+      ],
+      "keyboard": true,
+      "states": [
+        "default",
+        "disabled",
+        "focus"
+      ]
+    },
+    {
+      "id": "textarea",
+      "name": "Textarea",
+      "group": "form",
+      "dependencies": [],
+      "terms": [
+        "textarea"
+      ],
+      "keyboard": true,
+      "states": [
+        "default",
+        "disabled",
+        "focus"
+      ]
+    },
+    {
+      "id": "checkbox",
+      "name": "Checkbox",
+      "group": "form",
+      "dependencies": [],
+      "terms": [
+        "checkbox"
+      ],
+      "keyboard": true,
+      "states": [
+        "default",
+        "disabled",
+        "focus"
+      ]
+    },
+    {
+      "id": "radio-group",
+      "name": "Radio Group",
+      "group": "form",
+      "dependencies": [],
+      "terms": [
+        "radio",
+        "group"
+      ],
+      "keyboard": true,
+      "states": [
+        "default",
+        "disabled",
+        "focus"
+      ]
+    },
+    {
+      "id": "switch",
+      "name": "Switch",
+      "group": "form",
+      "dependencies": [],
+      "terms": [
+        "switch"
+      ],
+      "keyboard": true,
+      "states": [
+        "default",
+        "disabled",
+        "focus"
+      ]
+    },
+    {
+      "id": "slider",
+      "name": "Slider",
+      "group": "form",
+      "dependencies": [],
+      "terms": [
+        "slider"
+      ],
+      "keyboard": true,
+      "states": [
+        "default",
+        "disabled",
+        "focus"
+      ]
+    },
+    {
+      "id": "native-select",
+      "name": "Native Select",
+      "group": "form",
+      "dependencies": [],
+      "terms": [
+        "native",
+        "select"
+      ],
+      "keyboard": true,
+      "states": [
+        "default",
+        "disabled",
+        "focus"
+      ]
+    },
+    {
+      "id": "select",
+      "name": "Select",
+      "group": "form",
+      "dependencies": [],
+      "terms": [
+        "select"
+      ],
+      "keyboard": true,
+      "states": [
+        "default",
+        "disabled",
+        "focus"
+      ]
+    },
+    {
+      "id": "combobox",
+      "name": "Combobox",
+      "group": "form",
+      "dependencies": [
+        "Popover"
+      ],
+      "terms": [
+        "combobox"
+      ],
+      "keyboard": true,
+      "states": [
+        "default",
+        "disabled",
+        "focus"
+      ]
+    },
+    {
+      "id": "calendar",
+      "name": "Calendar",
+      "group": "form",
+      "dependencies": [],
+      "terms": [
+        "calendar"
+      ],
+      "keyboard": true,
+      "states": [
+        "default",
+        "disabled",
+        "focus"
+      ]
+    },
+    {
+      "id": "date-picker",
+      "name": "Date Picker",
+      "group": "form",
+      "dependencies": [
+        "Calendar"
+      ],
+      "terms": [
+        "date",
+        "picker"
+      ],
+      "keyboard": true,
+      "states": [
+        "default",
+        "disabled",
+        "focus"
+      ]
+    },
+    {
+      "id": "questionnaire",
+      "name": "Questionnaire",
+      "group": "form",
+      "dependencies": [],
+      "terms": [
+        "questionnaire"
+      ],
+      "keyboard": true,
+      "states": [
+        "default",
+        "disabled",
+        "focus"
+      ]
+    },
+    {
+      "id": "alert",
+      "name": "Alert",
+      "group": "feedback",
+      "dependencies": [],
+      "terms": [
+        "alert"
+      ],
+      "keyboard": true,
+      "states": [
+        "default",
+        "disabled",
+        "focus"
+      ]
+    },
+    {
+      "id": "alert-dialog",
+      "name": "Alert Dialog",
+      "group": "feedback",
+      "dependencies": [
+        "Dialog"
+      ],
+      "terms": [
+        "alert",
+        "dialog"
+      ],
+      "keyboard": true,
+      "states": [
+        "default",
+        "disabled",
+        "focus"
+      ]
+    },
+    {
+      "id": "badge",
+      "name": "Badge",
+      "group": "feedback",
+      "dependencies": [],
+      "terms": [
+        "badge"
+      ],
+      "keyboard": true,
+      "states": [
+        "default",
+        "disabled",
+        "focus"
+      ]
+    },
+    {
+      "id": "empty",
+      "name": "Empty",
+      "group": "feedback",
+      "dependencies": [],
+      "terms": [
+        "empty"
+      ],
+      "keyboard": true,
+      "states": [
+        "default",
+        "disabled",
+        "focus"
+      ]
+    },
+    {
+      "id": "progress",
+      "name": "Progress",
+      "group": "feedback",
+      "dependencies": [],
+      "terms": [
+        "progress"
+      ],
+      "keyboard": true,
+      "states": [
+        "default",
+        "disabled",
+        "focus"
+      ]
+    },
+    {
+      "id": "spinner",
+      "name": "Spinner",
+      "group": "feedback",
+      "dependencies": [],
+      "terms": [
+        "spinner"
+      ],
+      "keyboard": true,
+      "states": [
+        "default",
+        "disabled",
+        "focus"
+      ]
+    },
+    {
+      "id": "toast",
+      "name": "Toast",
+      "group": "feedback",
+      "dependencies": [],
+      "terms": [
+        "toast"
+      ],
+      "keyboard": true,
+      "states": [
+        "default",
+        "disabled",
+        "focus"
+      ]
+    },
+    {
+      "id": "tooltip",
+      "name": "Tooltip",
+      "group": "feedback",
+      "dependencies": [],
+      "terms": [
+        "tooltip"
+      ],
+      "keyboard": true,
+      "states": [
+        "default",
+        "disabled",
+        "focus"
+      ]
+    },
+    {
+      "id": "hover-card",
+      "name": "Hover Card",
+      "group": "feedback",
+      "dependencies": [],
+      "terms": [
+        "hover",
+        "card"
+      ],
+      "keyboard": true,
+      "states": [
+        "default",
+        "disabled",
+        "focus"
+      ]
+    },
+    {
+      "id": "skeleton",
+      "name": "Skeleton",
+      "group": "feedback",
+      "dependencies": [],
+      "terms": [
+        "skeleton"
+      ],
+      "keyboard": true,
+      "states": [
+        "default",
+        "disabled",
+        "focus"
+      ]
+    },
+    {
+      "id": "dialog",
+      "name": "Dialog",
+      "group": "overlay",
+      "dependencies": [],
+      "terms": [
+        "dialog"
+      ],
+      "keyboard": true,
+      "states": [
+        "default",
+        "disabled",
+        "focus"
+      ]
+    },
+    {
+      "id": "drawer",
+      "name": "Drawer",
+      "group": "overlay",
+      "dependencies": [],
+      "terms": [
+        "drawer"
+      ],
+      "keyboard": true,
+      "states": [
+        "default",
+        "disabled",
+        "focus"
+      ]
+    },
+    {
+      "id": "sheet",
+      "name": "Sheet",
+      "group": "overlay",
+      "dependencies": [],
+      "terms": [
+        "sheet"
+      ],
+      "keyboard": true,
+      "states": [
+        "default",
+        "disabled",
+        "focus"
+      ]
+    },
+    {
+      "id": "popover",
+      "name": "Popover",
+      "group": "overlay",
+      "dependencies": [],
+      "terms": [
+        "popover"
+      ],
+      "keyboard": true,
+      "states": [
+        "default",
+        "disabled",
+        "focus"
+      ]
+    },
+    {
+      "id": "dropdown-menu",
+      "name": "Dropdown Menu",
+      "group": "overlay",
+      "dependencies": [],
+      "terms": [
+        "dropdown",
+        "menu"
+      ],
+      "keyboard": true,
+      "states": [
+        "default",
+        "disabled",
+        "focus"
+      ]
+    },
+    {
+      "id": "context-menu",
+      "name": "Context Menu",
+      "group": "overlay",
+      "dependencies": [],
+      "terms": [
+        "context",
+        "menu"
+      ],
+      "keyboard": true,
+      "states": [
+        "default",
+        "disabled",
+        "focus"
+      ]
+    },
+    {
+      "id": "menubar",
+      "name": "Menubar",
+      "group": "overlay",
+      "dependencies": [],
+      "terms": [
+        "menubar"
+      ],
+      "keyboard": true,
+      "states": [
+        "default",
+        "disabled",
+        "focus"
+      ]
+    },
+    {
+      "id": "command",
+      "name": "Command",
+      "group": "overlay",
+      "dependencies": [],
+      "terms": [
+        "command"
+      ],
+      "keyboard": true,
+      "states": [
+        "default",
+        "disabled",
+        "focus"
+      ]
+    },
+    {
+      "id": "navigation-menu",
+      "name": "Navigation Menu",
+      "group": "overlay",
+      "dependencies": [],
+      "terms": [
+        "navigation",
+        "menu"
+      ],
+      "keyboard": true,
+      "states": [
+        "default",
+        "disabled",
+        "focus"
+      ]
+    },
+    {
+      "id": "breadcrumb",
+      "name": "Breadcrumb",
+      "group": "navigation",
+      "dependencies": [],
+      "terms": [
+        "breadcrumb"
+      ],
+      "keyboard": true,
+      "states": [
+        "default",
+        "disabled",
+        "focus"
+      ]
+    },
+    {
+      "id": "pagination",
+      "name": "Pagination",
+      "group": "navigation",
+      "dependencies": [],
+      "terms": [
+        "pagination"
+      ],
+      "keyboard": true,
+      "states": [
+        "default",
+        "disabled",
+        "focus"
+      ]
+    },
+    {
+      "id": "sidebar",
+      "name": "Sidebar",
+      "group": "navigation",
+      "dependencies": [
+        "Sheet"
+      ],
+      "terms": [
+        "sidebar"
+      ],
+      "keyboard": true,
+      "states": [
+        "default",
+        "disabled",
+        "focus"
+      ]
+    },
+    {
+      "id": "tabs",
+      "name": "Tabs",
+      "group": "navigation",
+      "dependencies": [],
+      "terms": [
+        "tabs"
+      ],
+      "keyboard": true,
+      "states": [
+        "default",
+        "disabled",
+        "focus"
+      ]
+    },
+    {
+      "id": "separator",
+      "name": "Separator",
+      "group": "navigation",
+      "dependencies": [],
+      "terms": [
+        "separator"
+      ],
+      "keyboard": true,
+      "states": [
+        "default",
+        "disabled",
+        "focus"
+      ]
+    },
+    {
+      "id": "direction",
+      "name": "Direction",
+      "group": "navigation",
+      "dependencies": [],
+      "terms": [
+        "direction"
+      ],
+      "keyboard": true,
+      "states": [
+        "default",
+        "disabled",
+        "focus"
+      ]
+    },
+    {
+      "id": "avatar",
+      "name": "Avatar",
+      "group": "data",
+      "dependencies": [],
+      "terms": [
+        "avatar"
+      ],
+      "keyboard": true,
+      "states": [
+        "default",
+        "disabled",
+        "focus"
+      ]
+    },
+    {
+      "id": "card",
+      "name": "Card",
+      "group": "data",
+      "dependencies": [],
+      "terms": [
+        "card"
+      ],
+      "keyboard": true,
+      "states": [
+        "default",
+        "disabled",
+        "focus"
+      ]
+    },
+    {
+      "id": "table",
+      "name": "Table",
+      "group": "data",
+      "dependencies": [],
+      "terms": [
+        "table"
+      ],
+      "keyboard": true,
+      "states": [
+        "default",
+        "disabled",
+        "focus"
+      ]
+    },
+    {
+      "id": "data-table",
+      "name": "Data Table",
+      "group": "data",
+      "dependencies": [
+        "Table"
+      ],
+      "terms": [
+        "data",
+        "table"
+      ],
+      "keyboard": true,
+      "states": [
+        "default",
+        "disabled",
+        "focus"
+      ]
+    },
+    {
+      "id": "chart",
+      "name": "Chart",
+      "group": "data",
+      "dependencies": [],
+      "terms": [
+        "chart"
+      ],
+      "keyboard": true,
+      "states": [
+        "default",
+        "disabled",
+        "focus"
+      ]
+    },
+    {
+      "id": "item",
+      "name": "Item",
+      "group": "data",
+      "dependencies": [],
+      "terms": [
+        "item"
+      ],
+      "keyboard": true,
+      "states": [
+        "default",
+        "disabled",
+        "focus"
+      ]
+    },
+    {
+      "id": "attachment",
+      "name": "Attachment",
+      "group": "data",
+      "dependencies": [],
+      "terms": [
+        "attachment"
+      ],
+      "keyboard": true,
+      "states": [
+        "default",
+        "disabled",
+        "focus"
+      ]
+    },
+    {
+      "id": "aspect-ratio",
+      "name": "Aspect Ratio",
+      "group": "data",
+      "dependencies": [],
+      "terms": [
+        "aspect",
+        "ratio"
+      ],
+      "keyboard": true,
+      "states": [
+        "default",
+        "disabled",
+        "focus"
+      ]
+    },
+    {
+      "id": "scroll-area",
+      "name": "Scroll Area",
+      "group": "data",
+      "dependencies": [],
+      "terms": [
+        "scroll",
+        "area"
+      ],
+      "keyboard": true,
+      "states": [
+        "default",
+        "disabled",
+        "focus"
+      ]
+    },
+    {
+      "id": "resizable",
+      "name": "Resizable",
+      "group": "data",
+      "dependencies": [],
+      "terms": [
+        "resizable"
+      ],
+      "keyboard": true,
+      "states": [
+        "default",
+        "disabled",
+        "focus"
+      ]
+    },
+    {
+      "id": "typography",
+      "name": "Typography",
+      "group": "data",
+      "dependencies": [],
+      "terms": [
+        "typography"
+      ],
+      "keyboard": true,
+      "states": [
+        "default",
+        "disabled",
+        "focus"
+      ]
+    },
+    {
+      "id": "kbd",
+      "name": "Kbd",
+      "group": "data",
+      "dependencies": [],
+      "terms": [
+        "kbd"
+      ],
+      "keyboard": true,
+      "states": [
+        "default",
+        "disabled",
+        "focus"
+      ]
+    },
+    {
+      "id": "accordion",
+      "name": "Accordion",
+      "group": "reveal",
+      "dependencies": [],
+      "terms": [
+        "accordion"
+      ],
+      "keyboard": true,
+      "states": [
+        "default",
+        "disabled",
+        "focus"
+      ]
+    },
+    {
+      "id": "collapsible",
+      "name": "Collapsible",
+      "group": "reveal",
+      "dependencies": [],
+      "terms": [
+        "collapsible"
+      ],
+      "keyboard": true,
+      "states": [
+        "default",
+        "disabled",
+        "focus"
+      ]
+    },
+    {
+      "id": "carousel",
+      "name": "Carousel",
+      "group": "content",
+      "dependencies": [],
+      "terms": [
+        "carousel"
+      ],
+      "keyboard": true,
+      "states": [
+        "default",
+        "disabled",
+        "focus"
+      ]
+    },
+    {
+      "id": "code-block",
+      "name": "Code Block",
+      "group": "content",
+      "dependencies": [],
+      "terms": [
+        "code",
+        "block"
+      ],
+      "keyboard": true,
+      "states": [
+        "default",
+        "disabled",
+        "focus"
+      ]
+    },
+    {
+      "id": "bubble",
+      "name": "Bubble",
+      "group": "content",
+      "dependencies": [],
+      "terms": [
+        "bubble"
+      ],
+      "keyboard": true,
+      "states": [
+        "default",
+        "disabled",
+        "focus"
+      ]
+    },
+    {
+      "id": "message",
+      "name": "Message",
+      "group": "content",
+      "dependencies": [],
+      "terms": [
+        "message"
+      ],
+      "keyboard": true,
+      "states": [
+        "default",
+        "disabled",
+        "focus"
+      ]
+    },
+    {
+      "id": "message-scroller",
+      "name": "Message Scroller",
+      "group": "content",
+      "dependencies": [
+        "Message"
+      ],
+      "terms": [
+        "message",
+        "scroller"
+      ],
+      "keyboard": true,
+      "states": [
+        "default",
+        "disabled",
+        "focus"
+      ]
+    },
+    {
+      "id": "marker",
+      "name": "Marker",
+      "group": "content",
+      "dependencies": [],
+      "terms": [
+        "marker"
+      ],
+      "keyboard": true,
+      "states": [
+        "default",
+        "disabled",
+        "focus"
+      ]
+    },
+    {
+      "id": "trace",
+      "name": "Trace",
+      "group": "content",
+      "dependencies": [],
+      "terms": [
+        "trace"
+      ],
+      "keyboard": true,
+      "states": [
+        "default",
+        "disabled",
+        "focus"
+      ]
+    }
+  ]
+}

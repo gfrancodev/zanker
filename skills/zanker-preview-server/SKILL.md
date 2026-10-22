@@ -3,7 +3,7 @@ name: zanker-preview-server
 description: Launch a local studio to present visual options and capture approvals. Use when visual alternatives are already prepared and a person must choose on a local URL.
 metadata:
   author: zanker
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 <skill name="zanker-preview-server">

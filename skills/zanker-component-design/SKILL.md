@@ -3,7 +3,7 @@ name: zanker-component-design
 description: Build reusable accessible UI components in the existing frontend stack. Use for new button, modal, table, component library.
 metadata:
   author: zanker
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 <skill name="zanker-component-design">
@@ -40,7 +40,7 @@ into context, and read the project manifest before proposing any implementation 
 </knowledge>
 
 <process>
-<step n="1">Locate current equivalents; choose extend, compose or create, with rationale.</step>
+<step n="1">Run `component-search.sh` for the requested primitive. Read `.zanker/design-intelligence/` and locate current equivalents; choose extend, compose or create, with rationale.</step>
 <step n="2">Define semantic props, states, keyboard behavior, loading/error and disabled logic.</step>
 <step n="3">Render in Zanker sandbox with realistic scenarios.</step>
 <step n="4">Run visual/accessibility checks and produce patch, examples and acceptance criteria.</step>

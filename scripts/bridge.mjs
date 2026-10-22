@@ -4,7 +4,7 @@ import {parseCommandLineOptions, resolveWithin} from '../src/common.mjs';
 import {inspectProject} from '../src/inspect.mjs';
 import {startStudio} from '../src/studio.mjs';
 import {prepareSandbox,runSandbox} from '../src/sandbox.mjs';
-import {auditURL} from '../src/audit.mjs';
+import {auditURL,captureAccessibilityOutline} from '../src/audit.mjs';
 import {diagnoseElement} from '../src/forensics.mjs';
 import {documentVisual} from '../src/documents.mjs';
 import {validateAll} from '../src/validation.mjs';
@@ -12,6 +12,10 @@ import {buildAdapters} from '../src/adapters.mjs';
 import {searchIcons} from '../src/icons.mjs';
 import {createSVG,generateMotionCSS,optimizeImage} from '../src/media.mjs';
 import {recordDecision,listDecisions} from '../src/decisions.mjs';
+import {runDesignSearch} from '../src/design-search.mjs';
+import {searchReferenceSites} from '../src/reference-sites.mjs';
+import {searchComponents} from '../src/component-catalog.mjs';
+import {loadMotionCatalog, searchMotionTechniques} from '../src/motion-catalog.mjs';
 const [action,...args]=process.argv.slice(2);
 const o=parseCommandLineOptions(args);const project=path.resolve(String(o.project||process.cwd()));
 const print=(x)=>console.log(JSON.stringify(x,null,2));
@@ -44,6 +48,20 @@ async function main(){
  case 'decisions':return print(o.title?recordDecision({project,title:o.title,decision:o.decision||'',status:o.status||'proposed',approvedBy:o['approved-by']||'',evidence:o.evidence?String(o.evidence).split(','):[]}):listDecisions(project));
  case 'build-adapters':{const r=buildAdapters({out:o.out,check:o.check===true});print(r);if(o.check===true&&!r.inSync)process.exitCode=1;return;}
  case 'validate':{const v=validateAll();print(v);if(!v.ok)process.exitCode=1;return;}
+ case 'design-search':return print(runDesignSearch({project, options:o}));
+ case 'reference-search':return print({ok:true, results:searchReferenceSites(String(o.query||''))});
+ case 'component-search':return print({ok:true, results:searchComponents(String(o.query||''))});
+ case 'motion-search':{
+   const catalog=loadMotionCatalog();
+   return print({
+     ok:true,
+     results:searchMotionTechniques(String(o.query||'')),
+     directionContract:catalog.directionContract,
+     designMeter:catalog.designMeter,
+     attribution:catalog.attribution,
+   });
+ }
+ case 'a11y-outline':{if(!o.url)throw Error('--url required');return print(await captureAccessibilityOutline({url:o.url,allowRemote:o['allow-remote']===true}));}
  default:throw Error('Unsupported script action; run one of the named .sh or .ps1 scripts.');
  }
 }

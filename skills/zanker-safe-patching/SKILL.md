@@ -3,7 +3,7 @@ name: zanker-safe-patching
 description: Apply smallest reasonable frontend change and produce reviewable integration evidence. Use for implement approved design, fix bug, PR.
 metadata:
   author: zanker
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 <skill name="zanker-safe-patching">

@@ -3,7 +3,7 @@ name: zanker-art-direction
 description: Develop distinctive, product-appropriate visual direction grounded in the user context. Use for new interface, premium visual, landing page, branding.
 metadata:
   author: zanker
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 <skill name="zanker-art-direction">
@@ -39,10 +39,10 @@ into context, and read the project manifest before proposing any implementation 
 </knowledge>
 
 <process>
-<step n="1">Read Product DNA and Design System; formulate art direction as an explicit sentence.</step>
-<step n="2">Choose typographic character, composition, palette, density, imagery and motion purpose.</step>
-<step n="3">Avoid default identical card grids, violet gradients and decorative noise without justification.</step>
-<step n="4">Present two or three meaningfully different options through the Design Studio.</step>
+<step n="1">Load `zanker-design-intelligence` when direction is still open. Read `.zanker/page-graph.json` and Product DNA.</step>
+<step n="2">With a user reference image: extract the brief into `.zanker/design-intelligence/`, then choose type, palette, density, imagery and motion from what is visible. Do not open Studio.</step>
+<step n="3">Without a user image: run design-search and reference-search, then formulate art direction as an explicit sentence. Studio is optional, not required.</step>
+<step n="4">Avoid default identical card grids, violet gradients and decorative noise without justification.</step>
 </process>
 
 <deliverables>

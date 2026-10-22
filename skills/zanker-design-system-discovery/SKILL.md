@@ -3,7 +3,7 @@ name: zanker-design-system-discovery
 description: Extract and prioritize real project tokens, components and visual conventions. Use when the stack is already known and tokens, type, color, or components must be inventoried.
 metadata:
   author: zanker
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 <skill name="zanker-design-system-discovery">

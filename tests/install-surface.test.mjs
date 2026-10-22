@@ -21,7 +21,7 @@ const ALLOWED_TOP_LEVEL = Object.freeze([
   '.claude-plugin/', '.cursor-plugin/', '.github/', '.gitignore',
   'AGENT.md', 'AGENTS.md', 'CHANGELOG.md', 'CODE_OF_CONDUCT.md', 'CONTRIBUTING.md',
   'LICENSE', 'README.md', 'SECURITY.md',
-  'adapters/', 'agents/', 'assets/', 'commands/', 'docs/',
+  'adapters/', 'agents/', 'assets/', 'commands/',
   'knowledge/', 'package.json', 'plugin.json', 'rules/', 'schemas/', 'scripts/',
   'skills/', 'src/', 'templates/', 'tests/',
 ]);

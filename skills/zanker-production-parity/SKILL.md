@@ -3,7 +3,7 @@ name: zanker-production-parity
 description: Verify isolated preview matches actual integrated application. Use for sandbox mismatch, SSR, production readiness.
 metadata:
   author: zanker
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 <skill name="zanker-production-parity">

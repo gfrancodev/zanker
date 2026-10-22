@@ -20,7 +20,7 @@ exercise `audit.sh` and `diagnose.sh` against a real browser.
 ## The three commands that gate everything
 
 ```sh
-npm test                                 # 155 tests, the contract itself
+npm test                                 # 167 tests, the contract itself
 bash scripts/validate.sh                 # knowledge packs, skills, JSON schemas
 bash scripts/build-adapters.sh --check   # adapters still match their source
 ```
@@ -44,15 +44,14 @@ Prefer a seam to a mock of the filesystem: the tests here use real temporary dir
 zanker/
 ├── .claude-plugin/        plugin.json and marketplace.json, source "."
 ├── .cursor-plugin/        the same pair for Cursor
-├── agents/zanker.md       role, 9-phase process, router over all 33 skills
-├── skills/<name>/         33 skills, one SKILL.md each
+├── agents/zanker.md       role, 9-phase process, router over all 34 skills
+├── skills/<name>/         34 skills, one SKILL.md each
 ├── knowledge/             23 JSON Knowledge Packs, 130 rules
 ├── scripts/               optional Node.js tools, PowerShell twins included
 ├── src/                   the modules those scripts call
 ├── schemas/               JSON Schemas for knowledge, scenarios, reviews
 ├── templates/             starting shapes for the artifacts skills produce
 ├── assets/                the plugin icon
-├── docs/                  architecture, quality, and the honest limits
 ├── tests/                 the suite that enforces all of the above
 ├── .github/               issue forms and the pull request checklist
 ├── AGENTS.md              portable contract, read by five other tools (generated)
